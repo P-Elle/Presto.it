@@ -10,4 +10,8 @@ class Announcement extends Model
     use HasFactory;
 
     protected $fillable = ['title','description','price'];
+
+    public function user(){
+        $this->belongsTo(User::class);
+    }
 }
