@@ -9,10 +9,14 @@ class CreateAnnouncement extends Component
 {   public $title;
     public $description;
     public $price;
+    // inserisco il nuovo attributo categories
+    public $category
 
     protected $rules = [
         'title' => 'required|min:3|max:50',
         'description' => 'required|min:8',
+        // validatore category
+        'category'=> 'required',
         'price' => 'required|numeric',
     ];
 
@@ -45,6 +49,8 @@ class CreateAnnouncement extends Component
         $this->title = '';
         $this->description = '';
         $this->price = '';
+        // associo la pulizia del campo category
+        $this->category = '';
     }
     public function render()
     {
