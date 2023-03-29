@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/nuovo-annuncio',[AnnouncementController::class, 'createAnnouncement'])->name('annoucements.create');
+Route::get('/nuovo-annuncio',[AnnouncementController::class, 'createAnnouncement'])->middleware('auth')->name('annoucements.create');

@@ -3,7 +3,7 @@
 .masthead{
     height: 100vh;
     min-height: 400px;
-    background-image: url('/Users/duccio/Desktop/progetto-finale/gruppo-01/public/img/steve-johnson-JUKWHtY4tMM-unsplash.jpg');
+    background-image: url('/public/img/steve-johnson-JUKWHtY4tMM-unsplash.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
