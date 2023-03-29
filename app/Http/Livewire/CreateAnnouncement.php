@@ -10,7 +10,7 @@ class CreateAnnouncement extends Component
     public $description;
     public $price;
     // inserisco il nuovo attributo categories
-    public $category
+    public $category;
 
     protected $rules = [
         'title' => 'required|min:3|max:50',

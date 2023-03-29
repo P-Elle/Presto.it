@@ -1,9 +1,9 @@
 <x-main>
     <x-navbar/>
     <div class="container mt-5">
-        <div class="row">
-            <div class="col-6 mx-auto">
-                <h1 class="mb-5">Registrati</h1>
+        <div class="row mt-5">
+            <div class="col-6 mx-auto mt-5">
+                <h1 class="mb-5 mt-2">Registrati</h1>
                 <form action="/register" method="POST">
                     @csrf
                     <div class="mb-3">

@@ -1,9 +1,9 @@
 <x-main>
     <x-navbar/>
     <div class="container mt-5">
-        <div class="row">
-            <div class="col-6 mx-auto">
-                <h1 class="mb-5">Accedi</h1>
+        <div class="row mt-5">
+            <div class="col-6 mt-5 mx-auto">
+                <h1 class="mb-5 mt-2">Accedi</h1>
                 <form action="/login" method="POST">
                     @csrf
                     <div class="mb-3">
