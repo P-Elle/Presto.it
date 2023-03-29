@@ -36,6 +36,9 @@
                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                     @endforeach
                 </select>
+                @error('category')
+                <span class="text-danger small">{{$message}}</span>
+                @enderror
             </div>
             <div class="col-6 mt-1">
                 <button type="submit" class="btn btn-primary shadow px-4 p-2 mt-2">Crea</button>
