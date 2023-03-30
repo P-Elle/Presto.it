@@ -10,7 +10,6 @@
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         
-<<<<<<< HEAD
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" id="categoriesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
             Categorie
@@ -24,9 +23,7 @@
           </ul>
         </li>
         
-=======
        
->>>>>>> a41ea4ac8dace72a66d8621b90ece03c8245dd44
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="#">Annunci</a>
         </li>
@@ -82,7 +79,7 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
               @foreach ($categories as $category)
-                <li><a class="dropdown-item" href="" >{{ 
+                <li><a class="dropdown-item" href="{{route('category.view', $category)}}" >{{ 
                   ($category->name) }}</a></li>            
                 <li><hr class="dropdown-divider"></li>
               @endforeach

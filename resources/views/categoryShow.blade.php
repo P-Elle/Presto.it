@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="row">
-                    @forelse ($category->announcement as $announcement)
+                    @forelse ($category->announcements as $announcement)
                         <div class="col-12 col-md-4 my-2">
                             <x-card :announcement='$announcement'/>
 
