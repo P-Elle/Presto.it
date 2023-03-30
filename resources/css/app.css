@@ -19,6 +19,9 @@
 .light-brand-bg {
   background-color: var(--my-color-light-brand);
 }
+.white-brand-bg {
+  background-color: var(--my-color-white);
+}
 .brand-cool-bg {
   background-color: var(--my-color-cool);
 }
@@ -34,6 +37,19 @@
 }
 .brand-light {
   color: var(--my-color-light-brand);
+}
+.brand-dark {
+  color: var(--my-color-dark);
+}
+.brand-dark-bg {
+  background-color: var(--my-color-dark);
+}
+.brand-cool {
+  color: var(--my-color-cool);
+}
+
+.master-ann-card {
+  margin-top: -250px;;
 }
 
 
@@ -147,6 +163,7 @@ a:hover{
       margin-right: 0;
     }
     
+    
 }
 
 
@@ -196,6 +213,9 @@ a:hover{
   font-size: 20px;
   color: rgb(46, 129, 162);
 }
+.z-ind {
+  z-index: 5;
+}
 
 .link-announcement{
   text-decoration: none;
@@ -210,5 +230,5 @@ a:hover{
   height: 100vh;
 }
 .ann-detail {
-  margin-top: 20%;
+  margin-top: 10%;
 }

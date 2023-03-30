@@ -1,10 +1,10 @@
-<div class="card px-0" style="width: 18rem;">
+<div class="card px-0 " style="width: 18rem;">
     <div class="c-header">
-        <img src="https://picsum.photos/300/300" class="img-fluid" alt="foto-annuncio">
+        <img src="https://picsum.photos/300/300" class="img-fluid w-100" alt="foto-annuncio">
         <span class="btn c-category">{{$announcement->category->name}}</span>
 
     </div>
-    <div class="card-body">
+    <div class="card-body z-ind white-brand-bg">
         <span class="price">{{$announcement->price}}</span>
         <h4 class="mt-2"><a class="link-announcement" href="{{route('announcements.show', $announcement)}}">{{$announcement->title}}</a></h4>
         <p>{{$announcement->body}}</p>
