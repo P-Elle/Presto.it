@@ -11,9 +11,12 @@ class Card extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public $announcement;
+
+    public function __construct($announcement)
+
     {
-        //
+        $this->announcement=$announcement;
     }
 
     /**
@@ -21,6 +24,7 @@ class Card extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.card');
+        $announcement=$this->announcement;
+        return view('components.card', compact('announcement'));
     }
 }

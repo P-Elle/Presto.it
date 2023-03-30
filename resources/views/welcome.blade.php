@@ -1,4 +1,5 @@
 <x-main>
+<<<<<<< Updated upstream
     <div class="container-fluid px-0 text-center">
       <x-navbar/>
          
@@ -39,3 +40,56 @@
           
     </div>
 </x-main>
+=======
+    <div class="container-fluid text-center">
+        <x-navbar/>
+        {{-- HEADER --}}
+        <div class="row">
+            <div class="masthead px-0">
+                <div class="container h-100">
+                    <div class="row h-100 align-content-center justify-content-center">
+                        <div class="col-6 text-center">
+                            <h1>Inserisci i tuoi annunci e trova i migliori affari!</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni inventore facere suscipit tenetur. Odit eveniet sequi cupiditate exercitationem incidunt eligendi?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{-- SEZIONE ANNUNCI --}}
+        <section class="my-5">
+            <div class="container">
+                <div class="row justify-content-center ms-5">
+
+                    @foreach ($announcements as $announcement)
+
+                    <x-card :announcement="$announcement"/>
+                    @endforeach
+
+                    {{-- <div class="col-12 col-md-4 my-4">
+
+                            <img src="https://picsum.photos/200" class="card-img-top p-3 rounded" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">{{$announcement->title}}</h5>
+                                <p class="card-text">{{$announcement->body}}</p>
+                                <p class="card-text">{{$announcement->price}}</p>
+                                <a href="" class="btn btn-primary shadow">Visualizza</a>
+                                <a href="" class="my-2 border-top pt-2 border-dark card-link shadow btn btn-success">Categoria:
+                                    {{$announcement->category->name}}</a>
+
+                                    <p class="card-footer">Pubblicato il : {{$announcement->created_at->format('d/m/Y')}}}</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    {{-- </div> --}}
+                </div>
+            </section>
+        </div>
+    </x-main>
+>>>>>>> Stashed changes
