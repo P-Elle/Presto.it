@@ -16,7 +16,7 @@ class Card extends Component
     public function __construct($announcement)
 
     {
-        $this->announcement=$announcement;
+        $this->announcement = $announcement;
     }
 
     /**
@@ -24,7 +24,7 @@ class Card extends Component
      */
     public function render(): View|Closure|string
     {
-        $announcement=$this->announcement;
+        $announcement = $this->announcement;
         return view('components.card', compact('announcement'));
     }
 }
