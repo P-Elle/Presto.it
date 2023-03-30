@@ -1,6 +1,6 @@
 <x-main>
     <x-navbar/>
-    <div class="container-fluid show brand-cool-bg">
+    <div class="container-fluid ann-show brand-cool-bg">
         <div class="row">
             <div class="col-10 col-md-6 mx-auto justify-content-center">
                 

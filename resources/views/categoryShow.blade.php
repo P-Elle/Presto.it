@@ -1,4 +1,5 @@
 <x-main>
+    <x-navbar/>
     <div class="container-fluid p-5 bg-gradient bg-success shadow mb-4">
         <div class="row">
             <div class="col-12 text-light p-5">
@@ -17,7 +18,7 @@
                     @empty
                     <div class="col-12">
                         <p class="h1">Non sono presenti annunci per questa categoria!</p>
-                        <p class="h2">Pubblicane uno: <a href="{{ route('annoucements.create') }}" 
+                        <p class="h2">Pubblicane uno: <a href="{{ route('category.view',$category) }}" 
                         class="btn btn-success shadow">Nuovo Annuncio</a></p>
                     </div>
                     @endforelse

@@ -9,12 +9,7 @@
   --my-color-white: #F3F7F0;
   --my-color-dark: #22262A;
 }
-.show {
-  height: 100vh;
-}
-.detail {
-  margin-top: 20%;
-}
+
 .brand-bg {
   background-color: var(--my-color-brand);
 }
@@ -210,4 +205,10 @@ a:hover{
 .link-announcement:hover{
   color:  rgb(46, 129, 162);
 }
-  
+
+.ann-show {
+  height: 100vh;
+}
+.ann-detail {
+  margin-top: 20%;
+}
