@@ -11,17 +11,17 @@ class CreateAnnouncement extends Component
 {   public $title;
     public $description;
     public $price;
-    // inserisco il nuovo attributo categories
     public $category;
 
+    //regole di validazione
     protected $rules = [
         'title' => 'required|min:3|max:50',
         'description' => 'required|min:8',
-        // validatore category
         'category'=> 'required',
         'price' => 'required|numeric',
     ];
 
+    //messaggi personalizzati di errore
     protected $messages = [
         'required' => 'Il campo :attribute è obbligatorio.',
         'min' => 'Il campo :attribute deve contenere almeno :min caratteri',
@@ -34,8 +34,10 @@ class CreateAnnouncement extends Component
         $this->validateOnly($propertyName);
     }
     
+    //salvatggio dell'annuncio all'interno del database
     public function store()
-    {   $this->validate();
+    {   
+        $this->validate();
 
         $category = Category::find($this->category);
         
@@ -44,20 +46,24 @@ class CreateAnnouncement extends Component
             'description'=>$this->description,
             'price'=>$this->price,
         ]);
+
         Auth::user()->announcements()->save($announcement);
+
         session()->flash('message', 'Annuncio inserito con successo.');
+
         $this->cleanForm();
     }
 
     
-
+    //pulire il form dopo il salvataggio dell'annuncio
     public function cleanForm(){
         $this->title = '';
         $this->description = '';
         $this->price = '';
-        // associo la pulizia del campo category
         $this->category = '';
     }
+
+    //renderizzazione della view
     public function render()
     {
         return view('livewire.create-announcement');
