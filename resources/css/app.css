@@ -152,6 +152,62 @@ a:hover{
       margin-right: 0;
     }
     
-  }
+}
 
+
+.card{
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 2px 3px 2px rgba(138,138,138,0.56); 
+  box-shadow: 0px 2px 3px 2px rgba(138,138,138,0.56);
+}
+
+.c-header img {
+  transition: all 0.3s;
+}
+
+.c-header:hover img {
+  transform: scale(1.1);
+}
+
+.c-header {
+  position: relative;
+}
+
+.c-category {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-weight: bold;
+  background-color: skyblue;
+  color: black;
+}
+
+.c-category:hover{
+  background-color: grey;
+}
+
+.card-footer {
+  border-top: rgb(46, 129, 162) 1px dashed;
+}
+
+.card-footer .col-6:first-child {
+  border-right: rgb(46, 129, 162) 1px dashed;
+}
+
+.price{
+  font-weight: bolder;
+  font-size: 20px;
+  color: rgb(46, 129, 162);
+}
+
+.link-announcement{
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.782);
+}
+
+.link-announcement:hover{
+  color:  rgb(46, 129, 162);
+}
   
