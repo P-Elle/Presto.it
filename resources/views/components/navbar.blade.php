@@ -10,18 +10,7 @@
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" id="categoriesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-            Categorie
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
-            @foreach ($categories as $category)
-                <li><a class="dropdown-item" href="{{ route('categoryShow', compact('category')) }}" >{{ 
-                ($category->name) }}</a></li>            
-                <li><hr class="dropdown-divider"></li>
-            @endforeach
-          </ul>
-        </li>
+       
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="#">Annunci</a>
         </li>
@@ -71,8 +60,20 @@
                         {{-- <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li> --}}
                         {{-- <li class="nav-item"><a class="nav-link" href="#about">About</a></li> --}}
                         {{-- <li class="nav-item"><a class="nav-link" href="#team">Team</a></li> --}}
-                        <li class="nav-item"><a class="nav-link" href="#contact">Categorie</a></li>
-                          @auth
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" role="button" id="categoriesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categorie
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+                            @foreach ($categories as $category)
+                                <li><a class="dropdown-item" href="" >{{ 
+                                ($category->name) }}</a></li>            
+                                <li><hr class="dropdown-divider"></li>
+                            @endforeach
+                          </ul>
+                        </li>  
+                        
+                        @auth
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Ciao,  {{auth()->user()->name}}
