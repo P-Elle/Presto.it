@@ -9,9 +9,17 @@
   --my-color-white: #F3F7F0;
   --my-color-dark: #22262A;
 }
-
+.show {
+  height: 100vh;
+}
+.detail {
+  margin-top: 20%;
+}
 .brand-bg {
   background-color: var(--my-color-brand);
+}
+.brand {
+  color: var(--my-color-brand);
 }
 .light-brand-bg {
   background-color: var(--my-color-light-brand);
@@ -25,6 +33,9 @@
 }
 .brand-white {
   color: var(--my-color-white);
+}
+.brand-white-bg {
+  background-color: var(--my-color-white);
 }
 .brand-light {
   color: var(--my-color-light-brand);
@@ -104,7 +115,7 @@ a:hover{
   }
   
   @media (min-width: 992px) {
-    .masthead .row:first-child {
+    .masthead .row:first-child{
       padding-top:103px !important;
     }
     #mainNav {
