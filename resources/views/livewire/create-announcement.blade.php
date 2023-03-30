@@ -1,4 +1,4 @@
-<div class="row g-3">
+<div class="row g-3 mt-3">
     <div class="col-8 col-md-5 mx-auto mt-5">
         <h1 class="mt-5">Crea il tuo annuncio!</h1>
         @if(session('message'))
@@ -30,7 +30,7 @@
             {{-- elenco categorie disponibili --}}
             <div class="col-12 mt-1">
                 <label for="category">Categoria</label>
-                <select wire:model.defer="category" id="category" class="form-control">
+                <select wire:model.defer="category" id="category" class="form-control @error('category') is-invalid @enderror">
                     <option value="">Scegli la categoria</option>
                     @foreach ($categories as $category)"
                         <option value="{{ $category->id }}">{{ $category->name }}</option>
