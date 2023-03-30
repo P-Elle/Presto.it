@@ -19,5 +19,5 @@ Route::get('/', function () {
 })->name('welcome');
 
 Route::get('/nuovo-annuncio',[AnnouncementController::class, 'createAnnouncement'])->middleware('auth')->name('annoucements.create');
-
+// rotta parametrica categorie
 Route::get('/categoria/{category}', [FrontController::class, 'categoryShow'])->name('category.view');
