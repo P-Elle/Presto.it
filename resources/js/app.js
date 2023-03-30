@@ -17,12 +17,15 @@ window.addEventListener('DOMContentLoaded', event => {
     var navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector('#mainNav');
         if (!navbarCollapsible) {
-            return;
+            navbarCollapsible.classList.add('shrink');
         }
         if (window.scrollY === 0) {
-            navbarCollapsible.classList.remove('navbar-shrink')
+            navbarCollapsible.classList.remove('navbar-shrink');
+            navbarCollapsible.classList.add('shrink');
+            
         } else {
-            navbarCollapsible.classList.add('navbar-shrink')
+            navbarCollapsible.classList.add('navbar-shrink');
+            navbarCollapsible.classList.remove('shrink');
         }
 
     };
@@ -34,13 +37,13 @@ window.addEventListener('DOMContentLoaded', event => {
     document.addEventListener('scroll', navbarShrink);
 
     //  Activate Bootstrap scrollspy on the main nav element
-    const mainNav = document.body.querySelector('#mainNav');
-    if (mainNav) {
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#mainNav',
-            rootMargin: '0px 0px -40%',
-        });
-    };
+    // const mainNav = document.body.querySelector('#mainNav');
+    // if (mainNav) {
+    //     new bootstrap.ScrollSpy(document.body, {
+    //         target: '#mainNav',
+    //         rootMargin: '0px 0px -40%',
+    //     });
+    // };
 
     // Collapse responsive navbar when toggler is visible
     const navbarToggler = document.body.querySelector('.navbar-toggler');
@@ -51,9 +54,23 @@ window.addEventListener('DOMContentLoaded', event => {
         responsiveNavItem.addEventListener('click', () => {
             if (window.getComputedStyle(navbarToggler).display !== 'none') {
                 navbarToggler.click();
+        
             }
         });
     });
 
 });
 
+//toogle navbar opacity based on width
+function myFunction(x) {
+    if (x.matches) { // If media query matches
+        document.body.querySelector('#mainNav').classList.remove('shrink');
+    } else {
+        document.body.querySelector('#mainNav').classList.add('shrink');
+
+    }
+  }
+  
+  var x = window.matchMedia("(max-width: 991px)")
+  myFunction(x); // Call listener function at run time
+  x.addListener(myFunction); // Attach listener function on state changes

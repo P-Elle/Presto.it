@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AnnouncementController;
+use App\Http\Controllers\FrontController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,10 +15,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+Route::get('/', [FrontController::class, 'welcome'])->name('welcome');
 
+<<<<<<< HEAD
 Route::get('/nuovo-annuncio',[AnnouncementController::class, 'createAnnouncement'])->middleware('auth')->name('annoucements.create');
 // rotta parametrica categorie
 Route::get('/categoria/{category}', [FrontController::class, 'categoryShow'])->name('category.view');
+=======
+
+Route::get('/nuovo-annuncio',[AnnouncementController::class, 'createAnnouncement'])->middleware('auth')->name('announcements.create');
+>>>>>>> a41ea4ac8dace72a66d8621b90ece03c8245dd44
