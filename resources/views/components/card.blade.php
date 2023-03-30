@@ -1,17 +1,18 @@
 <div class="card" style="width: 18rem;">
     <div class="c-header">
         <img src="https://picsum.photos/300/300" class="img-fluid" alt="foto-annuncio">
-        <span class="btn c-category">Categoria</span>
+        <span class="btn c-category">{{$announcement->category->name}}</span>
+
     </div>
     <div class="card-body">
-        <span class="price">20.50$</span>
-        <h4 class="mt-2"><a class="link-announcement" href="#">Titolo annuncio</a></h4>
-        <p>Lorem Ipsum dolor sit amet...</p>
+        <span class="price">{{$announcement->price}}</span>
+        <h4 class="mt-2"><a class="link-announcement" href="#">{{$announcement->title}}</a></h4>
+        <p>{{$announcement->body}}</p>
     </div>
     <div class="card-footer small p-2">
         <div class="row">
-            <div class="col-6 text-center text-secondary">Mario Rossi</div>
-            <div class="col-6 text-center text-secondary">20/03/2023</div>
-        </div>        
+            <div class="col-6 text-center text-secondary">{{$announcement->created_at->format('d/m/Y')}}</div>
+            <div class="col-6 text-center text-secondary">{{$announcement->created_at->format('d/m/Y')}}</div>
+        </div>
     </div>
 </div>

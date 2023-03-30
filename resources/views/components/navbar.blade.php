@@ -10,6 +10,19 @@
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" id="categoriesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            Categorie
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+            @foreach ($categories as $category)
+                <li><a class="dropdown-item" href="{{ route('categoryShow', compact('category')) }}" >{{ 
+                ($category->name) }}</a></li>            
+                <li><hr class="dropdown-divider"></li>
+            @endforeach
+          </ul>
+        </li>
+        
        
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="#">Annunci</a>
@@ -48,6 +61,7 @@
 
 
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top shrink" id="mainNav">
+<<<<<<< HEAD
             <div class="container">
                 <a class="navbar-brand" href="{{route('welcome')}}">Presto.it</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -74,8 +88,34 @@
                             @endforeach
                           </ul>
                         </li>  
+=======
+  <div class="container">
+    <a class="navbar-brand" href="{{route('welcome')}}">Presto.it</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars ms-1"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0 align-items-center">
+          {{-- <li class="nav-item"><a class="nav-link" href="#services">Services</a></li> --}}
+          {{-- <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li> --}}
+          {{-- <li class="nav-item"><a class="nav-link" href="#about">About</a></li> --}}
+          {{-- <li class="nav-item"><a class="nav-link" href="#team">Team</a></li> --}}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" id="categoriesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              Categorie
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+              @foreach ($categories as $category)
+                <li><a class="dropdown-item" href="{{route('category.view', $category)}}" >{{ 
+                  ($category->name) }}</a></li>            
+                <li><hr class="dropdown-divider"></li>
+              @endforeach
+            </ul>
+          </li>  
+>>>>>>> 6fb0b9502d3402f42a19cd4c121106acec00c80b
                         
-                        @auth
+          @auth
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Ciao,  {{auth()->user()->name}}
@@ -90,16 +130,16 @@
             </ul>
           </li>
           <li class="btn brand-bg button"><a class="brand-white" href="{{route('announcements.create')}}">Inserisci Annuncio</a></li>
-        @else
+          @else
           <li class="nav-item">
             <a class="nav-link" href="/login">Accedi</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/register">Registrati</a>
           </li>
-        @endauth
+          @endauth
         
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        </ul>
+      </div>
+  </div>
+</nav>
