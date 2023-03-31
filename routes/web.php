@@ -17,8 +17,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [FrontController::class, 'welcome'])->name('welcome');
 
-Route::get('/nuovo-annuncio',[AnnouncementController::class, 'createAnnouncement'])->middleware('auth')->name('annoucements.create');
+Route::get('/nuovo-annuncio',[AnnouncementController::class, 'createAnnouncement'])->middleware('auth')->name('announcements.create');
+
+
+Route::get('/dettaglio/annuncio/{announcement}',[AnnouncementController::class, 'showAnnouncement'])->middleware('auth')->name('announcements.show');
+
+
 // rotta parametrica categorie
 Route::get('/categoria/{category}', [FrontController::class, 'categoryShow'])->name('category.view');
-
-Route::get('/nuovo-annuncio',[AnnouncementController::class, 'createAnnouncement'])->middleware('auth')->name('announcements.create');

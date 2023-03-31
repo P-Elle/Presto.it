@@ -24,6 +24,14 @@
                       </div>
 
                     </div>
+                  @else
+                  <div class="row">
+                    <div class="col-6 mx-auto">
+                      <button class="btn brand-bg brand-white button mt-3">Cerca</button>
+
+                    </div>
+                  </div>
+
                   @endguest
                 </div>
                       
@@ -32,12 +40,9 @@
             </div> <!--END row-->
           {{-- </div> <!--END container--> --}}
         </div> <!--END masthead-->
-        <div class="row light-brand-bg">
-          <h2>hello!</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit dignissimos unde, autem accusantium quis quod voluptatem porro numquam maxime quidem doloremque rerum aspernatur odit saepe.</p>
-        </div>
-
-        {{-- SEZIONE ANNUNCI --}}
+        <div class="row brand-dark-bg">
+          
+            {{-- SEZIONE ANNUNCI --}}
         <section class="my-5">
           <div class="container">
             <div class="row justify-content-center ms-5">
@@ -48,5 +53,8 @@
             </div>
           </div>
         </section>
+        </div>
+
+      
     </div> 
 </x-main>

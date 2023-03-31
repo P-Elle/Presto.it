@@ -1,5 +1,6 @@
 import './bootstrap';
 import 'bootstrap';
+console.log('collegato');
 
 
 /*!

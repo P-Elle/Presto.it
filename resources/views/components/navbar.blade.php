@@ -1,69 +1,7 @@
-{{-- <nav class="navbar navbar-expand-lg px-5 fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Presto</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        
-<<<<<<< HEAD
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" id="categoriesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-            Categorie
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
-            @foreach ($categories as $category)
-                <li><a class="dropdown-item" href="{{ route('categoryShow', compact('category')) }}" >{{ 
-                ($category->name) }}</a></li>            
-                <li><hr class="dropdown-divider"></li>
-            @endforeach
-          </ul>
-        </li>
-        
-=======
-       
->>>>>>> a41ea4ac8dace72a66d8621b90ece03c8245dd44
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Annunci</a>
-        </li>
-        
-        @auth
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Username
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Modifica profilo</a></li>
-              <li><a class="dropdown-item" href="#">Lavora con noi</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="/logout" onclick="event.preventDefault();getElementById('logout').submit();">Esci</a></li>
-              <form id="logout" action="/logout" method="POST" class="d-none">
-                @csrf
-              </form>
-            </ul>
-          </li>
-          <li class="btn btn-success">Inserisci annuncio</li>
-        @else
-          <li class="nav-item">
-            <a class="nav-link" href="/login">Accedi</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/register">Registrati</a>
-          </li>
-        @endauth
-        
-      </ul>
-    </div>
-  </div>
-</nav>
- --}}
 
 
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top shrink" id="mainNav">
+
   <div class="container">
     <a class="navbar-brand" href="{{route('welcome')}}">Presto.it</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -82,8 +20,7 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
               @foreach ($categories as $category)
-                <li><a class="dropdown-item" href="" >{{ 
-                  ($category->name) }}</a></li>            
+                <li><a class="dropdown-item" href="{{route('category.view', $category)}}" >{{($category->name)}}</a></li>            
                 <li><hr class="dropdown-divider"></li>
               @endforeach
             </ul>
@@ -92,7 +29,7 @@
           @auth
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Ciao,  {{auth()->user()->name}}
+            Ciao, {{auth()->user()->name}}
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Modifica profilo</a></li>
@@ -114,6 +51,8 @@
           @endauth
         
         </ul>
+
+        
       </div>
   </div>
 </nav>
