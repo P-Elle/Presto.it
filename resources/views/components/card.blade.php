@@ -5,7 +5,7 @@
 
     </div>
     <div class="card-body z-ind white-brand-bg">
-        <span class="price">{{$announcement->price}}</span>
+        <span class="price">{{$announcement->price}} € </span>
         <h4 class="mt-2"><a class="link-announcement" href="{{route('announcements.show', $announcement)}}">{{$announcement->title}}</a></h4>
         <p>{{$announcement->body}}</p>
     </div>

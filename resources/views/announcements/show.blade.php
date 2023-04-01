@@ -3,15 +3,15 @@
     <div class="container-fluid ann-show brand-cool-bg">
         <div class="row">
             <div class="col-10 col-md-6 mx-auto justify-content-center ann-detail">
-                
+
                 <div class="row detail brand-white-bg justify-content-center">
                     <div class="col-12 col-lg-5 p-4">
-                        <h2 class="brand">{{$announcement->title}}</h2>  
-                        <h3>{{$announcement->price}} €</h3> 
-                        <p class="small mt-1">{{$announcement->category_id->name ?? "categoria non registrata"}}</p> 
+                        <h2 class="brand">{{$announcement->title}}</h2>
+                        <h3>{{$announcement->price}} €</h3>
+                        <p class="small mt-1">{{$announcement->category->name ?? "categoria non registrata"}}</p>
                         <p>{{$announcement->description}}</p>
-                    </div>    
-                    <div class="col-12 col-lg-7 align-item-center justify-content-center p-4"> 
+                    </div>
+                    <div class="col-12 col-lg-7 align-item-center justify-content-center p-4">
 
                         {{-- carosello --}}
                         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
@@ -23,7 +23,7 @@
                             <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img src="https://picsum.photos/500/300" class="v-100 d-block"alt="{{$announcement->title}}">
-                            
+
                             </div>
                             <div class="carousel-item">
                                 <img src="https://picsum.photos/500/300" class="v-100 d-block"alt="{{$announcement->title}}">
@@ -42,12 +42,12 @@
                             </button>
                         </div>
                     </div>
-               
-                </div> 
+
+                </div>
             </div>
-            
-                
-             
+
+
+
         </div>
     </div>
 </x-main>
