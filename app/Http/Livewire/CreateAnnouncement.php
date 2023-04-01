@@ -33,14 +33,14 @@ class CreateAnnouncement extends Component
     {
         $this->validateOnly($propertyName);
     }
-    
+
     //salvatggio dell'annuncio all'interno del database
     public function store()
-    {   
+    {
         $this->validate();
 
         $category = Category::find($this->category);
-        
+
         $announcement = $category->announcements()->create([
             'title'=>$this->title,
             'description'=>$this->description,
@@ -54,7 +54,7 @@ class CreateAnnouncement extends Component
         $this->cleanForm();
     }
 
-    
+
     //pulire il form dopo il salvataggio dell'annuncio
     public function cleanForm(){
         $this->title = '';
