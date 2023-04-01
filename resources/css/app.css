@@ -52,11 +52,11 @@
 
 
 .masterhero{
-  height: 20% !important;
+  max-height: 100% !important;
 }
 
 .masthead{
-    height: 100vh;
+    
     min-height: 400px;
     background-image: url('/public/img/steve-johnson-JUKWHtY4tMM-unsplash.jpg');
     background-size: cover;

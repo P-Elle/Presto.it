@@ -1,10 +1,10 @@
 <x-main>
     <x-navbar/>
     <div class="container mt-5">
-        <div class="row mt-5">
-            <div class="col-6 mt-5 mx-auto">
-                <h1 class="mb-5 mt-3">Accedi</h1>
-                <form action="/login" method="POST">
+        <div class="row mt-5 mb-0">
+            <div class="col-6 mt-5 mx-auto brand-dark-bg p-3 mt-0">
+                <h1 class="mb-5 mt-3 brand-white">Accedi</h1>
+                <form action="/login" method="POST" class="brand-white">
                     @csrf
                     <div class="mb-3">
                       <label for="email" class="form-label">E-mail</label>
