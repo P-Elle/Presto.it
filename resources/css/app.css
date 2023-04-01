@@ -48,11 +48,12 @@
   color: var(--my-color-cool);
 }
 
-.master-ann-card {
-  margin-top: -250px;;
+
+
+
+.masterhero{
+  height: 20% !important;
 }
-
-
 
 .masthead{
     height: 100vh;
