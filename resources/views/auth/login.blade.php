@@ -1,10 +1,10 @@
 <x-main>
     <x-navbar/>
-    <div class="container mt-5">
-        <div class="row mt-5 mb-0">
-            <div class="col-6 mt-5 mx-auto brand-dark-bg p-3 mt-0">
-                <h1 class="mb-5 mt-3 brand-white">Accedi</h1>
-                <form action="/login" method="POST" class="brand-white">
+    <div class="container-fluid">
+        <div class="row brand-top mb-0">
+            <div class="col-12 col-md-6 brand-white-bg mx-auto px-5 py-3 mt-0">
+                <h1 class="mb-5 brand-dark">Accedi</h1>
+                <form action="/login" method="POST" class="brand-dark">
                     @csrf
                     <div class="mb-3">
                       <label for="email" class="form-label">E-mail</label>
@@ -24,7 +24,7 @@
                       <input type="checkbox" class="form-check-input" id="remember" name="remember">
                       <label class="form-check-label" for="remember">Ricordami</label>
                     </div>
-                    <button type="submit" class="btn btn-primary">Accedi</button>
+                    <button type="submit" class="btn brand-dark-bg brand-white my-3">Accedi</button>
                 </form>
             </div>
         </div>

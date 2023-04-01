@@ -16,7 +16,7 @@
 .brand {
   color: var(--my-color-brand);
 }
-.light-brand-bg {
+.brand-light-bg {
   background-color: var(--my-color-light-brand);
 }
 .white-brand-bg {
@@ -66,7 +66,7 @@
     
 }
 
-.masthead .row:first-child {
+.masthead .row:first-child, .brand-top {
   padding-top:79px;
 }
 
@@ -85,13 +85,14 @@ h1 {
   background-color: #22262ab1 !important;
 }
 
-.button:hover {
+.button:hover, .btn:hover {
   background-color: var(--my-color-brand);
 }
 a{
   text-decoration: none;
+  color: var(--my-color-white);
 }
-a:hover{
+a:hover, .btn:hover{
   color: var(--my-color-white);
 }
 #mainNav {
@@ -127,7 +128,7 @@ a:hover{
   }
   
   @media (min-width: 992px) {
-    .masthead .row:first-child{
+    .masthead .row:first-child, .brand-top{
       padding-top:103px !important;
     }
     #mainNav {
@@ -193,26 +194,21 @@ a:hover{
   top: 10px;
   left: 10px;
   font-weight: bold;
-  background-color: skyblue;
-  color: black;
 }
 
-.c-category:hover{
-  background-color: grey;
-}
+
 
 .card-footer {
-  border-top: rgb(46, 129, 162) 1px dashed;
+  border-top: var(--my-color-cool) 1px dashed;
 }
 
 .card-footer .col-6:first-child {
-  border-right: rgb(46, 129, 162) 1px dashed;
+  border-right: var(--my-color-cool) 1px dashed;
 }
 
 .price{
   font-weight: bolder;
   font-size: 20px;
-  color: rgb(46, 129, 162);
 }
 .z-ind {
   z-index: 5;
@@ -220,11 +216,11 @@ a:hover{
 
 .link-announcement{
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.782);
+  color: var(--my-color-brand)
 }
 
 .link-announcement:hover{
-  color:  rgb(46, 129, 162);
+  color: var(--my-color-cool)
 }
 
 .ann-show {

@@ -40,11 +40,11 @@
           <section class="py-5">
             
               <div class="row justify-content-center justify-content-lg-around">
-                <h2 class="text-center brand-white pb-4">Sfoglia tra gli annunci più recenti!</h2>
-  
-                @foreach ($announcements as $announcement)
-                  <x-card :announcement="$announcement"/>
-                @endforeach
+                    <h2 class="text-center brand-white pb-4">Sfoglia tra gli annunci più recenti!</h2>
+      
+                    @foreach ($announcements as $announcement)
+                      <x-card :announcement="$announcement"/>
+                    @endforeach
               </div>
             
           </section>

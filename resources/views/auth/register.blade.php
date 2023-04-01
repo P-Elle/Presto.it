@@ -1,10 +1,10 @@
 <x-main>
     <x-navbar/>
-    <div class="container mt-5">
-        <div class="row mt-5">
-            <div class="col-6 mx-auto mt-5">
-                <h1 class="mb-5 mt-3">Registrati</h1>
-                <form action="/register" method="POST">
+    <div class="container-fluid">
+        <div class="row brand-top mb-0">
+            <div class="col-12 col-md-6 brand-white-bg mx-auto px-5 py-3 mt-0">
+                <h1 class="mb-5 mt-3" brand-dark>Registrati</h1>
+                <form action="/register" method="POST" class="brand-dark">
                     @csrf
                     <div class="mb-3">
                         <label for="name" class="form-label">Nome completo</label>
@@ -34,7 +34,7 @@
                             <span class="text-danger small">{{$message}}</span>
                         @enderror
                       </div>
-                    <button type="submit" class="btn btn-primary">Registrati</button>
+                    <button type="submit" class="btn brand-dark-bg brand-white my-3">Registrati</button>
                 </form>
             </div>
         </div>
