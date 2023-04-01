@@ -1,51 +1,55 @@
-<div class="row g-3 mt-3">
-    <div class="col-8 col-md-5 mx-auto mt-5">
-        <h1 class="mt-5">Crea il tuo annuncio!</h1>
+<div class="row brand-top mb-0 g-3 justify-content-center d-flex">
+    <div class="col-12 col-md-6 brand-white-bg mx-0 px-5">
+        <h1 class="my-3 text-center">Crea il tuo annuncio!</h1>
         @if(session('message'))
             <div class="alert alert-success my-2">{{session('message')}}</div>
         @endif
-        <form wire:submit.prevent="store">
-            @csrf
-            <div class="col-10 mt-1">
-                <label for="title">Titolo Annuncio</label>
-                <input wire:model="title" type="text" class="form-control @error('title') is-invalid @enderror">
-                @error('title')
-                <span class="text-danger small">{{$message}}</span>
-                @enderror
-            </div>
-            <div class="col-10 mt-1">
-                <label for="description">Descrizione</label>
-                <textarea wire:model="description" type="text" class="form-control @error('description') is-invalid @enderror"></textarea>
-                @error('description')
-                <span class="text-danger small">{{$message}}</span>
-                @enderror
-            </div>
-            <div class="col-10 mt-1">
-                <label for="price">Prezzo</label>
-                <input wire:model="price" type="number" step="0.01"  class="form-control @error('price') is-invalid @enderror">
-                @error('price')
-                <span class="text-danger small">{{$message}}</span>
-                @enderror
-            </div>
-            {{-- elenco categorie disponibili --}}
-            <div class="row d-flex align-items-end">
-                <div class="col-6 mt-1">
-                    <label for="category">Categoria</label>
-                    <select wire:model.defer="category" id="category" class="form-control @error('category') is-invalid @enderror">
-                        <option value="">Scegli la categoria</option>
-                        @foreach ($categories as $category)"
-                            <option value="{{ $category->id }}">{{ $category->name }}</option>
-                        @endforeach
-                    </select>
-                    @error('category')
+        
+            <form wire:submit.prevent="store">
+                @csrf
+                <div class="col-12 mt-1">
+                    <label for="title">Titolo Annuncio</label>
+                    <input wire:model="title" type="text" class="form-control @error('title') is-invalid @enderror">
+                    @error('title')
                     <span class="text-danger small">{{$message}}</span>
                     @enderror
                 </div>
-                <div class="col-5 mt-1">
-                    <button type="submit" class="btn btn-primary shadow px-4 p-2 mt-2">Crea</button>
+                <div class="col-12 mt-1">
+                    <label for="description">Descrizione</label>
+                    <textarea wire:model="description" type="text" class="form-control @error('description') is-invalid @enderror"></textarea>
+                    @error('description')
+                    <span class="text-danger small">{{$message}}</span>
+                    @enderror
                 </div>
-            </div>
-        </form>
+                <div class="col-12 mt-1">
+                    <label for="price">Prezzo</label>
+                    <input wire:model="price" type="number" step="0.01"  class="form-control @error('price') is-invalid @enderror">
+                    @error('price')
+                    <span class="text-danger small">{{$message}}</span>
+                    @enderror
+                </div>
+                {{-- elenco categorie disponibili --}}
+                <div class="row d-flex align-items-end">
+                    <div class="col-12 mt-1">
+                        <label for="category">Categoria</label>
+                        <select wire:model.defer="category" id="category" class="form-control @error('category') is-invalid @enderror">
+                            <option value="">Scegli la categoria</option>
+                            @foreach ($categories as $category)"
+                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                            @endforeach
+                        </select>
+                        @error('category')
+                        <span class="text-danger small">{{$message}}</span>
+                        @enderror
+                    </div>
+                    <div class="col-12 mt-1">
+                        <button type="submit" class="btn brand-dark-bg brand-white my-3">Crea</button>
+                    </div>
+                </div>
+            </form>
+
+       
+        
     </div>
     
 </div>

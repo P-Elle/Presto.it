@@ -1,10 +1,11 @@
 <x-main>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 mx-auto">
+    <div class="container-fluid px-0">
+        
+        
                 <x-navbar/>
                 <livewire:create-announcement />
-            </div>
-        </div>
+          
+      
+            
     </div>
 </x-main>
