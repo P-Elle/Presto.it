@@ -2,12 +2,13 @@
 
 :root {
   font-size: 1.1rem;
-  --my-color-brand: #CC4E00;
+  --my-color-brand: #c45e1f;
   --my-color-light-brand: #ffc800;
   --my-color-cool: #633495;
   --my-color-trasp-cool: #633495b5;
   --my-color-white: #F3F7F0;
   --my-color-dark: #22262A;
+  --my-color-light-yellow: #f2e8af;
 }
 
 .brand-bg {
@@ -170,11 +171,14 @@ a:hover, .btn:hover{
 
 
 .card{
-  background-color: white;
-  border-radius: 5px;
+  border: var(--my-color-light-yellow);
   overflow: hidden;
-  -webkit-box-shadow: 0px 2px 3px 2px rgba(138,138,138,0.56); 
-  box-shadow: 0px 2px 3px 2px rgba(138,138,138,0.56);
+  /* -webkit-box-shadow: 0px 2px 3px 2px rgba(138,138,138,0.56); 
+  box-shadow: 0px 2px 3px 2px rgba(138,138,138,0.56); */
+}
+
+.card-body{
+  background-color: var(--my-color-light-yellow) !important;
 }
 
 .c-header img {
@@ -228,4 +232,14 @@ a:hover, .btn:hover{
 }
 .ann-detail {
   margin-top: 10%;
+}
+
+.not-overlapping{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.ann-container{
+  width: 90%;
+  background-color: var(--my-color-light-yellow);
 }

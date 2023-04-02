@@ -2,7 +2,7 @@
     <x-navbar/>
     <div class="container-fluid">
         <div class="row brand-top mb-0">
-            <div class="col-12 col-md-6 brand-white-bg mx-auto px-5 py-3 mt-0">
+            <div class="col-12 col-md-6 brand-white-bg mx-auto px-5 py-3 not-overlapping rounded-1">
                 <h1 class="mb-5 brand-dark">Accedi</h1>
                 <form action="/login" method="POST" class="brand-dark">
                     @csrf

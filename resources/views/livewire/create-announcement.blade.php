@@ -1,5 +1,5 @@
 <div class="row brand-top mb-0 g-3 justify-content-center d-flex">
-    <div class="col-12 col-md-6 brand-white-bg mx-0 px-5">
+    <div class="col-12 col-md-6 brand-white-bg mx-0 px-5 not-overlapping rounded-1">
         <h1 class="my-3 text-center">Crea il tuo annuncio!</h1>
         @if(session('message'))
             <div class="alert alert-success my-2">{{session('message')}}</div>

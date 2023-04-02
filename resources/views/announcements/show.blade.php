@@ -1,10 +1,10 @@
 <x-main>
     <x-navbar/>
-    <div class="container-fluid ann-show brand-cool-bg">
+    <div class="container-fluid ann-show brand-trasp-cool-bg">
         <div class="row">
             <div class="col-10 col-md-6 mx-auto justify-content-center ann-detail">
 
-                <div class="row detail brand-white-bg justify-content-center">
+                <div class="row detail brand-white-bg justify-content-center rounded-1">
                     <div class="col-12 col-lg-5 p-4">
                         <h2 class="brand">{{$announcement->title}}</h2>
                         <h3>{{$announcement->price}} €</h3>
