@@ -3,7 +3,7 @@
     <div class="container-fluid p-5 bg-gradient bg-success shadow mb-4">
         <div class="row">
             <div class="col-12 text-light p-5">
-                <h1 class="display-2">Esplora la categoria {{ $category->name }}</h1>
+                <h1 class="display-2">Esplora la Categoria {{ $category->name }}</h1>
             </div>
         </div>
     </div>
