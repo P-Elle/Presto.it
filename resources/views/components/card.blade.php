@@ -3,7 +3,7 @@
         <div class="c-header">
             <img src="https://picsum.photos/800/800" class="img-fluid w-100" alt="foto-annuncio">
             <span class="btn rounded-1 c-category brand-white brand-dark-bg"><a href="{{route('category.view', $announcement->category)}}">{{$announcement->category->name}}</a></span>
-    
+
         </div>
         <div class="card-body z-ind white-brand-bg ps-0">
             <h4 class="mt-2"><a class="link-announcement" href="{{route('announcements.show', $announcement)}}">{{$announcement->title}}</a></h4>
