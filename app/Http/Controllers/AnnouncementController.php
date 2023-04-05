@@ -10,8 +10,14 @@ class AnnouncementController extends Controller
     {
         return view('announcements.create');
     }
+
     public function showAnnouncement($announcement)
     {   $announcement = Announcement::find($announcement);
         return view('announcements.show', compact('announcement'));
+    }
+
+    public function indexAnnouncement()
+    {   $announcements = Announcement::paginate(6);
+        return view('announcements.index', compact('announcements'));
     }
 }

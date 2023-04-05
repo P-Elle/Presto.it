@@ -4,12 +4,12 @@
         <div class="row masthead">
           <div class="row brand-trasp-cool-bg justify-content-center m-0">
             <div class="col-11 col-md-6 text-center p-0 m-0">
-                  
+
               <div class="  px-5 py-2 mt-0 rounded-bottom d-flex flex-column justify-content-center">
                 <h1 class="mt-3">Inserisci i tuoi annunci <br> & trova i migliori affari!</h1>
-                          
+
                 <p class="my-1">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni inventore facere suscipit tenetur. Odit eveniet sequi cupiditate exercitationem incidunt eligendi?
+                  Questa parte di testo in questa sezione mi da veramente fastdio perciò non vedo l'ora di farla sparire
                 </p>
                 @guest
                   <div class="row">
@@ -31,22 +31,22 @@
 
                 @endguest
               </div>
-                    
-                  
+
+
             </div> <!--END col-->
           </div> <!--END row-->
         </div>
         <div>
           <section class="py-5">
-            
+
               <div class="row justify-content-center justify-content-lg-around">
                     <h2 class="text-center brand-white pb-4">Sfoglia tra gli annunci più recenti!</h2>
-      
+
                     @foreach ($announcements as $announcement)
                       <x-card :announcement="$announcement"/>
                     @endforeach
               </div>
-            
+
           </section>
 
         </div>

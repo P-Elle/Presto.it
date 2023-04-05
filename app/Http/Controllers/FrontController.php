@@ -12,7 +12,7 @@ class FrontController extends Controller
 
     public function welcome ()
     {
-        $announcements = Announcement::take(6)->get()->sortByDesc('created_at');
+        $announcements = Announcement::get()->sortByDesc('created_at')->take(6);
         return view('welcome' , compact('announcements'));
     }
 

@@ -25,3 +25,6 @@ Route::get('/dettaglio/annuncio/{announcement}',[AnnouncementController::class, 
 
 // rotta parametrica categorie
 Route::get('/categoria/{category}', [FrontController::class, 'categoryShow'])->name('category.view');
+
+// rotta per index annunci
+Route::get('/tutti/annunci',[AnnouncementController::class, 'indexAnnouncement'])->name('announcements.index');
