@@ -2,12 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\BecomeRevisor;
 use App\Models\Announcement;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class RevisorController extends Controller
 {
-    // questo metodo visulazzerà tutti gli annunci da ccettare e rifiutare
+    // questo metodo visulazzerà tutti gli annunci da accettare e rifiutare
     public function index(){
         
         /* nella variabile racchiudo tutti gli annunci che nella tabella announcement,
@@ -33,4 +38,22 @@ class RevisorController extends Controller
         $announcement->setAccepted(false);
         return redirect()->back()->with('message', 'Complimenti, hai rifiutato l\'annuncio');
     }
+
+     // questo metodo gestisce l'invio della richiesta di lavoro come revisore
+     public function becomeRevisor(){
+        // invia all'admin la richiesta con i dati dell'utente loggato
+        Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()) );
+        return redirect()->back()->with('message', 'Complimenti, hai richiesto di diventare revisore correttamente');
+    }
+
+     // questo metodo gestisce l'accettazione della richiesta di lavoro come revisore
+     public function makeRevisor(User $user){
+        //attiva il comando presto:makeUserRevisor qnd l'admin clicca sul link 
+        //presente nell'email del richiedente per accettare la richiesta di lavoro
+        //Ricorda che questo automatismo sar possibile grazie alla registrazione 
+        //del relativo comando 
+       Artisan::call('presto:makeUserRevisor', ["email"=>$user->email]);
+       return redirect('/')->with('message', 'Complimenti! l\'utente è diventato revisore');
+    }   
+
 }

@@ -3,7 +3,7 @@
     <div class="container-fluid p-5 bg-gradient bg-success p-5 shadow mb-4">
         <div class="row">
             <div class="col-12 text-light p-5">
-                <h1 class="display-2">
+                <h1 class="display-2 fs-1">
                     {{-- controllo se ci sono o meno degli annunci da revisionare --}}
                     {{ $announcement_to_check ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare'}}
                 </h1>
