@@ -1,4 +1,4 @@
-{{-- <div class="col-12 col-md-6 col-lg-4 align-items-center justify-content-center"> --}}
+<div class=" col-12 col-lg-4 col-md-6 d-flex justify-content-center">
     <div class="card px-0 my-4 rounded-1" style="width: 18rem;">
         <div class="c-header">
             <img src="https://picsum.photos/800/800" class="img-fluid w-100" alt="foto-annuncio">
@@ -17,4 +17,4 @@
             </div>
         </div> --}}
     </div>
-{{-- </div> --}}
+</div>

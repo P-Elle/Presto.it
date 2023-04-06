@@ -1,5 +1,7 @@
 @import 'bootstrap';
 
+/* VARIABILI COLORI DI BRAND */
+
 :root {
   font-size: 1.1rem;
   --my-color-brand: #c45e1f;
@@ -26,7 +28,9 @@
 .brand-cool-bg {
   background-color: var(--my-color-cool);
 }
-
+.brand-l-yellow-bg{
+  background-color: var(--my-color-light-yellow);
+}
 .brand-trasp-cool-bg {
   background-color: var(--my-color-trasp-cool);
 }
@@ -50,7 +54,7 @@
 }
 
 
-
+/* HEADER */
 
 .masterhero{
   max-height: 100% !important;
@@ -58,20 +62,18 @@
 
 .masthead{
     
-    min-height: 400px;
-    background-image: url('/public/img/steve-johnson-JUKWHtY4tMM-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: var(--my-color-white);
+  min-height: 400px;
+  background-image: url('/public/img/steve-johnson-JUKWHtY4tMM-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--my-color-white);
     
 }
 
 .masthead .row:first-child, .brand-top {
   padding-top:79px;
 }
-
-
 
 p {
     letter-spacing: 0.0625em;
@@ -89,13 +91,16 @@ h1 {
 .button:hover, .btn:hover {
   background-color: var(--my-color-brand);
 }
+
 a{
   text-decoration: none;
   color: var(--my-color-white);
 }
+
 a:hover, .btn:hover{
   color: var(--my-color-white);
 }
+
 #mainNav {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -170,6 +175,8 @@ a:hover, .btn:hover{
 }
 
 
+/* CARD */
+
 .card{
   border: var(--my-color-light-yellow);
   overflow: hidden;
@@ -200,8 +207,6 @@ a:hover, .btn:hover{
   font-weight: bold;
 }
 
-
-
 .card-footer {
   border-top: var(--my-color-cool) 1px dashed;
 }
@@ -230,6 +235,7 @@ a:hover, .btn:hover{
 .ann-show {
   height: 100vh;
 }
+
 .ann-detail {
   margin-top: 10%;
 }
@@ -243,3 +249,4 @@ a:hover, .btn:hover{
   width: 90%;
   background-color: var(--my-color-light-yellow);
 }
+

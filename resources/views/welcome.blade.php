@@ -1,5 +1,7 @@
 <x-main>
   <div class="container-fluid">
+
+    {{-- HEADER --}}
     <x-navbar/>
     <div class="row masthead">
       <div class="row brand-trasp-cool-bg justify-content-center m-0">
@@ -28,14 +30,18 @@
       </div>
     </div>
   
+    {{-- SEZIONE ANNUNCI --}}
     <section class="py-5">
             
       <div class="row justify-content-center justify-content-lg-around">
         <h2 class="text-center brand-white pb-4">Sfoglia tra gli annunci più recenti!</h2>
-          <div class="col-12 d-flex justify-content-around py-3 white-brand-bg ann-container mt-3 rounded-1">
-            @foreach ($announcements as $announcement)
-              <x-card :announcement="$announcement"/>
-            @endforeach
+          <div class="container py-3 white-brand-bg ann-container mt-3 rounded-1">
+            <div class="row justify-content-around">
+              @foreach ($announcements as $announcement)
+                <x-card :announcement="$announcement"/>
+              @endforeach
+            </div>
+            
           </div>  
       </div>
             

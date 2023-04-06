@@ -1,5 +1,5 @@
 <div class="row brand-top mb-0 g-3 justify-content-center d-flex">
-    <div class="col-12 col-md-6 brand-white-bg mx-0 px-5 not-overlapping rounded-1">
+    <div class="col-12 col-md-6 brand-l-yellow-bg mx-0 px-5 not-overlapping rounded-1">
         <h1 class="my-3 text-center">Crea il tuo annuncio!</h1>
         @if(session('message'))
             <div class="alert alert-success my-2">{{session('message')}}</div>
@@ -7,21 +7,21 @@
         
             <form wire:submit.prevent="store">
                 @csrf
-                <div class="col-12 mt-1">
+                <div class="col-12 mt-1 mb-3">
                     <label for="title">Titolo Annuncio</label>
                     <input wire:model="title" type="text" class="form-control @error('title') is-invalid @enderror">
                     @error('title')
                     <span class="text-danger small">{{$message}}</span>
                     @enderror
                 </div>
-                <div class="col-12 mt-1">
+                <div class="col-12 mt-1 mb-3">
                     <label for="description">Descrizione</label>
                     <textarea wire:model="description" type="text" class="form-control @error('description') is-invalid @enderror"></textarea>
                     @error('description')
                     <span class="text-danger small">{{$message}}</span>
                     @enderror
                 </div>
-                <div class="col-12 mt-1">
+                <div class="col-12 mt-1 mb-3">
                     <label for="price">Prezzo</label>
                     <input wire:model="price" type="number" step="0.01"  class="form-control @error('price') is-invalid @enderror">
                     @error('price')
@@ -30,7 +30,7 @@
                 </div>
                 {{-- elenco categorie disponibili --}}
                 <div class="row d-flex align-items-end">
-                    <div class="col-12 mt-1">
+                    <div class="col-12 mt-1 mb-3">
                         <label for="category">Categoria</label>
                         <select wire:model.defer="category" id="category" class="form-control @error('category') is-invalid @enderror">
                             <option value="">Scegli la categoria</option>
@@ -42,7 +42,7 @@
                         <span class="text-danger small">{{$message}}</span>
                         @enderror
                     </div>
-                    <div class="col-12 mt-1">
+                    <div class="col-12 mt-1 mb-3">
                         <button type="submit" class="btn brand-dark-bg brand-white my-3">Crea</button>
                     </div>
                 </div>
