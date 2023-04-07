@@ -25,3 +25,6 @@ Route::get('/dettaglio/annuncio/{announcement}',[AnnouncementController::class, 
 
 // rotta parametrica categorie
 Route::get('/categoria/{category}', [FrontController::class, 'categoryShow'])->name('category.view');
+
+// rotta cerca annuncio 
+Route::get('/ricerca/annuncio', [FrontController::class, 'searchAnnouncements'])->name('announcements.search');

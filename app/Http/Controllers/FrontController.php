@@ -21,4 +21,11 @@ class FrontController extends Controller
         return view('categoryShow', compact('category'));
     }
 
+    public function searchAnnouncements(Request $request)
+    {
+        $announcements = Announcement::search($request->searched)->paginate(10);
+        return dd($announcements);
+        return view('welcome', compact('announcements'));
+    }
+
 }

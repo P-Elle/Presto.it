@@ -27,15 +27,20 @@
         </div>
       </div>
     </div>
-  
+    <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
+      <input type="search" name="searched" class="gorm-control me-2">
+      <button class="" type="submit">Search</button>
+    </form>
     <section class="py-5">
             
       <div class="row justify-content-center justify-content-lg-around">
         <h2 class="text-center brand-white pb-4">Sfoglia tra gli annunci più recenti!</h2>
           <div class="col-12 d-flex justify-content-around py-3 white-brand-bg ann-container mt-3 rounded-1">
-            @foreach ($announcements as $announcement)
+            @forelse ($announcements as $announcement)
               <x-card :announcement="$announcement"/>
-            @endforeach
+            @empty
+              nada
+            @endforelse
           </div>  
       </div>
             
