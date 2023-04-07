@@ -23,7 +23,7 @@
                     </div>
 
                   </div>
-                @else
+                @endguest
                 <div class="row">
                   <div class="col-6 mx-auto">
                     <button class="btn brand-bg brand-white button mt-3">Cerca</button>
