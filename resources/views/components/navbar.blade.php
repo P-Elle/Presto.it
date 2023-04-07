@@ -43,6 +43,25 @@
             </ul>
           </li>
           <li class="btn brand-bg button"><a class="brand-white" href="{{route('announcements.create')}}">Inserisci Annuncio</a></li>
+          
+          {{-- Revisore 
+            Se l'utente loggato è un revisore--}}
+          @if (Auth::user()->is_revisor)
+            {{-- stampa nella navbar la sezione dedicata al revisore  --}}
+            <li class= "ms-2">
+              {{-- nel quale cliccando sul link andrà sulla pagine in cui il revisore potrà revisionare gli annunci --}}
+              <a  class="nav-link btn btn-outline-success btn-sm position-relative" 
+              aria-current="page" href="{{route('revisor.index')}}">
+                Zona Revisore
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pil bg-danger">
+                  {{App\Models\Announcement::toBeRevisionedCount()}} {{-- contatore degli annunci da revisonare (un_accepted) --}}
+                  <span class="visually-hidden">unread messages</span>
+                </span>
+              </a>
+            </li>
+            
+          @endif
+
           @else
           <li class="nav-item">
             <a class="nav-link" href="/login">Accedi</a>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\RevisorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,13 +19,27 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [FrontController::class, 'welcome'])->name('welcome');
 
 Route::get('/nuovo-annuncio',[AnnouncementController::class, 'createAnnouncement'])->middleware('auth')->name('announcements.create');
-
-
 Route::get('/dettaglio/annuncio/{announcement}',[AnnouncementController::class, 'showAnnouncement'])->middleware('auth')->name('announcements.show');
-
 
 // rotta parametrica categorie
 Route::get('/categoria/{category}', [FrontController::class, 'categoryShow'])->name('category.view');
 
 // rotta per index annunci
 Route::get('/tutti/annunci',[AnnouncementController::class, 'indexAnnouncement'])->name('announcements.index');
+//ZONA REVISORE:
+//home revisore
+Route::get('/revisor/home', [RevisorController::class,'index'])->name('revisor.index');
+// accetta annuncio
+Route::patch('/accetta/annuncio/{announcement}', [RevisorController::class,'acceptAnnouncement'])->middleware('isRevisor')
+->name('revisor.accept_announcement');
+// rifiuta annuncio
+Route::patch('/rifiuta/annuncio/{announcement}', [RevisorController::class,'rejectAnnouncement'])->middleware('isRevisor')
+->name('revisor.reject_announcement');
+
+//Richiedi di diventare revisore (la rotta è protetta dal middleware perhè solo un utente loggato potrà inviare la richiesta)
+Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
+
+//Rendi l'utente revisore
+Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+
+   

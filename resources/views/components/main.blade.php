@@ -10,7 +10,12 @@
 </head>
 <body class="brand-bg">
     {{$slot}}
+    @auth
+    <x-footer/>
+    @endauth
     @livewireScripts
+
+
 </body>
 </html>
 
