@@ -13,19 +13,21 @@
           {{-- <li class="nav-item"><a class="nav-link" href="#services">Services</a></li> --}}
           {{-- <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li> --}}
           {{-- <li class="nav-item"><a class="nav-link" href="#about">About</a></li> --}}
-          {{-- <li class="nav-item"><a class="nav-link" href="#team">Team</a></li> --}}
+
+          <li class="nav-item"><a class="nav-link" href="{{route('announcements.index')}}">Tutti gli annunci</a></li>
+
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" id="categoriesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
               Categorie
             </a>
             <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
               @foreach ($categories as $category)
-                <li><a class="dropdown-item" href="{{route('category.view', $category)}}" >{{($category->name)}}</a></li>            
+                <li><a class="dropdown-item" href="{{route('category.view', $category)}}" >{{($category->name)}}</a></li>
                 <li><hr class="dropdown-divider"></li>
               @endforeach
             </ul>
-          </li>  
-                        
+          </li>
+
           @auth
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -49,10 +51,10 @@
             <a class="nav-link" href="/register">Registrati</a>
           </li>
           @endauth
-        
+
         </ul>
 
-        
+
       </div>
   </div>
 </nav>

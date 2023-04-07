@@ -6,7 +6,7 @@
   font-size: 1.1rem;
   --my-color-brand: #c45e1f;
   --my-color-light-brand: #ffc800;
-  --my-color-cool: #633495;
+  --my-color-cool: #3a7cba;
   --my-color-trasp-cool: #633495b5;
   --my-color-white: #F3F7F0;
   --my-color-dark: #22262A;
@@ -61,14 +61,14 @@
 }
 
 .masthead{
-    
-  min-height: 400px;
-  background-image: url('/public/img/steve-johnson-JUKWHtY4tMM-unsplash.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: var(--my-color-white);
-    
+
+    min-height: 400px;
+    background-image: url('/public/img/steve-johnson-JUKWHtY4tMM-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--my-color-white);
+
 }
 
 .masthead .row:first-child, .brand-top {
@@ -132,7 +132,7 @@ a:hover, .btn:hover{
   #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
     color: var(--my-color-light-brand);
   }
-  
+
   @media (min-width: 992px) {
     .masthead .row:first-child, .brand-top{
       padding-top:103px !important;
@@ -170,8 +170,8 @@ a:hover, .btn:hover{
     #mainNav .navbar-nav .nav-item:last-child {
       margin-right: 0;
     }
-    
-    
+
+
 }
 
 
@@ -180,7 +180,11 @@ a:hover, .btn:hover{
 .card{
   border: var(--my-color-light-yellow);
   overflow: hidden;
-  /* -webkit-box-shadow: 0px 2px 3px 2px rgba(138,138,138,0.56); 
+<<<<<<< HEAD
+  /* -webkit-box-shadow: 0px 2px 3px 2px rgba(138,138,138,0.56);
+=======
+  /* -webkit-box-shadow: 0px 2px 3px 2px rgba(138,138,138,0.56);
+>>>>>>> antonio
   box-shadow: 0px 2px 3px 2px rgba(138,138,138,0.56); */
 }
 
@@ -249,4 +253,3 @@ a:hover, .btn:hover{
   width: 90%;
   background-color: var(--my-color-light-yellow);
 }
-
