@@ -27,10 +27,15 @@
         </div>
       </div>
     </div>
-    <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
-      <input type="search" name="searched" class="gorm-control me-2">
-      <button class="" type="submit">Search</button>
-    </form>
+    <div class="row justify-content-center py-2 mx-0">
+      <div class="col-8 brand-cool-bg p-3">
+          <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
+              <input type="search" name="searched" class="form-control me-2">
+              <button class="btn brand-dark-bg brand-white" type="submit">Search</button>
+            </form>
+      </div>
+      
+  </div>
     <section class="py-5">
             
       <div class="row justify-content-center justify-content-lg-around">
