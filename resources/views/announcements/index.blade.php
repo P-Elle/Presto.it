@@ -8,14 +8,17 @@
             </div>
         </div>
     </div>
-
+    <x-search-announcement/>
     <section class="py-5">
         <div class="row justify-content-center justify-content-lg-around">
             <div class="container py-3 white-brand-bg ann-container mt-3 rounded-1">
+                
                 <div class="row justify-content-around">
-                    @foreach ($announcements as $announcement)
+                    @forelse ($announcements as $announcement)
                       <x-card :announcement="$announcement"/>
-                    @endforeach
+                    @empty
+                    <h3>Non ci sono annunci per la tua ricerca...</h3>
+                    @endforelse
                     {{$announcements->links()}}
                 </div>
 
