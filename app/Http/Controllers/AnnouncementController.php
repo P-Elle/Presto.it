@@ -20,4 +20,14 @@ class AnnouncementController extends Controller
         $announcements = Announcement::where('is_accepted', true)->paginate(6);
         return view('announcements.index', compact('announcements'));
     }
+
+    public function searchAnnouncements(Request $request)
+    {  
+        // if ($request->searchCategory){
+            
+        $announcements = Announcement::search($request->searched)->paginate(10);
+    // }
+        
+        return view('announcements.index', compact('announcements'));
+    }
 }

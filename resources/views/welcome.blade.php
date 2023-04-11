@@ -46,16 +46,15 @@
         <h2 class="text-center brand-white pb-4">Sfoglia tra gli annunci più recenti!</h2>
         <div class="container py-3 white-brand-bg ann-container mt-3 rounded-1">
           <div class="row justify-content-around">
-            @forelse ($announcements as $announcement)
+            @foreach ($announcements as $announcement)
               <x-card :announcement="$announcement"/>
-            @endforeach
+              @endforeach
+              
           </div>
         </div>
       </div>
 
-            @empty
-              nada
-            @endforelse
+            
           </div>  
       </div>
             

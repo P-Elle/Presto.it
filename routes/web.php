@@ -26,6 +26,11 @@ Route::get('/categoria/{category}', [FrontController::class, 'categoryShow'])->n
 
 // rotta per index annunci
 Route::get('/tutti/annunci',[AnnouncementController::class, 'indexAnnouncement'])->name('announcements.index');
+
+//Ricerca testo annuncio
+Route::get('/ricerca/annunci',[AnnouncementController::class, 'searchAnnouncements'])->name('announcements.search');
+
+
 //ZONA REVISORE:
 //home revisore
 Route::get('/revisor/home', [RevisorController::class,'index'])->name('revisor.index');
@@ -42,4 +47,4 @@ Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->
 //Rendi l'utente revisore
 Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
 
-   
+
