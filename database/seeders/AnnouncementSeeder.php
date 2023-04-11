@@ -19,6 +19,7 @@ class AnnouncementSeeder extends Seeder
         foreach (range(1,100) as $index) {
             Announcement::insert([
                 'user_id' => $faker->numberBetween(1, 2),
+                'is_accepted'=> $faker->numberBetween(0, 1),
                 'category_id' => $faker->numberBetween(1, 9),
                 'title' => 'Titolo annuncio n. ' . $faker->numberBetween(0, 100),
                 'description' => $faker->paragraph(),
