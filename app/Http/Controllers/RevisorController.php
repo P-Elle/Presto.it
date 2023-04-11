@@ -43,7 +43,8 @@ class RevisorController extends Controller
      public function becomeRevisor(){
         // invia all'admin la richiesta con i dati dell'utente loggato
         Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()) );
-        return redirect()->back()->with('message', 'Complimenti, hai richiesto di diventare revisore correttamente');
+        return view('announcements.become-revisor');
+        //return redirect()->back()->with('message', 'Complimenti, hai richiesto di diventare revisore correttamente');
     }
 
      // questo metodo gestisce l'accettazione della richiesta di lavoro come revisore
@@ -53,7 +54,8 @@ class RevisorController extends Controller
         //Ricorda che questo automatismo sar possibile grazie alla registrazione 
         //del relativo comando 
        Artisan::call('presto:makeUserRevisor', ["email"=>$user->email]);
-       return redirect('/')->with('message', 'Complimenti! l\'utente è diventato revisore');
+       return view('revisor.make-revisor');
+       //return redirect('/')->with('message', 'Complimenti! l\'utente è diventato revisore');
     }   
 
 }
