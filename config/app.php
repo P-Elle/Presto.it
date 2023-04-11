@@ -185,6 +185,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Laravel\Scout\ScoutServiceProvider::class,
         App\Providers\FortifyServiceProvider::class,
         /*
          * Application Service Providers...
