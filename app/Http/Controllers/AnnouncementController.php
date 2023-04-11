@@ -24,8 +24,9 @@ class AnnouncementController extends Controller
     public function searchAnnouncements(Request $request)
     {  
         // if ($request->searchCategory){
-            
-        $announcements = Announcement::search($request->searched)->paginate(10);
+        $announcements = Announcement::search($request->searched)->where('is_accepted', true)->where('category_id', 3)->paginate(10);;
+    
+        // $announcements = Announcement::search($request->searched)->where('is_accepted', true)->paginate(10);
     // }
         
         return view('announcements.index', compact('announcements'));
