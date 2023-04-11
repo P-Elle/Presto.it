@@ -48,16 +48,15 @@
           <div class="row justify-content-around">
             @forelse ($announcements as $announcement)
               <x-card :announcement="$announcement"/>
-            @endforeach
+              @empty
+              nada
+            @endforelse
           </div>
         </div>
       </div>
 
-            @empty
-              nada
-            @endforelse
-          </div>  
-      </div>
+            
+      
             
     </section>
 

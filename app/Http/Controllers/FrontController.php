@@ -30,6 +30,6 @@ class FrontController extends Controller
     // }
         
         return view('welcome', compact('announcements'));
-    }
+    }    
 
 }

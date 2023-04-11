@@ -26,6 +26,8 @@ Route::get('/categoria/{category}', [FrontController::class, 'categoryShow'])->n
 
 // rotta per index annunci
 Route::get('/tutti/annunci',[AnnouncementController::class, 'indexAnnouncement'])->name('announcements.index');
+Route::get('/ricerca/annunci',[FrontController::class, 'searchAnnouncements'])->name('announcements.search');
+
 //ZONA REVISORE:
 //home revisore
 Route::get('/revisor/home', [RevisorController::class,'index'])->name('revisor.index');
