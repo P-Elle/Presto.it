@@ -1,6 +1,6 @@
 <x-main>
     <x-navbar/>
-    <div class="container-fluid p-5 bg-gradient bg-success p-5 shadow mb-4">
+    <div class="container-fluid p-5 bg-gradient brand-trasp-cool-bg p-5 shadow mb-4">
         <div class="row">
             <div class="col-12 text-light p-5">
                 <h1 class="display-2 fs-1">
@@ -10,7 +10,7 @@
             </div>
         </div>
     </div>
-     @if ($announcement_to_check) {{--se c'è l'annuncio da revisionare --}}
+    @if ($announcement_to_check) {{--se c'è l'annuncio da revisionare --}}
     
      {{-- stampiamo il dettaglio dell'annuncio --}}    
     <div class="container-fluid ann-show brand-cool-bg"> 
@@ -27,9 +27,9 @@
                         <p>                       
                             <form action="{{ route('revisor.accept_announcement',['announcement'=>$announcement_to_check]) }}"
                             method="POST">
-                            @csrf
-                             @method('PATCH')    
-                            <button class="btn btn-success shadow" type="submit">Accetta</button>
+                                @csrf
+                                @method('PATCH')    
+                                <button class="btn btn-success shadow" type="submit">Accetta</button>
                             </form>
                         </p>
                         <p>

@@ -9,19 +9,19 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="row">
-
+    <section class="py-5">
+        <div class="row justify-content-center justify-content-lg-around">
+            <div class="container py-3 white-brand-bg ann-container mt-3 rounded-1">
+                <div class="row justify-content-around">
                     @foreach ($announcements as $announcement)
                       <x-card :announcement="$announcement"/>
                     @endforeach
                     {{$announcements->links()}}
                 </div>
-            </div>
+
+            </div>  
         </div>
-    </div>
+    </section>
 
 
 </x-main>
