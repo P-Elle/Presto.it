@@ -76,13 +76,3 @@ function myFunction(x) {
   myFunction(x); // Call listener function at run time
   x.addListener(myFunction); // Attach listener function on state changes
 
-
-//   let inputText = document.getElementById('searchAnn');
-//   let selCat = document.getElementById('searchCat');
-//   let searchBtn = document.getElementById('searchBtn');
-
-  
-//   window.addEventListener('load',function(e){
-    
-//     inputText.setAttribute('placeholder', inputText.value);
-//   })

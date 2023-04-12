@@ -8,7 +8,7 @@
                         <input type="search" name="searched" class="form-control" value="{{old('searched')}}">
                     </div>
                     <div class="col-12 col-md-5 py-2 py-md-0">
-                        <select class="form-select" name="searchCategory" id="searchCat">
+                        <select class="form-select" name="searchCategory">
                             <option value="0">Categorie</option>
                             @foreach ($categories as $category)
                             <option value="{{$category->id}}"
