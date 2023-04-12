@@ -4,21 +4,25 @@
 
             <div class="row justify-content-center">
                 
-                    <div class="col-md-5 pe-sm-0">
+                    <div class="col-12 col-md-5 pe-md-0">
                         <input type="search" name="searched" class="form-control" value="{{old('searched')}}">
                     </div>
-                    <div class="col-md-5">
-                        <select class="form-select" name="searchCategory">
-                            <option selected value="0">Categorie</option>
+                    <div class="col-12 col-md-5 py-2 py-md-0">
+                        <select class="form-select" name="searchCategory" id="searchCat">
+                            <option value="0">Categorie</option>
                             @foreach ($categories as $category)
-                            <option value="{{$category->id}}">{{$category->name}}</option>
+                            <option value="{{$category->id}}"
+                                @if((session()->get('searchCategory')) == $category->id)
+                                selected
+                                @endif
+                                >{{$category->name}}</option>
                             @endforeach
                             
 
                         </select>
                     </div>
-                    <div class="col-md-2 ps-0 d-flex">
-                        <button class="btn brand-dark-bg brand-white flex-fill" type="submit">Search</button>
+                    <div class="col-12 col-md-2 ps-md-0 d-flex">
+                        <button class="btn brand-dark-bg brand-white flex-fill" type="submit" id="searchBtn">Search</button>
                     </div>
                     
                     

@@ -36,8 +36,11 @@ class AnnouncementController extends Controller
         $announcements = Announcement::search($request->searched)->where('is_accepted', true)->paginate(10);
 
         }
+        $request->flash();
+        $request->session()->put(['searched'=>$request->searched, 'searchCategory'=>$request->searchCategory ]);
+        $searched= (session()->get('searched'));
+        $searchCat= (session()->get('searchCategory'));
         
-        // $request->session()->now(['searched', $request->searched]);
-        return view('announcements.index', compact('announcements'));
+        return view('announcements.index', compact('announcements', 'searched'));
     }
 }
