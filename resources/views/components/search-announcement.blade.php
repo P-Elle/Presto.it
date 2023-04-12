@@ -1,8 +1,29 @@
-<div class="row justify-content-center py-2 mx-0">
-    <div class="col-8 brand-cool-bg p-3">
-        <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
-            <input type="search" name="searched" class="form-control me-2">
-            <button class="btn brand-dark-bg brand-white" type="submit">Search</button>
-          </form>
+<div class="row justify-content-center">
+    <div class="col-10 col-md-8 brand-cool-bg p-2">
+        <form action="{{route('announcements.search')}}" method="GET">
+
+            <div class="row justify-content-center">
+                
+                    <div class="col-md-5 p-2 pe-md-0">
+                        <input type="search" name="searched" class="form-control" value="{{old('searched')}}">
+                    </div>
+                    <div class="col-md-5 p-2 p-md-0">
+                        <select class="form-select" name="searchCategory">
+                            <option selected value="0">Categorie</option>
+                            @foreach ($categories as $category)
+                            <option value="{{$category->id}}">{{$category->name}}</option>
+                            @endforeach
+                            
+
+                        </select>
+                    </div>
+                    <div class="col-md-2 p-2 ps-md-0 d-flex">
+                        <button class="btn brand-dark-bg brand-white flex-fill" type="submit">Search</button>
+                    </div>
+                    
+                    
+                
+            </div>
+        </form>
     </div>
 </div>
