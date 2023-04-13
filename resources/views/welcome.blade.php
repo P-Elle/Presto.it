@@ -13,7 +13,7 @@
             @guest
               <div class="row">
                 
-                <div class="col-6 mx-auto">
+                <div class="col-6 mx-auto mb-5">
                   <button class="btn brand-bg button mt-3"><a class="brand-white" href="{{'/register'}}">Registrati</a></button>
                   <hr>
                   <p> Hai già un account? <a class="brand-light d-block mb-2" href="{{'/login'}}">ENTRA</a></p>
