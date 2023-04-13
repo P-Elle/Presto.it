@@ -1,4 +1,4 @@
-<div class="container-fluid mt-4 p-5 bg-dark text-light">
+<div class="container-fluid p-5 bg-dark text-light">
     <div class="row">
         <div class="col-12 text-center">
             <p>Presto.it</p>
