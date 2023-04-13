@@ -1,5 +1,5 @@
 <x-main>
-    <x-navbar/>
+    <x-navbar />
     <div class="container-fluid">
         <div class="row brand-top mb-0">
             <div class="col-12 col-md-6 brand-l-yellow-bg mx-auto px-5 py-3 not-overlapping rounded-1">
@@ -29,5 +29,5 @@
             </div>
         </div>
     </div>
-    
+
 </x-main>
