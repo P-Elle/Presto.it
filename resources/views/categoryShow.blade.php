@@ -1,16 +1,17 @@
 <x-main>
     <x-navbar/>
-    <div class="container-fluid p-5 brand-cool-bg shadow mb-4">
-        <div class="row">
+    <div class="container-fluid brand-grey-bg">
+        <div class="row category-header shadow">
             <div class="col-12 text-light p-5">
-                <h1 class="display-2">Esplora la Categoria {{ $category->name }}</h1>
+                <h1 class="mt-5 brand-white text-center pt-5"><span class="brand-cool">{{ $category->name }}</span>: una nuova vita.</h1>
             </div>
+            <x-search-announcement/>
         </div>
-    </div>
+    
 
     <section class="py-5">
         <div class="row justify-content-center justify-content-lg-around">
-            <div class="container py-3 white-brand-bg ann-container mt-3 rounded-1">
+            <div class="container py-3 brand-grey-bg ann-container mt-3 rounded-1">
                 <div class="row justify-content-around">
                     @forelse ($announcements as $announcement)
                         <x-card :announcement="$announcement"/>
@@ -25,4 +26,5 @@
             </div>  
         </div>
     </section>
+</div>
 </x-main>

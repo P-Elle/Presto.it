@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AnnouncementController;
+use App\Http\Controllers\Auth\ProviderController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\RevisorController;
 use Illuminate\Support\Facades\Route;
@@ -50,4 +51,10 @@ Route::post('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])-
 //Rendi l'utente revisore
 Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
 
+// Autenticazione con google
 
+
+ 
+Route::get('/auth/{provider}/redirect', [ProviderController::class, 'redirect']);
+ 
+Route::get('/auth/{provider}/callback', [ProviderController::class, 'callback']);
