@@ -2,8 +2,7 @@
 @import 'bootstrap-icons/font/bootstrap-icons.css';
 /* COMANDO DA LANCIARE NEL TERMINALE: npm i bootstrap-icons */
 
-@import 'style.css';
-@import 'styleLogin.css';
+/* @import 'styleLogin.css'; */
 /* @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;700&display=swap'); */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
@@ -21,6 +20,11 @@
   --my-color-light-yellow: #f5ebd5;
   --my-color-trasp: #ffffff00;
   background-color:  #625bc0;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 
@@ -108,7 +112,7 @@ text-decoration: none;
 color: var(--my-color-grey);
 }
 
-a:hover, .btn:hover, button:hover{
+a::hover, .btn::hover, button::hover{
 color: var(--my-color-light-yellow) !important;
 }
 
@@ -322,6 +326,14 @@ color: var(--my-color-light-yellow) !important;
     background-repeat: no-repeat;
 }
 
+.wip-header {
+  background-image: url('/public/img/karim-manjra-dtSCKE9-8cI-unsplash.jpg');
+  background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 90vh;
+}
+
 .index-header {
   background-image: url('/public/img/pexels-magda-ehlers-1279813.jpg');
   background-size: cover;
@@ -346,7 +358,7 @@ color: var(--my-color-light-yellow) !important;
 .img-work{
   height: 60rem;
   margin-top: 120px;
-  background-image: url('C:\Users\eleon\OneDrive\Desktop\progetto-finale\gruppo-01\public\img\high-angle-shot-woman-hands-typing-keyboard-focused-female-student-working-her-homework-computer-making-notes-waiting-important-call-from-boss-glancing-smartphone.jpg');
+  background-image: url('/public/img/high-angle-shot-woman-hands-typing-keyboard-focused-female-student-working-her-homework-computer-making-notes-waiting-important-call-from-boss-glancing-smartphone.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -362,3 +374,92 @@ color: var(--my-color-light-yellow) !important;
   width: 60%;
   margin: auto;
 }
+
+
+.ftco-footer-social li {
+  list-style: none;
+  margin: 0 10px 0 0;
+  display: inline-block; }
+  .ftco-footer-social li a {
+    height: 40px;
+    width: 40px;
+    display: block;
+    background: var(--my-color-dark);
+    border-radius: 50%;
+    position: relative; }
+    .ftco-footer-social li a span {
+      position: absolute;
+      font-size: 20px;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+    .ftco-footer-social li a::hover {
+      color: var(--my-color-light-brand) !important; }
+
+
+.ftco-section {
+  padding: 12em 0; }
+  .ftco-section h2 {
+    margin-bottom: 0; }
+
+footer {
+  padding: 7em 0; }
+
+.footer-10 {
+  background: var(--my-color-dark);
+  padding: 0 0 4em 0; }
+
+  .footer-10 .con-info .icon {
+    width: 50px;
+    height: 50px;
+    background: var(--my-color-light-brand);
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 10px; }
+    .footer-10 .con-info .icon span {
+      color: var(--my-color-white);
+      font-size: 24px; }
+  .footer-10 .con-info span {
+    color: var(--my-color-light-yellow); }
+  .footer-10 .subscribe-form .form-group {
+    position: relative;
+    margin-bottom: 0;
+    border-radius: 0; }
+    
+   
+      .footer-10 .subscribe-form .form-group input:focus {
+        outline: none !important;
+        -webkit-box-shadow: none;
+        box-shadow: none; }
+    .footer-10 .subscribe-form .form-group .submit {
+      color: #fff !important;
+      display: block;
+      width: 130px;
+      height: 52px;
+      font-size: 16px;
+      background: #1089ff !important;
+      border: none;
+      border-radius: 0; }
+      .footer-10 .subscribe-form .form-group .submit:hover, .footer-10 .subscribe-form .form-group .submit:focus {
+        text-decoration: none !important;
+        outline: none !important; }
+  .footer-10 .subscribe-form .subheading {
+    display: inline-block;
+    margin-top: 5px;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 13px; }
+  
+
+    .footer-heading, .list-unstyled li  {
+      color: var(--my-color-light-yellow);
+    }
+
+    .list-unstyled li a:hover  {
+      color: var(--my-color-light-brand);
+    }
+
+   
+
+ 

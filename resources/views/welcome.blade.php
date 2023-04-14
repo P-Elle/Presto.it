@@ -40,14 +40,14 @@
 
       <div class="row justify-content-center justify-content-lg-around">
         <h2 class="text-center brand-grey">Sfoglia tra gli annunci più recenti!</h2>
-        <div class="container py-3 brand-bg rounded-1">
+        
           <div class="row justify-content-around welcome-cards">
             @foreach ($announcements as $announcement)
               <x-card :announcement="$announcement"/>
               @endforeach
               
           </div>
-        </div>
+       
       </div>
 
             
@@ -58,5 +58,5 @@
 
         
   </div>
-
+   
 </x-main>

@@ -52,9 +52,8 @@ Route::post('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])-
 Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
 
 // Autenticazione con google
-
-
- 
 Route::get('/auth/{provider}/redirect', [ProviderController::class, 'redirect']);
- 
 Route::get('/auth/{provider}/callback', [ProviderController::class, 'callback']);
+
+// rotta provvisoria
+Route::get('/arriva/presto',[FrontController::class, 'wip'])->name('wip');
