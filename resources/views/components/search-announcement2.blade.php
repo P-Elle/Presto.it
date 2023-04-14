@@ -4,11 +4,11 @@
 
             <div class="row justify-content-center">
                 
-                    <div class="col-12 col-md-5 pe-md-0">
-                        <input type="search" name="searched" class="form-control" @if(session('searched')) value="{{old('searched')}}" @endif placeholder="Cerca">
+                    <div class="col-8 col-xl-4 col-md-5 pe-md-0">
+                        <input type="search" name="searched" class="form-control" value="{{old('searched')}}" placeholder="Cerca">
                     </div>
-                    <div class="col-12 col-md-5 py-2 py-md-0">
-                        <select class="form-select" name="searchCategory">
+                    <div class="col-8 col-xl-4 col-md-5 py-2 py-md-0">
+                        <select class="form-select d-none d-md-block" name="searchCategory">
                             <option value="0">Categorie</option>
                             @foreach ($categories as $category)
                             <option value="{{$category->id}}"
@@ -21,7 +21,7 @@
 
                         </select>
                     </div>
-                    <div class="col-12 col-md-2 ps-md-0 d-flex">
+                    <div class="col-8 col-md-2 col-xl-4 ps-md-0 d-flex">
                         <button class="btn brand-light-bg brand-grey flex-fill" type="submit" id="searchBtn">Cerca</button>
                     </div>
                     

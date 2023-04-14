@@ -16,7 +16,7 @@
 
           <li class="nav-item"><a class="nav-link" href="{{route('announcements.index')}}">Tutti gli annunci</a></li>
 
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown d-none d-lg-block">
             <a class="nav-link dropdown-toggle" href="#" role="button" id="categoriesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
               Categorie
             </a>
@@ -29,14 +29,26 @@
           </li>
 
           @auth
+          <li class="nav-item d-lg-none">
+           <a>
+            <a class="nav-link" href="">Ciao, {{auth()->user()->name}}</a>
+      
+            
+           
+     
+          </li>
+          <li class="nav-item"><a class="nav-link" href="/logout" onclick="event.preventDefault();getElementById('logout').submit();">Logout</a></li>
+          <form id="logout" action="/logout" method="POST" class="d-none">
+            @csrf
+          </form>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle d-none d-lg-block" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Ciao, {{auth()->user()->name}}
             </a>
            
-
+            <span class="d-none d-lg-block">
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Modifica profilo</a></li>
+              <li><a class="dropdown-item" href="{{route('wip')}}">Modifica profilo</a></li>
               <li><a class="dropdown-item" href="{{route('work.with.us')}}">Lavora con noi</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="/logout" onclick="event.preventDefault();getElementById('logout').submit();">Esci</a></li>
@@ -44,6 +56,7 @@
                 @csrf
               </form>
             </ul>
+          </span>
           </li>
           <li class="btn brand-light-bg button"><a class="brand-grey" href="{{route('announcements.create')}}">Inserisci Annuncio</a></li>
           
