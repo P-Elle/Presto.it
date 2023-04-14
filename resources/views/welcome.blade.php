@@ -29,7 +29,7 @@
         </div>
       </div>
     </div>
-          <x-search-announcement/>
+    <x-search-announcement/>
       
 
     {{-- SEZIONE ANNUNCI --}}

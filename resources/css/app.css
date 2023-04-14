@@ -249,3 +249,26 @@ a:hover, .btn:hover{
   width: 90%;
   background-color: var(--my-color-light-yellow);
 }
+
+
+/* LAVORA CON NOI */
+
+.img-work{
+  height: 60rem;
+  margin-top: 120px;
+  background-image: url('C:\Users\eleon\OneDrive\Desktop\progetto-finale\gruppo-01\public\img\high-angle-shot-woman-hands-typing-keyboard-focused-female-student-working-her-homework-computer-making-notes-waiting-important-call-from-boss-glancing-smartphone.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container-work{
+  background-color: var(--my-color-light-yellow);
+  height: 60rem;
+  margin-top: 120px;
+}
+
+.form-work{
+  width: 60%;
+  margin: auto;
+}

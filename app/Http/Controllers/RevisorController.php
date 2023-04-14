@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\BecomeRevisor;
 use App\Models\Announcement;
+use App\Models\Candidate;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
@@ -39,8 +40,32 @@ class RevisorController extends Controller
         return redirect()->back()->with('message', 'Complimenti, hai rifiutato l\'annuncio');
     }
 
+    //ritorna la vista lavora con noi
+    public function workWithUs(){
+        return view('announcements.work-with-us');
+    }
+
      // questo metodo gestisce l'invio della richiesta di lavoro come revisore
-     public function becomeRevisor(){
+     public function becomeRevisor(Request $request){
+        $candidate = Candidate::create($request->all());
+
+        if($request->hasFile('cv') && $request->file('cv')->isValid()){
+
+            $fileName = $request->file('cv')->getClientOriginalName();
+            $fileExtension = $request->file('cv')->extension();
+            $originalName = $fileName . $fileExtension;
+
+            //salvo file su disco
+            $cvPath = $request->file('cv')->storeAs('public/cv', $originalName);
+            
+            //Salvo il percorso del file all'interno del database
+            $candidate->cv = $cvPath;
+            $candidate->save();
+        }
+
+
+
+
         // invia all'admin la richiesta con i dati dell'utente loggato
         Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()) );
         return view('announcements.become-revisor');

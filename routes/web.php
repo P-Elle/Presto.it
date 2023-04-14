@@ -30,6 +30,9 @@ Route::get('/tutti/annunci',[AnnouncementController::class, 'indexAnnouncement']
 //Ricerca testo annuncio
 Route::get('/ricerca/annunci',[AnnouncementController::class, 'searchAnnouncements'])->name('announcements.search');
 
+//Lavora con noi
+Route::get('/lavora-con-noi', [RevisorController::class, 'workWithUs'])->middleware('auth')->name('work.with.us');
+
 
 //ZONA REVISORE:
 //home revisore
@@ -42,7 +45,7 @@ Route::patch('/rifiuta/annuncio/{announcement}', [RevisorController::class,'reje
 ->name('revisor.reject_announcement');
 
 //Richiedi di diventare revisore (la rotta è protetta dal middleware perhè solo un utente loggato potrà inviare la richiesta)
-Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
+Route::post('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
 
 //Rendi l'utente revisore
 Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
