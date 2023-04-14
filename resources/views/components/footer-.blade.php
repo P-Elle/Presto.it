@@ -12,7 +12,7 @@
 <div>
 
 
-<footer class="footer-10 pt-5">
+<footer class="footer-10 mt-5">
     <div class="container p-0">
         <div class="row mb-5 pb-3 no-gutters">
             <div class="col-md-4 mb-md-0 mb-4 d-flex">
@@ -47,7 +47,7 @@
 
                         </div>
                         <div class="text">
-                            <span>Strada S. Giorgio Martire, 2D <br> 70124 Bari (BA)</span>
+                            <span>Strada S. Giorgio Martire, 2D, 70124 Bari (BA)</span>
                         </div>
                     </div>
                 </div>
@@ -100,14 +100,11 @@
         </div>
     </div>
     {{-- parte sotto --}}
-    <div class="row mb-5 pt-4 border-top brand-dark-bg">
-        <div class="col-md-6 mb-md-0 mb-4 text-center">
-            <p class="brand-grey mx-auto ms-lg-5">© 2023 Presto.it</p>
-            <p class="brand-grey mx-auto ms-lg-5">by The Scrumming Heads.</p>
-            <p class="brand-grey mx-auto ms-lg-5">Tutti i diritti riservati</p>
-        
+    <div class="row mb-5 pt-4 border-top brand-cool-bg">
+        <div class="col-md-6 col-lg-8 mb-md-0 mb-4">
+            <p class="brand-grey ms-5">© 2023 Presto.it, by Scrumming Heads. Tutti i diritti riservati</p>
         </div>
-        <div class="col-md-6 text-center text-md-right">
+        <div class="col-md-6 col-lg-4 text-md-right">
             <ul class="ftco-footer-social p-0">
                 <li class="ftco-animate"><a href="{{route('wip')}}" data-toggle="tooltip" data-placement="top"
                         title="Twitter"><span class="ion-logo-twitter"><i class="bi bi-twitter brand-white"></i></span></a></li>

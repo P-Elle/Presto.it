@@ -300,6 +300,11 @@ color: var(--my-color-light-yellow) !important;
 
 .link-announcement:hover{
   color: var(--my-color-white);
+  font-size: 0.7em;
+}
+.link-announcement{
+  color: var(--my-color-white);
+  font-size: 0.7em;
 }
 
 .ann-show {
@@ -347,7 +352,7 @@ color: var(--my-color-light-yellow) !important;
 
 @media (max-width: 720px) {
   .welcome-search .search-bar {
-    margin-top: -125px;
+    margin-top: -50px;
   }
 
 }
@@ -358,7 +363,7 @@ color: var(--my-color-light-yellow) !important;
 .img-work{
   height: 60rem;
   margin-top: 6.2rem;
-  background-image: url('C:\Users\eleon\OneDrive\Desktop\progetto-finale\gruppo-01\public\img\high-angle-shot-woman-hands-typing-keyboard-focused-female-student-working-her-homework-computer-making-notes-waiting-important-call-from-boss-glancing-smartphone.jpg');
+  background-image: url('/public/img/high-angle-shot-woman-hands-typing-keyboard-focused-female-student-working-her-homework-computer-making-notes-waiting-important-call-from-boss-glancing-smartphone.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
