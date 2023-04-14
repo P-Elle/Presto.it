@@ -10,8 +10,8 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
+        "aos": "^2.3.4",
         "bootstrap": "^5.2.3",
-        "bootstrap-icons": "^1.10.4",
-        "ionicons": "^7.1.0"
+        "bootstrap-icons": "^1.10.4"
     }
 }

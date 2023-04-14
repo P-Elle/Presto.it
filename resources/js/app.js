@@ -1,6 +1,11 @@
 import './bootstrap';
 import 'bootstrap';
-console.log('collegato');
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init(); 
+console.log('collegato')
 
 
 /*!
@@ -75,4 +80,7 @@ function myFunction(x) {
   var x = window.matchMedia("(max-width: 991px)")
   myFunction(x); // Call listener function at run time
   x.addListener(myFunction); // Attach listener function on state changes
+
+
+ 
 

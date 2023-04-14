@@ -2,18 +2,32 @@
 @import 'bootstrap-icons/font/bootstrap-icons.css';
 /* COMANDO DA LANCIARE NEL TERMINALE: npm i bootstrap-icons */
 
+/* @import 'styleLogin.css'; */
+/* @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;700&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
 /* VARIABILI COLORI DI BRAND */
 
 :root {
   font-size: 1.1rem;
-  --my-color-brand: #c45e1f;
-  --my-color-light-brand: #ffc800;
-  --my-color-cool: #633495;
-  --my-color-trasp-cool: #633495b5;
+  --my-color-brand: #625bc0;
+  --my-color-light-brand: #ff7926;
+  --my-color-cool: #0f077e;
+  --my-color-trasp-cool: #2f288ab5;
   --my-color-white: #F3F7F0;
   --my-color-dark: #22262A;
-  --my-color-light-yellow: #f2e8af;
+  --my-color-light-yellow: #f5ebd5;
+  --my-color-trasp: #ffffff00;
+  background-color:  #625bc0;
 }
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
 
 .brand-bg {
   background-color: var(--my-color-brand);
@@ -21,17 +35,20 @@
 .brand {
   color: var(--my-color-brand);
 }
-.brand-light-bg {
-  background-color: var(--my-color-light-brand);
-}
+
 .white-brand-bg {
   background-color: var(--my-color-white);
 }
-.brand-cool-bg {
-  background-color: var(--my-color-cool);
+
+.brand-grey {
+  color: var(--my-color-light-yellow);
 }
-.brand-l-yellow-bg{
+
+.brand-grey-bg {
   background-color: var(--my-color-light-yellow);
+}
+.brand-trasp-cool {
+  color: var(--my-color-trasp-cool);
 }
 .brand-trasp-cool-bg {
   background-color: var(--my-color-trasp-cool);
@@ -45,6 +62,9 @@
 .brand-light {
   color: var(--my-color-light-brand);
 }
+.brand-light-bg {
+  background-color: var(--my-color-light-brand);
+}
 .brand-dark {
   color: var(--my-color-dark);
 }
@@ -54,6 +74,48 @@
 .brand-cool {
   color: var(--my-color-cool);
 }
+
+.brand-cool-bg {
+  background-color: var(--my-color-cool);
+}
+
+.brand-alpha {
+  background-color: var(--my-color-trasp);
+}
+
+
+/* FONT, button, link */
+*{
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+p {
+  letter-spacing: 0.0625em;
+  line-height: 1.3;
+}
+
+h1 {
+  letter-spacing: 0.0625em;
+  font-weight: 700;
+}
+
+.shrink {
+background-color: var(--my-color-trasp-cool) !important;
+}
+
+.button:hover, .btn:hover {
+background-color: var(--my-color-brand);
+}
+
+a{
+text-decoration: none;
+color: var(--my-color-grey);
+}
+
+a::hover, .btn::hover, button::hover{
+color: var(--my-color-light-yellow) !important;
+}
+
 
 
 /* HEADER */
@@ -77,36 +139,14 @@
   padding-top:79px;
 }
 
-p {
-    letter-spacing: 0.0625em;
-    line-height: 1.3;
-}
+  /* NAVBAR */
 
-h1 {
-    letter-spacing: 0.0625em;
-}
 
-.shrink {
-  background-color: #22262ab1 !important;
-}
-
-.button:hover, .btn:hover {
-  background-color: var(--my-color-brand);
-}
-
-a{
-  text-decoration: none;
-  color: var(--my-color-white);
-}
-
-a:hover, .btn:hover{
-  color: var(--my-color-white);
-}
 
 #mainNav {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: var(--my-color-dark);
+    background-color: var(--my-color-cool);
   }
   #mainNav .navbar-toggler {
     padding: 0.75rem;
@@ -116,7 +156,7 @@ a:hover, .btn:hover{
     font-weight: 700;
   }
   #mainNav .navbar-brand {
-    color: var(--my-color-light-brand);
+    color: var(--my-color-light-yellow);
     font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 700;
     letter-spacing: 0.0625em;
@@ -157,7 +197,7 @@ a:hover, .btn:hover{
     #mainNav.navbar-shrink {
       padding-top: 1rem;
       padding-bottom: 1rem;
-      background-color: var(--my-color-dark);
+      background-color: var(--my-color-cool);
     }
     #mainNav.navbar-shrink .navbar-brand {
       font-size: 1.25em;
@@ -186,9 +226,7 @@ a:hover, .btn:hover{
   box-shadow: 0px 2px 3px 2px rgba(138,138,138,0.56); */
 }
 
-.card-body{
-  background-color: var(--my-color-light-yellow) !important;
-}
+
 
 .c-header img {
   transition: all 0.3s;
@@ -209,6 +247,37 @@ a:hover, .btn:hover{
   font-weight: bold;
 }
 
+.card-body-text {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  aspect-ratio: 1;
+  width: 300px;
+  opacity: 0;
+}
+.welcome-cards .card-body{
+  background-color: var(--my-color-brand);
+}
+
+.index-cards .card-body{
+  background-color: var(--my-color-white);
+}
+
+@keyframes cardtext {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.card-body-text:hover {
+  opacity: 1;
+  animation-name: cardtext;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
 .card-footer {
   border-top: var(--my-color-cool) 1px dashed;
 }
@@ -225,13 +294,12 @@ a:hover, .btn:hover{
   z-index: 5;
 }
 
-.link-announcement{
-  text-decoration: none;
-  color: var(--my-color-brand)
+.card-body-text h4{
+  margin-top: 25% !important;
 }
 
 .link-announcement:hover{
-  color: var(--my-color-cool)
+  color: var(--my-color-white);
 }
 
 .ann-show {
@@ -249,5 +317,180 @@ a:hover, .btn:hover{
 
 .ann-container{
   width: 90%;
-  background-color: var(--my-color-light-yellow);
 }
+
+.category-header {
+  background-image: url('/public/img/rodion-kutsaiev-PEm_sLmJT-w-unsplash.jpg');
+  background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.wip-header {
+  background-image: url('/public/img/karim-manjra-dtSCKE9-8cI-unsplash.jpg');
+  background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 90vh;
+}
+
+.index-header {
+  background-image: url('/public/img/pexels-magda-ehlers-1279813.jpg');
+  background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.welcome-search .search-bar {
+  margin-top: -75px;
+}
+
+@media (max-width: 720px) {
+  .welcome-search .search-bar {
+    margin-top: -125px;
+  }
+
+}
+
+
+/* LAVORA CON NOI */
+
+.img-work{
+  height: 60rem;
+  margin-top: 6.2rem;
+  background-image: url('C:\Users\eleon\OneDrive\Desktop\progetto-finale\gruppo-01\public\img\high-angle-shot-woman-hands-typing-keyboard-focused-female-student-working-her-homework-computer-making-notes-waiting-important-call-from-boss-glancing-smartphone.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container-work{
+  background-color: var(--my-color-light-yellow);
+  height: 60rem;
+  margin-top: 6.2rem;
+}
+
+.form-work{
+  width: 60%;
+  margin: auto;
+}
+
+.success-box svg{
+  width: 20px;
+  padding-bottom: 5.5rem;
+}
+
+.container-success{
+  padding-top: 7.5rem;
+}
+
+@media (max-width: 992px) {
+  .img-work{
+    display: none;
+  }
+
+  .container-work{
+    width: 90%;
+    margin-left: 1.6rem;
+  }
+
+}
+
+@media (max-width: 475px) {
+  .form-work{
+    width: 90%;
+  }
+
+  .container-work{
+    margin-left: 1.1rem;
+  }
+
+}
+
+.ftco-footer-social li {
+  list-style: none;
+  margin: 0 10px 0 0;
+  display: inline-block; }
+  .ftco-footer-social li a {
+    height: 40px;
+    width: 40px;
+    display: block;
+    background: var(--my-color-dark);
+    border-radius: 50%;
+    position: relative; }
+    .ftco-footer-social li a span {
+      position: absolute;
+      font-size: 20px;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+    .ftco-footer-social li a::hover {
+      color: var(--my-color-light-brand) !important; }
+
+
+.ftco-section {
+  padding: 12em 0; }
+  .ftco-section h2 {
+    margin-bottom: 0; }
+
+footer {
+  padding: 7em 0; }
+
+.footer-10 {
+  background: var(--my-color-dark);
+  padding: 0 0 4em 0; }
+
+  .footer-10 .con-info .icon {
+    width: 50px;
+    height: 50px;
+    background: var(--my-color-light-brand);
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 10px; }
+    .footer-10 .con-info .icon span {
+      color: var(--my-color-white);
+      font-size: 24px; }
+  .footer-10 .con-info span {
+    color: var(--my-color-light-yellow); }
+  .footer-10 .subscribe-form .form-group {
+    position: relative;
+    margin-bottom: 0;
+    border-radius: 0; }
+    
+   
+      .footer-10 .subscribe-form .form-group input:focus {
+        outline: none !important;
+        -webkit-box-shadow: none;
+        box-shadow: none; }
+    .footer-10 .subscribe-form .form-group .submit {
+      color: #fff !important;
+      display: block;
+      width: 130px;
+      height: 52px;
+      font-size: 16px;
+      background: #1089ff !important;
+      border: none;
+      border-radius: 0; }
+      .footer-10 .subscribe-form .form-group .submit:hover, .footer-10 .subscribe-form .form-group .submit:focus {
+        text-decoration: none !important;
+        outline: none !important; }
+  .footer-10 .subscribe-form .subheading {
+    display: inline-block;
+    margin-top: 5px;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 13px; }
+  
+
+    .footer-heading, .list-unstyled li  {
+      color: var(--my-color-light-yellow);
+    }
+
+    .list-unstyled li a:hover  {
+      color: var(--my-color-light-brand);
+    }
+
+   
+
+ 

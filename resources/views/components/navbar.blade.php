@@ -33,8 +33,11 @@
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Ciao, {{auth()->user()->name}}
             </a>
+           
+
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Modifica profilo</a></li>
+              <li><a class="dropdown-item" href="{{route('work.with.us')}}">Lavora con noi</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="/logout" onclick="event.preventDefault();getElementById('logout').submit();">Esci</a></li>
               <form id="logout" action="/logout" method="POST" class="d-none">
@@ -42,7 +45,7 @@
               </form>
             </ul>
           </li>
-          <li class="btn brand-bg button"><a class="brand-white" href="{{route('announcements.create')}}">Inserisci Annuncio</a></li>
+          <li class="btn brand-light-bg button"><a class="brand-grey" href="{{route('announcements.create')}}">Inserisci Annuncio</a></li>
           
           {{-- Revisore 
             Se l'utente loggato è un revisore--}}
