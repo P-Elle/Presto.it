@@ -9,7 +9,7 @@
     <title>Presto</title>
    
 
-    @vite(['resources/css/app.css','resources/css/styleLogin.css','resources/css/style.css',  'resources/css/styleLogin.css','resources/js/app.js'])
+    @vite(['resources/css/app.css','resources/css/style.css',  'resources/css/styleLogin.css','resources/js/app.js'])
     
     @livewireStyles
 </head>
