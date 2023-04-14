@@ -68,8 +68,7 @@ class RevisorController extends Controller
 
         // invia all'admin la richiesta con i dati dell'utente loggato
         Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()) );
-        return view('announcements.become-revisor');
-        //return redirect()->back()->with('message', 'Complimenti, hai richiesto di diventare revisore correttamente');
+        return redirect()->back()->with('message', 'Candidatura inviata con successo!');
     }
 
      // questo metodo gestisce l'accettazione della richiesta di lavoro come revisore
