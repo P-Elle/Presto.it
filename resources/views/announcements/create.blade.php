@@ -1,5 +1,5 @@
 <x-main>
-    <div class="container-fluid px-0">
+    <div class="container-fluid brand-light-bg px-0">
         
         
         <x-navbar/>
