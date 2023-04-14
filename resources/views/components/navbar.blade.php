@@ -53,7 +53,7 @@
             {{-- stampa nella navbar la sezione dedicata al revisore  --}}
             <li class= "ms-2">
               {{-- nel quale cliccando sul link andrà sulla pagine in cui il revisore potrà revisionare gli annunci --}}
-              <a  class="nav-link btn btn-outline-success btn-sm position-relative" 
+              <a  class="nav-link btn btn-sm position-relative" 
               aria-current="page" href="{{route('revisor.index')}}">
                 Zona Revisore
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pil bg-danger">

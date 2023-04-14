@@ -2,7 +2,7 @@
 @import 'bootstrap-icons/font/bootstrap-icons.css';
 /* COMANDO DA LANCIARE NEL TERMINALE: npm i bootstrap-icons */
 
-/* @import 'styleLogin.css'; */
+@import 'styleLogin.css';
 /* @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;700&display=swap'); */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
@@ -329,9 +329,9 @@ color: var(--my-color-light-yellow) !important;
 .wip-header {
   background-image: url('/public/img/karim-manjra-dtSCKE9-8cI-unsplash.jpg');
   background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 90vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 90vh;
 }
 
 .index-header {
@@ -491,6 +491,43 @@ footer {
       color: var(--my-color-light-brand);
     }
 
-   
+  
+/* ZONA REVISORE */
+.revisor-header {
+  background-image: url('C:\Users\eleon\OneDrive\Desktop\progetto-finale\gruppo-01\public\img\sand-surface-texture-background-zen-peace-concept.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 90vh;
+}
 
- 
+.revisor-2-header {
+  background-image: url('C:\Users\eleon\OneDrive\Desktop\progetto-finale\gruppo-01\public\img\abstract-bluish-paint-background-wallpaper.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.img-revisor{
+  background-image: url('C:\Users\eleon\OneDrive\Desktop\progetto-finale\gruppo-01\public\img\light-bulb-made-from-yellow-paper-ball.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container-revisor{
+  height: 50rem;
+}
+
+.col-revisor{
+  margin-top: 12.5rem;
+}
+
+.col-revisor h1{
+  font-size: 4rem;
+}
+
+.button-revisor{
+  width: 8rem;
+  margin: auto;
+}
