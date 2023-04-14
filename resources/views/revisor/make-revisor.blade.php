@@ -8,7 +8,7 @@
         </div>
     </div> --}}
 
-    <div class="container-fluid ">
+    <div class="container-fluid">
         <div class="row container-revisor">
             <div class="col-6 col-revisor">
                 <div class="row">

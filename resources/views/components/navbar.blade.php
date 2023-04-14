@@ -30,14 +30,13 @@
 
           @auth
           <li class="nav-item d-lg-none">
-           <a>
             <a class="nav-link" href="">Ciao, {{auth()->user()->name}}</a>
       
             
            
      
           </li>
-          <li class="nav-item"><a class="nav-link" href="/logout" onclick="event.preventDefault();getElementById('logout').submit();">Logout</a></li>
+          <li class="nav-item d-lg-none"><a class="nav-link" href="/logout" onclick="event.preventDefault();getElementById('logout').submit();">Logout</a></li>
           <form id="logout" action="/logout" method="POST" class="d-none">
             @csrf
           </form>

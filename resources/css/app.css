@@ -536,3 +536,27 @@ footer {
   width: 8rem;
   margin: auto;
 }
+
+@media (max-width: 992px) {
+  .img-revisor{
+    display: none;
+  }
+
+  .col-revisor{
+    width: 90%;
+    margin: auto;
+  }
+
+  .col-revisor h1{
+    font-size: 2rem;
+    margin-left: 1.6rem;
+  }
+
+  .col-revisor .row{
+    width: 90%;
+  }
+
+  .button-revisor{
+    max-width: 8rem;
+  }
+}
