@@ -22,6 +22,10 @@ class FrontController extends Controller
         return view('categoryShow', compact('category', 'announcements'));
     }
 
+    public function wip(){
+        return view('wip');
+    }
+
     
 
 }
