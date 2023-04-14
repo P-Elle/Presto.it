@@ -16,7 +16,7 @@
                 <div class="col-6 mx-auto mb-5">
                   <button class="btn brand-bg button mt-3"><a class="brand-white" href="{{'/register'}}">Registrati</a></button>
                   <hr>
-                  <p> Hai già un account? <a class="brand-light d-block mb-2" href="{{'/login'}}">ENTRA</a></p>
+                  <p class="brand-white"> Hai già un account? <a class="brand-light d-block mb-5" href="{{'/login'}}">ENTRA</a></p>
 
                 </div>
 
@@ -40,14 +40,14 @@
 
       <div class="row justify-content-center justify-content-lg-around">
         <h2 class="text-center brand-grey">Sfoglia tra gli annunci più recenti!</h2>
-        <div class="container py-3 brand-bg rounded-1">
+        
           <div class="row justify-content-around welcome-cards">
             @foreach ($announcements as $announcement)
               <x-card :announcement="$announcement"/>
               @endforeach
               
           </div>
-        </div>
+       
       </div>
 
             
@@ -58,5 +58,5 @@
 
         
   </div>
-
+   
 </x-main>

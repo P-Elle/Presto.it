@@ -10,12 +10,13 @@
 </head>
 <body>
     {{$slot}}
-    @auth
+    
+    
+   
+    
+    
     <x-footer/>
-    @endauth
     @livewireScripts
-
-
 </body>
 </html>
 

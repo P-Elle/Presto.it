@@ -81,6 +81,7 @@
             </button>
           </div>
         </form>
+        <a href="/auth/google/redirect"><i class="bi bi-google"></i></a>
       </div>
     </div>
   </div>

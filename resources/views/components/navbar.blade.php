@@ -37,6 +37,7 @@
 
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Modifica profilo</a></li>
+              <li><a class="dropdown-item" href="{{route('work.with.us')}}">Lavora con noi</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="/logout" onclick="event.preventDefault();getElementById('logout').submit();">Esci</a></li>
               <form id="logout" action="/logout" method="POST" class="d-none">
