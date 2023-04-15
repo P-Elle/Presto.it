@@ -39,7 +39,8 @@ class CreateNewUser implements CreatesNewUsers
             'password' => Hash::make($input['password']),
         ]);
 
-        return $user->notify(new EmailVerification());
+            //  $user->notify(new EmailVerification));
+
 
 
     }
