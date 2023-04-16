@@ -5,7 +5,7 @@
     <x-navbar/>
     <div class="row masthead">
       <div class="row brand-trasp-cool-bg justify-content-center m-0">
-        <div class="col-11 col-md-6 text-center p-0 m-0">
+        <div class="col-12 col-lg-6 text-center p-0 m-0">
           
           <div class="px-5 py-2 mt-0 rounded-bottom d-flex flex-column justify-content-center">
             <h1 class="mt-5 mt-md-3">Inserisci i tuoi annunci & trova i migliori affari!</h1>

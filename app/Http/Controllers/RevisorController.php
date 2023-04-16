@@ -15,7 +15,7 @@ class RevisorController extends Controller
 {
     // questo metodo visulazzerà tutti gli annunci da accettare e rifiutare
     public function index(){
-        
+
         /* nella variabile racchiudo tutti gli annunci che nella tabella announcement,
         in corrispondenza della colonna is_accepted hanno un valore null */
         $announcement_to_check = Announcement::where('is_accepted', null)->first();
@@ -23,7 +23,7 @@ class RevisorController extends Controller
         return view('revisor.index', compact('announcement_to_check'));
     }
 
-     
+
     /* I 2 metodi gestiscono l'accettazione e il rifiuto dell'annuncio da parte del revisore.
     Attraverso la funzione setAccepted, impostata nel modello annuncio, in base al valore settato
     il revisore accetterà o rifiuterà l'annuncio */
@@ -37,7 +37,7 @@ class RevisorController extends Controller
     public function rejectAnnouncement(Announcement $announcement){
         // se il valore sarà fale l'annuncio verrà rifiutato e stampato il relativo messaggio
         $announcement->setAccepted(false);
-        return redirect()->back()->with('message', 'Complimenti, hai rifiutato l\'annuncio');
+        return redirect()->back()->with('message', 'Siamo spiacenti ma l\'annuncio è stato rifiutato');
     }
 
     //ritorna la vista lavora con noi
@@ -73,13 +73,13 @@ class RevisorController extends Controller
 
      // questo metodo gestisce l'accettazione della richiesta di lavoro come revisore
      public function makeRevisor(User $user){
-        //attiva il comando presto:makeUserRevisor qnd l'admin clicca sul link 
+        //attiva il comando presto:makeUserRevisor qnd l'admin clicca sul link
         //presente nell'email del richiedente per accettare la richiesta di lavoro
-        //Ricorda che questo automatismo sar possibile grazie alla registrazione 
-        //del relativo comando 
+        //Ricorda che questo automatismo sar possibile grazie alla registrazione
+        //del relativo comando
        Artisan::call('presto:makeUserRevisor', ["email"=>$user->email]);
        return view('revisor.make-revisor');
        //return redirect('/')->with('message', 'Complimenti! l\'utente è diventato revisore');
-    }   
+    }
 
 }

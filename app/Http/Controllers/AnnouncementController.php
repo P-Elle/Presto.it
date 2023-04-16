@@ -37,7 +37,7 @@ class AnnouncementController extends Controller
 
         }
         $request->flash();
-        $request->session()->put(['searched'=>$request->searched, 'searchCategory'=>$request->searchCategory ]);
+        $request->session()->put(['searched'=>$request->searched, 'searchCategory'=>$request->searchCategory]);
         $searched= (session()->get('searched'));
         $searchCat= (session()->get('searchCategory'));
         

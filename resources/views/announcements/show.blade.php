@@ -6,7 +6,7 @@
 
                 <div class="row detail brand-white-bg justify-content-center rounded-1">
                     <div class="col-12 col-lg-5 p-4">
-                        <h2 class="brand">{{$announcement->title}}</h2>
+                        <h2 class="brand mt-5 mt-lg-0">{{$announcement->title}}</h2>
                         <h3>{{$announcement->price}} €</h3>
                         <p class="small mt-1">{{$announcement->category->name ?? "categoria non registrata"}}</p>
                         <p>{{$announcement->description}}</p>

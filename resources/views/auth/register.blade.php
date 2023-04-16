@@ -1,10 +1,10 @@
 <x-main>
     <x-navbar/>
-    <div class="container-fluid">
+    <div class="container-fluid brand-trasp-cool-bg">
         <div class="row brand-top mb-0">
-            <div class="col-12 col-md-6 brand-l-yellow-bg mx-auto px-5 py-3 not-overlapping rounded-1">
-                <h1 class="mb-5 mt-3" brand-dark>Registrati</h1>
-                <form action="/register" method="POST" class="brand-dark">
+            <div class="col-12 col-md-6 mx-auto px-5 py-3 not-overlapping brand-white-bg">
+                <h1 class="mb-5 mt-3 brand-trasp-cool">Registrati</h1>
+                <form action="/register" method="POST" class="brand-trasp-cool">
                     @csrf
                     <div class="mb-3">
                         <label for="name" class="form-label">Nome completo</label>
@@ -34,10 +34,12 @@
                             <span class="text-danger small">{{$message}}</span>
                         @enderror
                       </div>
-                    <button type="submit" class="btn brand-dark-bg brand-white my-3">Registrati</button>
+                      <div>
+                        <a href="/auth/google/redirect"><p class="d-inline">Entra con </p> <i class="brand-light bi bi-google"></i></a>
+                      </div>
+                    <button type="submit" class="btn brand-trasp-cool-bg brand-white my-3">Registrati</button>
                 </form>
 
-                        <a href="/auth/google/redirect"><i class="bi bi-google"></i></a>
 
             </div>
         </div>

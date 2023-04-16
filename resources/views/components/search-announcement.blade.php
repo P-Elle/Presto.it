@@ -5,7 +5,7 @@
             <div class="row justify-content-center">
                 
                     <div class="col-12 col-md-5 pe-md-0">
-                        <input type="search" name="searched" class="form-control" value="{{old('searched')}}" placeholder="Cerca">
+                        <input type="search" name="searched" class="form-control" @if(session('searched')) value="{{old('searched')}}" @endif placeholder="Cerca">
                     </div>
                     <div class="col-12 col-md-5 py-2 py-md-0">
                         <select class="form-select" name="searchCategory">

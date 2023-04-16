@@ -301,6 +301,11 @@ color: var(--my-color-light-yellow) !important;
 
 .link-announcement:hover{
   color: var(--my-color-white);
+  font-size: 0.7em;
+}
+.link-announcement{
+  color: var(--my-color-white);
+  font-size: 0.7em;
 }
 
 .ann-show {
@@ -330,9 +335,9 @@ color: var(--my-color-light-yellow) !important;
 .wip-header {
   background-image: url('/public/img/karim-manjra-dtSCKE9-8cI-unsplash.jpg');
   background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 90vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 90vh;
 }
 
 .index-header {
@@ -348,7 +353,7 @@ color: var(--my-color-light-yellow) !important;
 
 @media (max-width: 720px) {
   .welcome-search .search-bar {
-    margin-top: -125px;
+    margin-top: -50px;
   }
 
 }
@@ -359,7 +364,7 @@ color: var(--my-color-light-yellow) !important;
 .img-work{
   height: 60rem;
   margin-top: 6.2rem;
-  background-image: url('C:\Users\eleon\OneDrive\Desktop\progetto-finale\gruppo-01\public\img\high-angle-shot-woman-hands-typing-keyboard-focused-female-student-working-her-homework-computer-making-notes-waiting-important-call-from-boss-glancing-smartphone.jpg');
+  background-image: url('/public/img/high-angle-shot-woman-hands-typing-keyboard-focused-female-student-working-her-homework-computer-making-notes-waiting-important-call-from-boss-glancing-smartphone.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -492,6 +497,67 @@ footer {
       color: var(--my-color-light-brand);
     }
 
-   
+  
+/* ZONA REVISORE */
+.revisor-header {
+  background-image: url('C:\Users\eleon\OneDrive\Desktop\progetto-finale\gruppo-01\public\img\sand-surface-texture-background-zen-peace-concept.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 90vh;
+}
 
- 
+.revisor-2-header {
+  background-image: url('C:\Users\eleon\OneDrive\Desktop\progetto-finale\gruppo-01\public\img\abstract-bluish-paint-background-wallpaper.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.img-revisor{
+  background-image: url('C:\Users\eleon\OneDrive\Desktop\progetto-finale\gruppo-01\public\img\light-bulb-made-from-yellow-paper-ball.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container-revisor{
+  height: 50rem;
+}
+
+.col-revisor{
+  margin-top: 12.5rem;
+}
+
+.col-revisor h1{
+  font-size: 4rem;
+}
+
+.button-revisor{
+  width: 8rem;
+  margin: auto;
+}
+
+@media (max-width: 992px) {
+  .img-revisor{
+    display: none;
+  }
+
+  .col-revisor{
+    width: 90%;
+    margin: auto;
+  }
+
+  .col-revisor h1{
+    font-size: 2rem;
+    margin-left: 1.6rem;
+  }
+
+  .col-revisor .row{
+    width: 90%;
+  }
+
+  .button-revisor{
+    max-width: 8rem;
+  }
+}
