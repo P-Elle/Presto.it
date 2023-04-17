@@ -31,10 +31,10 @@
           @auth
           <li class="nav-item d-lg-none">
             <a class="nav-link" href="">Ciao, {{auth()->user()->name}}</a>
-      
-            
-           
-     
+
+
+
+
           </li>
           <li class="nav-item d-lg-none"><a class="nav-link" href="/logout" onclick="event.preventDefault();getElementById('logout').submit();">Logout</a></li>
           <form id="logout" action="/logout" method="POST" class="d-none">
@@ -44,7 +44,7 @@
             <a class="nav-link dropdown-toggle d-none d-lg-block" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Ciao, {{auth()->user()->name}}
             </a>
-           
+
             <span class="d-none d-lg-block">
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="{{route('wip')}}">Modifica profilo</a></li>
@@ -58,14 +58,14 @@
           </span>
           </li>
           <li class="btn brand-light-bg button"><a class="brand-grey" href="{{route('announcements.create')}}">Inserisci Annuncio</a></li>
-          
-          {{-- Revisore 
+
+          {{-- Revisore
             Se l'utente loggato è un revisore--}}
           @if (Auth::user()->is_revisor)
             {{-- stampa nella navbar la sezione dedicata al revisore  --}}
             <li class= "ms-2">
               {{-- nel quale cliccando sul link andrà sulla pagine in cui il revisore potrà revisionare gli annunci --}}
-              <a  class="nav-link btn btn-sm position-relative" 
+              <a  class="nav-link btn btn-sm position-relative"
               aria-current="page" href="{{route('revisor.index')}}">
                 Zona Revisore
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pil bg-danger">
@@ -74,7 +74,7 @@
                 </span>
               </a>
             </li>
-            
+
           @endif
 
           @else
