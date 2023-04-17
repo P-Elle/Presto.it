@@ -26,6 +26,8 @@
                   </div>
                   <div>
                     <a href="/auth/google/redirect"><p class="d-inline">Accedi con </p> <i class="brand-light bi bi-google"></i></a>
+                    <a href="/auth/facebook/redirect"><p class="d-inline">Accedi con </p> <i class="brand-light bi bi-google"></i></a>
+
                   </div>
                   {{-- ricordami --}}
                   <div class="form-check">

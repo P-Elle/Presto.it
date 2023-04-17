@@ -48,5 +48,9 @@ class Announcement extends Model
         // che corrispondono a quelli che nella colonna is_accepted hanno un valore null
         return Announcement::where('is_accepted', null)->count();
     }
+
+    public function images(){
+        return $this->hasMany(Image::class);
+    }
     
 }

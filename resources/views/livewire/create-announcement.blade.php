@@ -42,6 +42,16 @@
                         <span class="text-danger small">{{$message}}</span>
                         @enderror
                     </div>
+                    <div class="col-12 mt-1">
+                        <input wire:model="temporary_images" type="file" name="images" multiple class="form-control @error('temporary_images.*') is-invalid @enderror">
+                        <div>@if ($images)
+                            Photo Preview:
+                            <img src="{{ $image->temporaryUrl() }}">
+                        @endif</div>
+                        @error('temporary_images.*')
+                        <span class="text-danger small">{{$message}}</span>
+                        @enderror
+                    </div>
                     <div class="col-12 mt-1 mb-3">
                         <button type="submit" class="btn brand-dark-bg brand-white my-3">Crea</button>
                     </div>
