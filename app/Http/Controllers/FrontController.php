@@ -19,7 +19,7 @@ class FrontController extends Controller
     public function categoryshow(Category $category)
     {   
         session()->forget(['searchCategory']);
-        $announcements = Announcement::where('is_accepted', true)->where('category_id', $category->id)->get();
+        $announcements = Announcement::where('is_accepted', true)->where('category_id', $category->id)->get()->sortByDesc('created_at');
         return view('categoryShow', compact('category', 'announcements'));
     }
 
