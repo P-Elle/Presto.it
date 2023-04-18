@@ -74,12 +74,16 @@
                      @endif
                      
                  
-                    <div class="col-12 mt-1">
+                    <div class="col-12 mt-1 mb-3">
                         <label for="temporary_images">Immagini</label>
                         <input wire:model="temporary_images" type="file" name="images" multiple class="form-control">
                         @error('temporary_images.*')
                         <span class="text-danger small">{{$message}}</span>
                         @enderror
+                       @if (!empty($images))
+                       <div class="row mt-3">
+                            <div class="col-12">
+                                <div class="row border border-4 rounded py-4">
                        {{-- @if (!empty($images))
                        <div class="row">
                             <div class="col-12 mt-2">
@@ -96,8 +100,6 @@
                                     @endforeach
                                 </div>
                             </div>
-                            
-
                         @endif
                         
                     </div> --}}

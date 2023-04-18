@@ -231,6 +231,9 @@ color: var(--my-color-light-yellow) !important;
 
 .c-header img {
   transition: all 0.3s;
+  object-fit: scale-down;
+  width: 15rem;
+  height: 15rem;
 }
 
 .c-header:hover img {
@@ -571,7 +574,10 @@ footer {
 }
 
 .img-carousel{
-  width: 100%;
+  width: 500px;
+  height: 300px;
+  object-fit: scale-down;
+  object-position: center;
 }
 
 
