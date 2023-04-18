@@ -3,7 +3,7 @@
 
 /* COMANDO DA LANCIARE NEL TERMINALE: npm i bootstrap-icons */
 
-@import 'styleLogin.css';
+
 /* @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;700&display=swap'); */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
@@ -500,7 +500,7 @@ footer {
   
 /* ZONA REVISORE */
 .revisor-header {
-  background-image: url('C:\Users\eleon\OneDrive\Desktop\progetto-finale\gruppo-01\public\img\sand-surface-texture-background-zen-peace-concept.jpg');
+  background-image: url('/public/img/sand-surface-texture-background-zen-peace-concept.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -508,14 +508,14 @@ footer {
 }
 
 .revisor-2-header {
-  background-image: url('C:\Users\eleon\OneDrive\Desktop\progetto-finale\gruppo-01\public\img\abstract-bluish-paint-background-wallpaper.jpg');
+  background-image: url('/public/img/abstract-bluish-paint-background-wallpaper.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .img-revisor{
-  background-image: url('C:\Users\eleon\OneDrive\Desktop\progetto-finale\gruppo-01\public\img\light-bulb-made-from-yellow-paper-ball.jpg');
+  background-image: url('/public/img/light-bulb-made-from-yellow-paper-ball.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -564,11 +564,32 @@ footer {
 
 
 .image-preview{
-  width: 300px;
-  height: 300px;
+  width: 150px;
+  aspect-ratio: 1;
   background-size: cover;
+  position:relative;
 }
 
 .img-carousel{
   width: 100%;
+}
+
+
+.remove {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.remove:hover {
+  background-color: var(--my-color-white);
+  color: var(--my-color-dark);
+}
+
+.preview-box > .row {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.preview-box > .row > .image-preview {
+  display: inline-block;
 }
