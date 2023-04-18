@@ -42,16 +42,15 @@
                         <span class="text-danger small">{{$message}}</span>
                         @enderror
                     </div>
-                    <div class="col-12 mt-1">
+                    <div class="col-12 mt-1 mb-3">
                         <input wire:model="temporary_images" type="file" name="images" multiple class="form-control">
                         @error('temporary_images.*')
                         <span class="text-danger small">{{$message}}</span>
                         @enderror
                        @if (!empty($images))
-                       <div class="row">
+                       <div class="row mt-3">
                             <div class="col-12">
-                                <p>Photo Preview:</p>
-                                <div class="row border border-4 border-info rounded shadow py-4">
+                                <div class="row border border-4 rounded py-4">
                                     @foreach ($images as $key => $image)
                                         <div class="col my-3">
                                             <div class="image-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}});"></div>
@@ -61,8 +60,6 @@
                                     @endforeach
                                 </div>
                             </div>
-                            
-                            {{-- <img src="{{ $image->temporaryUrl() }}"> --}}
                         @endif
                         
                     </div>
