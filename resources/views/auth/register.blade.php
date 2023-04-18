@@ -33,11 +33,23 @@
                         @error('password_confirmation')
                             <span class="text-danger small">{{$message}}</span>
                         @enderror
-                      </div>
-                      <div>
-                        <a href="/auth/google/redirect"><p class="d-inline">Entra con </p> <i class="brand-light bi bi-google"></i></a>
-                      </div>
-                    <button type="submit" class="btn brand-trasp-cool-bg brand-white my-3">Registrati</button>
+                    </div>
+
+                    <div class="d-flex my-3">
+                        <button type="submit" class="btn brand-trasp-cool-bg brand-white me-3">Registrati</button>
+                        <p class="align-self-center me-3">oppure</p>
+                        <div class="row">
+                          <div class="col-12">
+                            <a class="btn btn-outline-dark" href="/auth/google/redirect" role="button" style="text-transform:none">
+                              <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                              Login with Google
+                            </a>
+                          </div>
+                        </div>
+                    </div>
+                      
+
+                    
                 </form>
 
 

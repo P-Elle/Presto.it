@@ -561,3 +561,14 @@ footer {
     max-width: 8rem;
   }
 }
+
+
+.image-preview{
+  width: 300px;
+  height: 300px;
+  background-size: cover;
+}
+
+.img-carousel{
+  width: 100%;
+}

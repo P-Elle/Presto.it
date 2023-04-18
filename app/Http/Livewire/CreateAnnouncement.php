@@ -6,12 +6,20 @@ use App\Models\Announcement;
 use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class CreateAnnouncement extends Component
-{   public $title;
+{   
+    use WithFileUploads;
+
+    public $title;
     public $description;
     public $price;
+    public $temporary_images;
+    public $images = [];
+    public $form_id;
     public $category;
+    
 
     //regole di validazione
     protected $rules = [
@@ -19,6 +27,8 @@ class CreateAnnouncement extends Component
         'description' => 'required|min:8',
         'category'=> 'required',
         'price' => 'required|numeric',
+        'images.*' => 'image|max:1024',
+        'temporary_images.*' => 'image|max:1024'
     ];
 
     //messaggi personalizzati di errore
@@ -27,11 +37,42 @@ class CreateAnnouncement extends Component
         'min' => 'Il campo :attribute deve contenere almeno :min caratteri',
         'max' => 'Il campo :attribute può contenere al massimo :max caratteri',
         'numeric' => 'Il campo :attribute deve essere numerico',
+        'temporary_images.required'=>'L\'immagine è richiesta',
+        'temporary_images.*.image'=>'I file devono essere immagini.',
+        'temporary_images.*max'=>'L\'immagine non può superare 1mb',
+        'images.image' => 'L\'immagine deve essere un\'immagine',
+        'images.max' => 'L\'immagine non può superare 1mb'
+ 
     ];
 
     public function updated($propertyName)
     {
         $this->validateOnly($propertyName);
+    }
+
+    public function updatedTemporaryImages()
+    {
+        if ($this->validate([
+            'temporary_images.*'=>'image|max:1024',
+        ])){
+            foreach($this->temporary_images as $image){
+                $this->images[] = $image;
+                // $image->store('images');
+            }
+
+        }
+
+    }
+
+  
+
+    public function removeImage($key)
+    {
+        if (in_array($key, array_keys($this->images))){
+            unset($this->images[$key]);
+
+        }
+
     }
 
     //salvatggio dell'annuncio all'interno del database
@@ -47,6 +88,14 @@ class CreateAnnouncement extends Component
             'price'=>$this->price,
         ]);
 
+
+        if(count($this->images)){
+            foreach($this->images as $image){
+                $announcement->images()->create(['path'=>$image->store('images','public')]);
+            }
+
+        }
+
         Auth::user()->announcements()->save($announcement);
 
         session()->flash('message', 'Annuncio inserito con successo.');
@@ -61,6 +110,8 @@ class CreateAnnouncement extends Component
         $this->description = '';
         $this->price = '';
         $this->category = '';
+        $this->images = [];
+        $this->temporary_images = [];
     }
 
     //renderizzazione della view

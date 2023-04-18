@@ -1,5 +1,3 @@
-
-
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top shrink" id="mainNav">
 
   <div class="container">
@@ -31,41 +29,39 @@
           @auth
           <li class="nav-item d-lg-none">
             <a class="nav-link" href="">Ciao, {{auth()->user()->name}}</a>
-      
-            
-           
-     
           </li>
+
           <li class="nav-item d-lg-none"><a class="nav-link" href="/logout" onclick="event.preventDefault();getElementById('logout').submit();">Logout</a></li>
           <form id="logout" action="/logout" method="POST" class="d-none">
             @csrf
           </form>
+
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle d-none d-lg-block" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Ciao, {{auth()->user()->name}}
             </a>
-           
+
             <span class="d-none d-lg-block">
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="{{route('wip')}}">Modifica profilo</a></li>
-              <li><a class="dropdown-item" href="{{route('work.with.us')}}">Lavora con noi</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="/logout" onclick="event.preventDefault();getElementById('logout').submit();">Esci</a></li>
-              <form id="logout" action="/logout" method="POST" class="d-none">
-                @csrf
-              </form>
-            </ul>
-          </span>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{{route('wip')}}">Modifica profilo</a></li>
+                <li><a class="dropdown-item" href="{{route('work.with.us')}}">Lavora con noi</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/logout" onclick="event.preventDefault();getElementById('logout').submit();">Esci</a></li>
+                <form id="logout" action="/logout" method="POST" class="d-none">
+                  @csrf
+                </form>
+              </ul>
+            </span>
           </li>
           <li class="btn brand-light-bg button"><a class="brand-grey" href="{{route('announcements.create')}}">Inserisci Annuncio</a></li>
-          
-          {{-- Revisore 
+
+          {{-- Revisore
             Se l'utente loggato è un revisore--}}
           @if (Auth::user()->is_revisor)
             {{-- stampa nella navbar la sezione dedicata al revisore  --}}
-            <li class= "ms-2">
+            <li class= "ms-2 mt-lg-0 mt-3">
               {{-- nel quale cliccando sul link andrà sulla pagine in cui il revisore potrà revisionare gli annunci --}}
-              <a  class="nav-link btn btn-sm position-relative" 
+              <a  class="nav-link btn btn-sm position-relative"
               aria-current="page" href="{{route('revisor.index')}}">
                 Zona Revisore
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pil bg-danger">
@@ -74,7 +70,7 @@
                 </span>
               </a>
             </li>
-            
+
           @endif
 
           @else
