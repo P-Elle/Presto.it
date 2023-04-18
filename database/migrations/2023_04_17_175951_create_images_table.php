@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
 
             $table->unsignedBigInteger('announcement_id')->nullable();
-            $table->foreign('announcement_id')->references('id')->on('announcements');
+            $table->foreign('announcement_id')->references('id')->on('announcements')->onDelete('cascade');
             $table->string('path')->nullable();
             $table->timestamps();
         });

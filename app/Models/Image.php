@@ -10,7 +10,7 @@ class Image extends Model
 {
     use HasFactory;
 
-    protected $fillable = ('path');
+    protected $fillable = ['path'];
 
     public function announcement(){
         return $this->belongsTo(Announcement::class);
