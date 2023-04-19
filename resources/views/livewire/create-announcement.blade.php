@@ -45,19 +45,14 @@
                     @if (!empty($images))
 
                          <div class="col-12 mt-1 preview-box">
-                             <p>{{__(ui.img)}}</p>
-                             <div x-data="{images: @entangle('images')}" wire:sortable="updateImageOrder" class="row mx-auto rounded py-4 brand-white-bg" x-init="() => {
-                                const container = document.querySelector('[wire\\:sortable]')
-                                const sortable = new Sortable(container, {
-                                    draggable: '.image-container',
-                                    handle: 'img',
-                                })
-                            }">
+                             <p>Anteprima immagini:</p>
+                             <div  wire:sortable="updateImageOrder" class="row mx-auto rounded py-4 brand-white-bg">
+
 
 
                                  @foreach ($images as $key => $image)
 
-                                         <div class="image-preview mx-auto" wire:sortable.item="{{$key}}" wire:key="image-{{$key}}" wire:sortable.handle style="background-image: url({{$image->temporaryUrl()}});">
+                                         <div class="image-preview mx-auto" draggable="true" ondragstart="event.dataTransfer.setData('text/plain', this.dataset.order); event.dataTransfer.effectAllowed = 'move';">
                                              <button type="button" class="btn remove m-0 p-0 border-0" wire:click="removeImage({{$key}})"><i class="bi bi-x-circle-fill"></i></button>
                                              {{-- <button wire:sortable.handle>drag</button> --}}
                                          </div>
@@ -80,29 +75,6 @@
                         @error('temporary_images.*')
                         <span class="text-danger small">{{$message}}</span>
                         @enderror
-                       @if (!empty($images))
-                       <div class="row mt-3">
-                            <div class="col-12">
-                                <div class="row border border-4 rounded py-4">
-                       {{-- @if (!empty($images))
-                       <div class="row">
-                            <div class="col-12 mt-2">
-                                <p class="mt-2">Photo Preview:</p>
-                                <div class="row border border-4 border-info rounded shadow py-4 brand-white-bg">
-                                    @foreach ($images as $key => $image)
-                                        <div class="col my-3">
-                                            <div class="image-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}}); position:relative;">
-                                                <button type="button" class="btn remove m-0 p-0 border-0" wire:click="removeImage({{$key}})"><i class="bi bi-x-circle-fill"></i></button>
-                                            </div>
-
-                                        </div>
-
-                                    @endforeach
-                                </div>
-                            </div>
-                        @endif
-
-                    </div> --}}
                     <div class="col-12 mt-1 mb-3">
                         <button type="submit" class="btn brand-dark-bg brand-white my-3">{{__('ui.create2')}}</button>
                     </div>

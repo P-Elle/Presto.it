@@ -55,7 +55,7 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-12">
-                <div class="row ps-md-5">
+                <div class="row ps-md-5 mb-4">
                     <div class="col-10 mx-auto col-md-3 mb-md-0 mb-4">
                         <h2 class="footer-heading text-center">About</h2>
                         <ul class="list-unstyled text-center">

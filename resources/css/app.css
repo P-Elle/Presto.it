@@ -120,7 +120,7 @@ text-decoration: none;
 color: var(--my-color-grey);
 }
 
-a::hover, .btn::hover, button::hover{
+a:hover, .btn:hover, button:hover{
 color: var(--my-color-light-yellow) !important;
 }
 
@@ -344,6 +344,13 @@ color: var(--my-color-light-yellow) !important;
 
 .wip-header {
   background-image: url('/public/img/karim-manjra-dtSCKE9-8cI-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 90vh;
+}
+.verify-header {
+  /* background-image: url('/public/img/karim-manjra-dtSCKE9-8cI-unsplash.jpg'); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
