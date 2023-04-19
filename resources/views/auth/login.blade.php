@@ -3,7 +3,7 @@
   <div class="container-fluid brand-cool-bg">
       <div class="row brand-top mb-0">
           <div class="col-12 col-md-6 brand-white-bg mx-auto px-5 py-3 not-overlapping">
-              <h1 class="mb-5 brand-trasp-cool">Accedi</h1>
+              <h1 class="mb-5 brand-trasp-cool">{{__(ui.log)}}</h1>
               <form action="/login" method="POST" class="brand-cool">
                   @csrf
                   <div class="mb-3">
@@ -31,7 +31,7 @@
                       <div class="col-12">
                         <a class="btn btn-outline-dark" href="/auth/google/redirect" role="button" style="text-transform:none">
                           <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
-                          Login with Google
+                          Entra con Google
                         </a>
                       </div>
                     </div>
@@ -40,12 +40,12 @@
                   <div class="form-check">
                     <input type="checkbox" class="form-check-input" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                     <label class="form-check-label" for="remember">
-                        {{ __('Ricordami') }}
+                        Ricordami
                     </label>
                   </div>
               </form>
           </div>
       </div>
   </div>
-  
+
 </x-main>

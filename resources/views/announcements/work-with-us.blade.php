@@ -14,58 +14,58 @@
                         <svg class="bi flex-shrink-0 me-2 brand" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
                         <div>
                             <h4 class="alert-heading">{{session('message')}}</h4>
-                            <p>Presto verrai contattato dal nostro team</p>
+                            <p>{{__(ui.soon)}}</p>
                             <hr>
-                            <a href="{{route('announcements.index')}}" class="btn brand-light-bg brand-grey">Continua ad esplorare</a>
+                            <a href="{{route('announcements.index')}}" class="btn brand-light-bg brand-grey">{{__(ui.explore)}}</a>
                         </div>
                     </div>
             @endif
 
             <div class="col-6 container-work ">
                 <div class="row text-center my-5">
-                    <h1 class="display-3">Diventa revisor!</h1>
-                    <h3>Lavora comodamente da casa</h2>
-                    <p class="mt-3">Compila il form e invia la tua candidatura</p>
+                    <h1 class="display-3">{{__(ui.become)}}</h1>
+                    <h3>{{__(ui.home)}}</h2>
+                    <p class="mt-3">{{__(ui.form)}}</p>
                 </div>
-                
+
                 <form action="{{route('become.revisor')}}" method="POST" class="brand-dark form-work" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
-                        <label for="name" class="form-label">Nome</label>
+                        <label for="name" class="form-label">{{__(ui.name)}}</label>
                         <input type="text" class="form-control" id="name" name="name" placeholder="Mario">
                         @error('name')
                             <span class="text-danger small">{{$message}}</span>
                         @enderror
                     </div>
                     <div class="mb-3">
-                        <label for="last_name" class="form-label">Cognome</label>
+                        <label for="last_name" class="form-label">{{__(ui.surname)}}</label>
                         <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Rossi">
                         @error('last_name')
                             <span class="text-danger small">{{$message}}</span>
                         @enderror
                     </div>
                     <div class="mb-3">
-                        <label for="email" class="form-label">E-mail</label>
+                        <label for="email" class="form-label">{{__(ui.mail)}}</label>
                         <input type="email" class="form-control" id="email" name="email" placeholder="info@example.com">
                         @error('email')
                             <span class="text-danger small">{{$message}}</span>
                         @enderror
                     </div>
-                        
+
                     <div class="mb-3">
-                        <label for="body" class="form-label">Presentati!</label>
+                        <label for="body" class="form-label">{{__(ui.presentati)}}</label>
                         <textarea class="form-control" name="body" id="body" cols="30" rows="5"></textarea>
                     </div>
-    
+
                     <div class="mb-3">
-                        <label for="cv" class="form-label">Allega il CV</label>
+                        <label for="cv" class="form-label">{{__(ui.cv)}}</label>
                         <input class="form-control" type="file" id="cv" name="cv">
                     </div>
-                    
-                    <button type="submit" class="btn brand-dark-bg brand-white my-3">Candidati</button>
+
+                    <button type="submit" class="btn brand-dark-bg brand-white my-3">{{__(ui.send)}}</button>
                 </form>
-                
-                
+
+
             </div>
             <div class="col-6 img-work"></div>
         </div>

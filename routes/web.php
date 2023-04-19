@@ -57,3 +57,8 @@ Route::get('/auth/{provider}/callback', [ProviderController::class, 'callback'])
 
 // rotta provvisoria
 Route::get('/arriva/presto',[FrontController::class, 'wip'])->name('wip');
+
+
+// rotta per la lingua differente
+Route::post('/lingua/{lang}', [FrontController::class, 'setLanguage'])->name('setLocale');
+

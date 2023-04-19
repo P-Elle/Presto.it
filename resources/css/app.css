@@ -1,6 +1,13 @@
 @import 'bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons.css';
 
+
+/*Per installare la libreria icone delle bandiere eseguire da terminale:
+npm install flag-icons */
+@import "/node_modules/flag-icons/css/flag-icons.min.css";
+
+
+
 /* COMANDO DA LANCIARE NEL TERMINALE: npm i bootstrap-icons */
 
 
@@ -467,8 +474,8 @@ footer {
     position: relative;
     margin-bottom: 0;
     border-radius: 0; }
-    
-   
+
+
       .footer-10 .subscribe-form .form-group input:focus {
         outline: none !important;
         -webkit-box-shadow: none;
@@ -490,7 +497,7 @@ footer {
     margin-top: 5px;
     color: rgba(255, 255, 255, 0.3);
     font-size: 13px; }
-  
+
 
     .footer-heading, .list-unstyled li  {
       color: var(--my-color-light-yellow);
@@ -500,7 +507,7 @@ footer {
       color: var(--my-color-light-brand);
     }
 
-  
+
 /* ZONA REVISORE */
 .revisor-header {
   background-image: url('/public/img/sand-surface-texture-background-zen-peace-concept.jpg');
@@ -564,6 +571,7 @@ footer {
     max-width: 8rem;
   }
 }
+
 
 
 .image-preview{

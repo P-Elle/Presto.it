@@ -10,11 +10,11 @@
 </head>
 <body>
     {{$slot}}
-    
-    
-   
-    
-    
+
+
+
+
+
     <x-footer/>
     @livewireScripts
 </body>

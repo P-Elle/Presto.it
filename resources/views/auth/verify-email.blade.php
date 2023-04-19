@@ -3,8 +3,8 @@
     <div class="container-fluid brand-grey-bg">
         <div class="row wip-header shadow align-items-center">
             <div class="col-12 text-light">
-                <h1 class="brand-white text-center" style="text-shadow: 5px 5px 5px #332f2f;">Benvenut* nella nostra community</h1>
-                <h2 class="brand-white text-center mb-5" style="text-shadow: 4px 4px 4px #332f2f;">Conferma il link che ti abbiamo inviato sulla mail</h1>
+                <h1 class="brand-white text-center" style="text-shadow: 5px 5px 5px #332f2f;">{{__(ui.community)}}</h1>
+                <h2 class="brand-white text-center mb-5" style="text-shadow: 4px 4px 4px #332f2f;">{{__(ui.link)}}</h1>
 
             </div>
 

@@ -61,7 +61,7 @@
                         <ul class="list-unstyled text-center">
                             <li><a href="{{route('wip')}}" class="d-block">La nostra storia</a></li>
                             <li><a href="{{route('wip')}}" class="d-block">Contatti</a></li>
-                            <li><a href="{{route('wip')}}" class="d-block">Il nostro Team</a></li>
+                            <li><a href="{{route('wip')}}" class="d-block">Il nostro team</a></li>
                             <li><a href="{{route('work.with.us')}}" class="d-block">Lavora con noi</a></li>
                         </ul>
                     </div>
@@ -72,16 +72,16 @@
                              <li><a href="{{ route('category.view',$category) }}" class="d-block">{{ $category->name }}</a></li>
                             @endforeach
 
-                        </ul>   
+                        </ul>
                     </div>
-           
-                    
+
+
                     <div class="col-10 mx-auto col-md-3 mb-md-0 mb-4">
                         <h2 class="footer-heading text-center">Risorse</h2>
                         <ul class="list-unstyled text-center">
                             <li><a href="{{route('wip')}}" class="d-block">Blog</a></li>
-                            <li><a href="{{route('wip')}}" class="d-block">Newsletter</a></li>
-                            <li><a href="{{route('wip')}}" class="d-block">Privacy Policy</a></li>
+                            <li><a href="{{route('wip')}}" class="d-block">News</a></li>
+                            <li><a href="{{route('wip')}}" class="d-block">Privacy</a></li>
                         </ul>
                     </div>
                 </div>
@@ -105,7 +105,7 @@
             <p class="brand-grey mx-auto ms-lg-5">© 2023 Presto.it</p>
             <p class="brand-grey mx-auto ms-lg-5">by The Scrumming Heads.</p>
             <p class="brand-grey mx-auto ms-lg-5">Tutti i diritti riservati</p>
-        
+
         </div>
         <div class="col-md-6 text-center text-md-right">
             <ul class="ftco-footer-social p-0">

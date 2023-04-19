@@ -9,7 +9,7 @@ use Livewire\Component;
 use Livewire\WithFileUploads;
 
 class CreateAnnouncement extends Component
-{   
+{
     use WithFileUploads;
 
     public $title;
@@ -19,7 +19,7 @@ class CreateAnnouncement extends Component
     public $images = [];
     public $form_id;
     public $category;
-    
+
 
     //regole di validazione
     protected $rules = [
@@ -42,11 +42,11 @@ class CreateAnnouncement extends Component
         'temporary_images.*max'=>'L\'immagine non può superare 1mb',
         'images.image' => 'L\'immagine deve essere un\'immagine',
         'images.max' => 'L\'immagine non può superare 1mb'
- 
+
     ];
 
     public function updateImageOrder($orderedImages)
-    {  
+    {
         // $this->temporary_images = collect($orderedImages)->map(function($id) {
         //     return collect($this->temporary_images)->where('id', (int) $id['value'])->first();
         // })->toArray();
@@ -57,10 +57,10 @@ class CreateAnnouncement extends Component
             $this->images[] = $image;
             // $image->store('images');
         }
-        
+
     }
 
- 
+
 
 
     public function updated($propertyName)
@@ -82,7 +82,7 @@ class CreateAnnouncement extends Component
 
     }
 
-  
+
 
     public function removeImage($key)
     {
@@ -116,7 +116,7 @@ class CreateAnnouncement extends Component
 
         Auth::user()->announcements()->save($announcement);
 
-        session()->flash('message', 'Annuncio inserito con successo.');
+        session()->flash('message', '{{__(ui.success)}}');
 
         $this->cleanForm();
     }

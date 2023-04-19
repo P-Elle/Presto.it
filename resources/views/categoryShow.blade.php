@@ -3,11 +3,11 @@
     <div class="container-fluid brand-grey-bg">
         <div class="row category-header shadow">
             <div class="col-12 text-light p-5">
-                <h1 class="mt-5 brand-white text-center pt-5"><span class="brand-cool">{{ $category->name }}</span>: una nuova vita.</h1>
+                <h1 class="mt-5 brand-white text-center pt-5"><span class="brand-cool">{{ $category->name }}</span>{{ __('ui.life')}}</h1>
             </div>
             <x-search-announcement/>
         </div>
-    
+
 
     <section class="py-5">
         <div class="row justify-content-center justify-content-lg-around">
@@ -17,13 +17,13 @@
                         <x-card :announcement="$announcement"/>
                     @empty
                         <div class="col-12">
-                            <p class="h1">Non sono presenti annunci per questa categoria!</p>
-                            <p class="h2">Pubblicane uno: <a href="{{ route('announcements.create') }}" class="btn shadow">Nuovo Annuncio</a></p>
+                            <p class="h1">{{__('ui.none')}}</p>
+                            <p class="h2">{{__('ui.publish')}}<a href="{{ route('announcements.create') }}" class="btn shadow">{{__('ui.new')}}</a></p>
                         </div>
                     @endforelse
                 </div>
 
-            </div>  
+            </div>
         </div>
     </section>
 </div>

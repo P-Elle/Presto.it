@@ -35,8 +35,8 @@ class EmailVerification extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-                    ->line('Ciao benvnut* nella nostra community')
-                    ->line('Per confermare la tua registrazione clicca sul link in basso')
+                    ->line('{{__(ui.welcome)}}')
+                    ->line('{{__(ui.bottom)}}')
                     ->action('Notification Action', url('/'));
     }
 
