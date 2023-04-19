@@ -1,6 +1,13 @@
 import './bootstrap';
 import 'bootstrap';
 
+// import '@nextapps-be/livewire-sortablejs';
+// import Alpine from 'alpinejs'
+ 
+// window.Alpine = Alpine
+ 
+// Alpine.start()
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -80,6 +87,9 @@ function myFunction(x) {
   var x = window.matchMedia("(max-width: 991px)")
   myFunction(x); // Call listener function at run time
   x.addListener(myFunction); // Attach listener function on state changes
+
+
+
 
 
  

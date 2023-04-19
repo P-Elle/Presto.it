@@ -47,6 +47,24 @@ class CreateAnnouncement extends Component
  
     ];
 
+    public function updateImageOrder($orderedImages)
+    {  
+        // $this->temporary_images = collect($orderedImages)->map(function($id) {
+        //     return collect($this->temporary_images)->where('id', (int) $id['value'])->first();
+        // })->toArray();
+
+        // return $this->temporary_images
+        $this->images = collect($orderedImages)->pluck(('order'))->toArray();
+        foreach($this->temporary_images as $image){
+            $this->images[] = $image;
+            // $image->store('images');
+        }
+        
+    }
+
+ 
+
+
     public function updated($propertyName)
     {
         $this->validateOnly($propertyName);
