@@ -52,7 +52,7 @@
 
                                  @foreach ($images as $key => $image)
 
-                                         <div class="image-preview mx-auto" wire:sortable.item="{{$key}}" wire:key="image-{{$key}}" wire:sortable.handle style="background-image: url({{$image->temporaryUrl()}});">
+                                         <div class="image-preview mx-auto" draggable="true" ondragstart="event.dataTransfer.setData('text/plain', this.dataset.order); event.dataTransfer.effectAllowed = 'move';">
                                              <button type="button" class="btn remove m-0 p-0 border-0" wire:click="removeImage({{$key}})"><i class="bi bi-x-circle-fill"></i></button>
                                              {{-- <button wire:sortable.handle>drag</button> --}}
                                          </div>
