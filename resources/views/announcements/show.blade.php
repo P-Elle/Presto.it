@@ -22,14 +22,17 @@
                             </div>
                             <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="https://picsum.photos/500/300" class="v-100 d-block"alt="{{$announcement->title}}">
+                                <img src="{{!$announcement->images()->get()->isEmpty() ? {{--Storage::url($announcement->images()->first()->path)--}} 
+                                $announcement->images()->first()->getUrl(400,400) : 'https://picsum.photos/400/400'}}" class="v-100 d-block"alt="{{$announcement->title}}">
 
                             </div>
                             <div class="carousel-item">
-                                <img src="https://picsum.photos/500/300" class="v-100 d-block"alt="{{$announcement->title}}">
+                                <img src="{{!$announcement->images()->get()->isEmpty() ? {{--Storage::url($announcement->images()->first()->path)--}} 
+                                $announcement->images()->first()->getUrl(400,400) : 'https://picsum.photos/400/400'}}" class="v-100 d-block"alt="{{$announcement->title}}">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://picsum.photos/500/300" class="v-100 d-block"alt="{{$announcement->title}}">
+                                <img src="{{!$announcement->images()->get()->isEmpty() ? {{--Storage::url($announcement->images()->first()->path)--}} 
+                                $announcement->images()->first()->getUrl(400,400) : 'https://picsum.photos/400/400'}}" class="v-100 d-block"alt="{{$announcement->title}}">
                             </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

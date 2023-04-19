@@ -2,11 +2,13 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Announcement;
-use App\Models\Category;
-use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
+use App\Models\Category;
+use App\Jobs\ResizeImage;
+use App\Models\Announcement;
 use Livewire\WithFileUploads;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 class CreateAnnouncement extends Component
 {   
@@ -91,9 +93,21 @@ class CreateAnnouncement extends Component
 
         if(count($this->images)){
             foreach($this->images as $image){
-                $announcement->images()->create(['path'=>$image->store('images','public')]);
+                // $announcement->images()->create(['path'=>$image->store('images','public')]);
+
+                //creiamo una nuova cartella announcements con all'interno la cartella con l'id dell'annuncio
+                $newFileName = "announcements/{$announcement->id}";
+                //e ogni immagine sarà ridimensionata e salvata nella relativa cartella
+                $newImage = $announcement->images()->create(['path'=>$image->store($newFileName, 'public')]);
+
+                // andiamo ad effettuare in asincrono il nostro job ovvero in background andrà a croppare l'immagine e salvarla
+                // in announcements con l'id della relativa immagine
+                
+                dispatch(new ResizeImage($newImage->path, 400, 400));
             }
 
+            //successivamente andiamo a cancellare la cartella temporanea di livewire
+            File::deleteDirectory(storage_path ('/app/livewire-tmp'));
         }
 
         Auth::user()->announcements()->save($announcement);
