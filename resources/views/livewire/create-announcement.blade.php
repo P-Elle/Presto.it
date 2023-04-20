@@ -42,6 +42,7 @@
                         <span class="text-danger small">{{$message}}</span>
                         @enderror
                     </div>
+
                     @if (!empty($images))
 
                          <div class="col-12 mt-1 preview-box">
@@ -50,7 +51,7 @@
 
 
 
-                                 @foreach ($images as $key => $image)
+                            @foreach ($images as $key => $image)
 
                                          <div class="image-preview mx-auto" draggable="true" ondragstart="event.dataTransfer.setData('text/plain', this.dataset.order); event.dataTransfer.effectAllowed = 'move';">
                                              <button type="button" class="btn remove m-0 p-0 border-0" wire:click="removeImage({{$key}})"><i class="bi bi-x-circle-fill"></i></button>

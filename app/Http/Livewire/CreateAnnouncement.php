@@ -123,12 +123,12 @@ class CreateAnnouncement extends Component
 
         if(count($this->images)){
             foreach($this->images as $image){
-                // $announcement->images()->create(['path'=>$image->store('images','public')]);
+                // $this->announcement->images()->create(['path'=>$image->store('images','public')]);
 
                 //creiamo una nuova cartella announcements con all'interno la cartella con l'id dell'annuncio
-                $newFileName = "announcements/{$announcement->id}";
+                $newFileName = "announcements/{$this->announcement->id}";
                 //e ogni immagine sarà ridimensionata e salvata nella relativa cartella
-                $newImage = $announcement->images()->create(['path'=>$image->store($newFileName, 'public')]);
+                $newImage = $this->announcement->images()->create(['path'=>$image->store($newFileName, 'public')]);
 
                 // andiamo ad effettuare in asincrono il nostro job ovvero in background andrà a croppare l'immagine e salvarla
                 // in announcements con l'id della relativa immagine
