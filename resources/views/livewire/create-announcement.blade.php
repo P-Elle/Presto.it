@@ -45,7 +45,7 @@
                     @if (!empty($images))
 
                          <div class="col-12 mt-1 preview-box">
-                             <p>Anteprima immagini:</p>
+                             <p>{{__('ui.img')}}</p>
                              <div  wire:sortable="updateImageOrder" class="row mx-auto rounded py-4 brand-white-bg">
 
 
@@ -70,7 +70,7 @@
 
 
                     <div class="col-12 mt-1 mb-3">
-                        <label for="temporary_images">{{__(ui.jpg)}}</label>
+                        <label for="temporary_images">{{__('ui.jpg')}}</label>
                         <input wire:model="temporary_images" type="file" name="images" multiple class="form-control">
                         @error('temporary_images.*')
                         <span class="text-danger small">{{$message}}</span>

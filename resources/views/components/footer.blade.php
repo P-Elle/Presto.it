@@ -59,14 +59,14 @@
                     <div class="col-10 mx-auto col-md-3 mb-md-0 mb-4">
                         <h2 class="footer-heading text-center">About</h2>
                         <ul class="list-unstyled text-center">
-                            <li><a href="{{route('wip')}}" class="d-block">La nostra storia</a></li>
-                            <li><a href="{{route('wip')}}" class="d-block">Contatti</a></li>
-                            <li><a href="{{route('wip')}}" class="d-block">Il nostro team</a></li>
-                            <li><a href="{{route('work.with.us')}}" class="d-block">Lavora con noi</a></li>
+                            <li><a href="{{route('wip')}}" class="d-block">{{__('ui.story')}}</a></li>
+                            <li><a href="{{route('wip')}}" class="d-block">{{__('ui.contact')}}</a></li>
+                            <li><a href="{{route('wip')}}" class="d-block">{{__('ui.team')}}</a></li>
+                            <li><a href="{{route('work.with.us')}}" class="d-block">{{__('ui.us')}}</a></li>
                         </ul>
                     </div>
                     <div class="col-10 mx-auto col-md-3 mb-md-0 mb-4">
-                        <h2 class="footer-heading text-center">Categorie</h2>
+                        <h2 class="footer-heading text-center">{{__('ui.categories')}}</h2>
                         <ul class="list-unstyled text-center">
                             @foreach ($categories as $category)
                              <li><a href="{{ route('category.view',$category) }}" class="d-block">{{ $category->name }}</a></li>
@@ -77,11 +77,11 @@
 
 
                     <div class="col-10 mx-auto col-md-3 mb-md-0 mb-4">
-                        <h2 class="footer-heading text-center">Risorse</h2>
+                        <h2 class="footer-heading text-center">{{__('ui.resource')}}</h2>
                         <ul class="list-unstyled text-center">
-                            <li><a href="{{route('wip')}}" class="d-block">Blog</a></li>
-                            <li><a href="{{route('wip')}}" class="d-block">News</a></li>
-                            <li><a href="{{route('wip')}}" class="d-block">Privacy</a></li>
+                            <li><a href="{{route('wip')}}" class="d-block">{{__('ui.blog')}}</a></li>
+                            <li><a href="{{route('wip')}}" class="d-block">{{__('ui.news')}}</a></li>
+                            <li><a href="{{route('wip')}}" class="d-block">{{__('ui.privacy')}}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -104,7 +104,7 @@
         <div class="col-md-6 mb-md-0 mb-4 text-center">
             <p class="brand-grey mx-auto ms-lg-5">© 2023 Presto.it</p>
             <p class="brand-grey mx-auto ms-lg-5">by The Scrumming Heads.</p>
-            <p class="brand-grey mx-auto ms-lg-5">Tutti i diritti riservati</p>
+            <p class="brand-grey mx-auto ms-lg-5">{{__('ui.rights')}}</p>
 
         </div>
         <div class="col-md-6 text-center text-md-right">

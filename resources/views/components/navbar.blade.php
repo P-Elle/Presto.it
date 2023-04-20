@@ -3,7 +3,7 @@
   <div class="container">
     <a class="navbar-brand" href="{{route('welcome')}}">Presto.it</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
+        {{__('ui.menu')}}
         <i class="fas fa-bars ms-1"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -22,7 +22,7 @@
 
           <li class="nav-item dropdown d-none d-lg-block">
             <a class="nav-link dropdown-toggle" href="#" role="button" id="categoriesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                Categorie
+                {{__('ui.categories')}}
             </a>
             <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
               @foreach ($categories as $category)
@@ -34,32 +34,32 @@
 
           @auth
           <li class="nav-item d-lg-none">
-            <a class="nav-link" href="">{{__(ui.ciao)}} {{auth()->user()->name}}</a>
+            <a class="nav-link" href="">{{__('ui.ciao')}} {{auth()->user()->name}}</a>
           </li>
 
-          <li class="nav-item d-lg-none"><a class="nav-link" href="/logout" onclick="event.preventDefault();getElementById('logout').submit();">{{__(ui.logout)}}</a></li>
+          <li class="nav-item d-lg-none"><a class="nav-link" href="/logout" onclick="event.preventDefault();getElementById('logout').submit();">{{__('ui.logout')}}</a></li>
           <form id="logout" action="/logout" method="POST" class="d-none">
             @csrf
           </form>
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle d-none d-lg-block" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                {{__(ui.ciao)}} {{auth()->user()->name}}
+                {{__('ui.ciao')}} {{auth()->user()->name}}
             </a>
 
             <span class="d-none d-lg-block">
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="{{route('wip')}}">{{__(ui.profile)}}</a></li>
-                <li><a class="dropdown-item" href="{{route('work.with.us')}}">{{__(ui.us)}}</a></li>
+                <li><a class="dropdown-item" href="{{route('wip')}}">{{__('ui.profile')}}</a></li>
+                <li><a class="dropdown-item" href="{{route('work.with.us')}}">{{__('ui.us')}}</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="/logout" onclick="event.preventDefault();getElementById('logout').submit();">{{__(ui.out)}}</a></li>
+                <li><a class="dropdown-item" href="/logout" onclick="event.preventDefault();getElementById('logout').submit();">{{__('ui.out')}}</a></li>
                 <form id="logout" action="/logout" method="POST" class="d-none">
                   @csrf
                 </form>
               </ul>
             </span>
           </li>
-          <li class="btn brand-light-bg button"><a class="brand-grey" href="{{route('announcements.create')}}">{{__(ui.insert)}}</a></li>
+          <li class="btn brand-light-bg button"><a class="brand-grey" href="{{route('announcements.create')}}">{{__('ui.insert')}}</a></li>
 
           {{-- Revisore
             Se l'utente loggato è un revisore--}}
@@ -72,7 +72,7 @@
               {{__(ui.rev)}}
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pil bg-danger">
                   {{App\Models\Announcement::toBeRevisionedCount()}} {{-- contatore degli annunci da revisonare (un_accepted) --}}
-                  <span class="visually-hidden">{{__(ui.unread)}}</span>
+                  <span class="visually-hidden">{{__('ui.unread')}}</span>
                 </span>
               </a>
             </li>
@@ -81,10 +81,10 @@
 
           @else
           <li class="nav-item">
-            <a class="nav-link" href="/login">Login</a>
+            <a class="nav-link" href="/login">{{__('ui.enter')}}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/register">Registrati</a>
+            <a class="nav-link" href="/register">{{__('ui.register')}}</a>
           </li>
           @endauth
 

@@ -19,13 +19,13 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        $categories = ['Motori', 'Informatica', 'Elettrodomestici', 'Libri', 'Giochi',
+        $categories = [__("ui.motori"), 'Informatica', 'Elettrodomestici', 'Libri', 'Giochi',
         'Sport', 'Immobili','Telefoni', 'Arredamento'];
 
         foreach($categories as $category) {
             Category::create(['name'=>$category]);
         }
-        
+
     }
 
     /**

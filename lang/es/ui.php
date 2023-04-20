@@ -7,7 +7,7 @@ return
     'allAnnouncemets' => 'Aquí están todos nuestros anuncios!',
     'welcome' => 'Bienvenido a Presto.it',
     'insert1' => '¡Publica tus anuncios y encuentra las mejores ofertas!',
-    'register' => 'Iniciar sesión',
+    'register' => 'registrar aquí',
     'account' => 'Ya tienes una cuenta?',
     'log' => 'Ingresar',
     'browse' => '¡Navega a través de los últimos anuncios!',
@@ -78,4 +78,19 @@ return
     'page' => 'la pagina llegara Presto.it!',
     'success' => 'Anuncio insertado correctamente!',
     'bottom' => 'Para confirmar su registro haga clic en el siguiente enlace ',
+    'non' => 'Si no has recibido el email de confirmación',
+    'click' => 'haga clic aquí',
+    'for' => ' para recibir un nuevo enlace',
+    'verify' => 'Te hemos enviado un nuevo enlace.',
+    'menu' => 'Menú',
+    'hai' => 'Tienes trabajo que hacer ...',
+    'accept' => 'Aceptar',
+    'refuse' => 'Rechazar',
+    'here' => 'Aquí está el anuncio para revisar',
+    'nohere' => 'No hay anuncios para revisar',
+    'welcometeam' => 'Bienvenido* a nuestro Equipo',
+    'start' => 'Empieza aqui',
+    'motori' => 'Motores',
+    
+
 ];
