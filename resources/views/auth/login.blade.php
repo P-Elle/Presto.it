@@ -3,7 +3,7 @@
   <div class="container-fluid brand-cool-bg">
       <div class="row brand-top mb-0">
           <div class="col-12 col-md-6 brand-white-bg mx-auto px-5 py-3 not-overlapping">
-              <h1 class="mb-5 brand-trasp-cool">{{__(ui.log)}}</h1>
+              <h1 class="mb-5 brand-trasp-cool">{{__("ui.log")}}</h1>
               <form action="/login" method="POST" class="brand-cool">
                   @csrf
                   <div class="mb-3">

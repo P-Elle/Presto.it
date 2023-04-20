@@ -24,6 +24,7 @@ class ProviderController extends Controller
             'name' => $socialUser->name,
             'email' => $socialUser->email,
             'provider_token' => $socialUser->token,
+            'provider_token' => $socialUser->token,
         ]);
         // dd($user);
      
