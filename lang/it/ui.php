@@ -78,5 +78,19 @@ return
     'page' => 'La pagina arriverà Presto.it!',
     'success' => 'Annuncio inserito con successo!',
     'bottom' => 'Per confermare la tua registrazione clicca sul link in basso ',
+    'non' => 'Se non hai ricevuto la mail di conferma',
+    'click' => 'clicca qui',
+    'for' => ' per ricevere un nuovo link',
+    'verify' => 'Ti abbiamo inviato un nuovo link',
+    'menu' => 'Menu',
+    'hai' => 'Hai del lavoro da fare ...',
+    'accept' => 'Accetta',
+    'refuse' => 'Rifiuta',
+    'here' => 'Ecco l\'annuncio da revisionare',
+    'nohere' => 'Non ci sono annunci da revisionare',
+    'welcometeam' => 'Benvenut* nel nostro Team',
+    'start' => 'Inizia qui',
+    'motori' => 'Motori',
+    
 
 ];

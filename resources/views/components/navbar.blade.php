@@ -3,7 +3,7 @@
   <div class="container">
     <a class="navbar-brand" href="{{route('welcome')}}">Presto.it</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
+        {{__('ui.menu')}}
         <i class="fas fa-bars ms-1"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -12,7 +12,7 @@
 
           <li class="nav-item dropdown d-none d-lg-block">
             <a class="nav-link dropdown-toggle" href="#" role="button" id="categoriesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                Categorie
+                {{__('ui.categories')}}
             </a>
             <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
               @foreach ($categories as $category)
@@ -27,9 +27,9 @@
 
           <li class="nav-item d-none d-lg-block"><x-_locale lang="en" nation='gb'/></li>
 
-          <li class="nav-item d-none d-lg-block"><x-_locale lang="es" nation='es'/></li> 
+          <li class="nav-item d-none d-lg-block"><x-_locale lang="es" nation='es'/></li>
 
-          <li class="nav-item d-lg-none"><x-_locale lang="it" nation='it'/> <x-_locale lang="en" nation='gb'/> <x-_locale lang="es" nation='es'/></li> 
+          <li class="nav-item d-lg-none"><x-_locale lang="it" nation='it'/> <x-_locale lang="en" nation='gb'/> <x-_locale lang="es" nation='es'/></li>
 
           @auth
           <li class="nav-item d-lg-none">
@@ -80,10 +80,10 @@
 
           @else
           <li class="nav-item">
-            <a class="nav-link" href="/login">Login</a>
+            <a class="nav-link" href="/login">{{__('ui.enter')}}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/register">Registrati</a>
+            <a class="nav-link" href="/register">{{__('ui.register')}}</a>
           </li>
           @endauth
 

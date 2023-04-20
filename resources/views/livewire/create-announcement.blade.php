@@ -44,73 +44,46 @@
                     </div>
 
                     @if (!empty($images))
-                    
-                    <div class="col-12 mt-1 preview-box">
-                        <p>Anteprima immagini:</p>
-                        <div  wire:sortable="updateImageOrder" class="row mx-auto rounded py-4 brand-white-bg">
-                       
-                    
+
+                         <div class="col-12 mt-1 preview-box">
+                             <p>{{__('ui.img')}}</p>
+                             <div  wire:sortable="updateImageOrder" class="row mx-auto rounded py-4 brand-white-bg">
+
+
 
                             @foreach ($images as $key => $image)
 
-                                    <div class="image-preview mx-auto" draggable="true" wire:sortable.item="{{$key}}" wire:key="image-{{$key}}" wire:sortable.handle style="background-image: url({{$image->temporaryUrl()}});">
-                                        <button type="button" class="btn remove m-0 p-0 border-0" wire:click="removeImage({{$key}})"><i class="bi bi-x-circle-fill"></i></button>
-                                        {{-- <button wire:sortable.handle>drag</button> --}}
-                                    </div>
-                                 
+                                         <div class="image-preview mx-auto" draggable="true" ondragstart="event.dataTransfer.setData('text/plain', this.dataset.order); event.dataTransfer.effectAllowed = 'move';">
+                                             <button type="button" class="btn remove m-0 p-0 border-0" wire:click="removeImage({{$key}})"><i class="bi bi-x-circle-fill"></i></button>
+                                             {{-- <button wire:sortable.handle>drag</button> --}}
+                                         </div>
 
-                                
-                                
-                            @endforeach
-                           
+
+
+
+                                 @endforeach
+
+                             </div>
+
+
                         </div>
-                   
-                    
-                   </div>
-                @endif
-                
-            
-               <div class="col-12 mt-1 mb-3">
-                   <label for="temporary_images">{{__('ui.jpg')}}</label>
-                   <input wire:model="temporary_images" type="file" name="images" multiple class="form-control">
-                   @error('temporary_images.*')
-                   <span class="text-danger small">{{$message}}</span>
-                   @enderror
-               
-               <div class="col-12 mt-1 mb-3">
-                   <button type="submit" class="btn brand-dark-bg brand-white my-3">{{__('ui.create2')}}</button>
-               </div>
-           </div>
-       </form>
+                     @endif
 
-  
-   
-</div>
+
+                    <div class="col-12 mt-1 mb-3">
+                        <label for="temporary_images">{{__('ui.jpg')}}</label>
+                        <input wire:model="temporary_images" type="file" name="images" multiple class="form-control">
+                        @error('temporary_images.*')
+                        <span class="text-danger small">{{$message}}</span>
+                        @enderror
+                    <div class="col-12 mt-1 mb-3">
+                        <button type="submit" class="btn brand-dark-bg brand-white my-3">{{__('ui.create2')}}</button>
+                    </div>
+                </div>
+            </form>
+
+
+
+    </div>
 
 </div>
-
-
-
-
-
-
-
-
-
-                   
-                            
-
-
-
-
-
-
-
-
-                               
-
-
-
-
-
-

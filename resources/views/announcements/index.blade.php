@@ -4,7 +4,7 @@
     <div class="container-fluid brand-white-bg">
         <div class="row index-header shadow justify-content-center">
             <div class="col-12 text-light p-5">
-                <h1 class="mt-5 brand-white text-center pt-5"><span class="brand-cool"></span>{{__("ui.gusto")}}</h1>
+                <h1 class="mt-5 brand-white text-center pt-5"><span class="brand-cool"></span>{{__('ui.gusto')}}</h1>
             </div>
             <x-search-announcement/>
         </div>
@@ -17,7 +17,7 @@
                     @forelse ($announcements as $announcement)
                       <x-card :announcement="$announcement"/>
                     @empty
-                    <h3>{{__("ui.no")}}</h3>
+                    <h3>{{__('ui.no')}}</h3>
                     @endforelse
                     {{$announcements->links()}}
                 </div>

@@ -12,12 +12,12 @@
         <div class="row container-revisor">
             <div class="col-6 col-revisor">
                 <div class="row">
-                    <h1 class="brand-cool text-center">Benvenuto nel nostro team!</h1>
+                    <h1 class="brand-cool text-center">{{__('ui.welcometeam')}}</h1>
                 </div>
                <div class="row button-revisor">
-                    <a href="{{route('revisor.index')}}" class="btn brand-light-bg brand-white mt-5">Inizia qui</a>
+                    <a href="{{route('revisor.index')}}" class="btn brand-light-bg brand-white mt-5">{{__('ui.start')}}</a>
                </div>
-               
+
             </div>
             <div class="col-6 img-revisor">
             </div>
