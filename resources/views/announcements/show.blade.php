@@ -8,7 +8,7 @@
                     <div class="col-12 col-lg-5 p-4">
                         <h2 class="brand mt-5 mt-lg-0">{{$announcement->title}}</h2>
                         <h3>{{$announcement->price}} €</h3>
-                        <p class="small mt-1">{{$announcement->category->name ?? {{__(ui.nocat)}}}}</p>
+                        <p class="small mt-1">{{$announcement->category->name}}</p>
                         <p>{{$announcement->description}}</p>
                     </div>
                     <div class="col-12 col-lg-7 align-item-center justify-content-center p-4">
@@ -37,11 +37,11 @@
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">{{__(ui.previous)}}</span>
+                            <span class="visually-hidden">{{__("ui.previous")}}</span>
                             </button>
                             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">{{__(ui.next)}}</span>
+                            <span class="visually-hidden">{{__("ui.next")}}</span>
                             </button>
                         </div>
                     </div>

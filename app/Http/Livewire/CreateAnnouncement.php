@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 
 class CreateAnnouncement extends Component
-{
+{   
     use WithFileUploads;
 
     public $title;
@@ -21,9 +21,7 @@ class CreateAnnouncement extends Component
     public $images = [];
     public $form_id;
     public $category;
-
-
-    public $orderedImages;
+    
 
     //regole di validazione
     protected $rules = [
@@ -46,35 +44,27 @@ class CreateAnnouncement extends Component
         'temporary_images.*max'=>'L\'immagine non può superare 1mb',
         'images.image' => 'L\'immagine deve essere un\'immagine',
         'images.max' => 'L\'immagine non può superare 1mb'
-
+ 
     ];
 
     public function updateImageOrder($orderedImages)
-    {
+    {  
         // $this->temporary_images = collect($orderedImages)->map(function($id) {
         //     return collect($this->temporary_images)->where('id', (int) $id['value'])->first();
         // })->toArray();
-
+            dd($orderedImages, $this->temporary_images);
         // return $this->temporary_images
         $this->images = collect($orderedImages)->pluck(('order'))->toArray();
         foreach($this->temporary_images as $image){
             $this->images[] = $image;
             // $image->store('images');
         }
-
-        // $this->images = collect($orderedImages)->pluck('order')->toArray();
-        // foreach($this->temporary_images as $key => $image){
-        //     $image->position = $orderedImages[$key]->order;
-        // }
-
-
-        //  foreach ($orderedImages as $key => $image) {
-        //     $this->temporary_images[$key]['position'] = $image['order'];
-        // }
-
+        
     }
 
 
+
+ 
 
 
     public function updated($propertyName)
@@ -96,7 +86,7 @@ class CreateAnnouncement extends Component
 
     }
 
-
+  
 
     public function removeImage($key)
     {
@@ -123,16 +113,16 @@ class CreateAnnouncement extends Component
 
         if(count($this->images)){
             foreach($this->images as $image){
-                // $this->announcement->images()->create(['path'=>$image->store('images','public')]);
+                // $announcement->images()->create(['path'=>$image->store('images','public')]);
 
                 //creiamo una nuova cartella announcements con all'interno la cartella con l'id dell'annuncio
-                $newFileName = "announcements/{$this->announcement->id}";
+                $newFileName = "announcements/{$announcement->id}";
                 //e ogni immagine sarà ridimensionata e salvata nella relativa cartella
-                $newImage = $this->announcement->images()->create(['path'=>$image->store($newFileName, 'public')]);
+                $newImage = $announcement->images()->create(['path'=>$image->store($newFileName, 'public')]);
 
                 // andiamo ad effettuare in asincrono il nostro job ovvero in background andrà a croppare l'immagine e salvarla
                 // in announcements con l'id della relativa immagine
-
+                
                 dispatch(new ResizeImage($newImage->path, 400, 400));
             }
 
@@ -142,7 +132,7 @@ class CreateAnnouncement extends Component
 
         Auth::user()->announcements()->save($announcement);
 
-        session()->flash('message', '{{__(ui.success)}}');
+        session()->flash('message', 'Annuncio inserito con successo.');
 
         $this->cleanForm();
     }
