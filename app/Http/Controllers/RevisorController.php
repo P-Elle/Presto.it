@@ -30,14 +30,14 @@ class RevisorController extends Controller
     public function acceptAnnouncement(Announcement $announcement){
         // se il valore sarà true l'annuncio verrà accettato e stampato il relativo messaggio
         $announcement->setAccepted(true);
-        return redirect()->back()->with('message', 'Complimenti, hai accettato l\'annuncio');
+        return redirect()->back()->with('message', __('ui.complimenti'));
     }
 
     // questo metodo gestisce il rifiuto dell'annuncio
     public function rejectAnnouncement(Announcement $announcement){
         // se il valore sarà fale l'annuncio verrà rifiutato e stampato il relativo messaggio
         $announcement->setAccepted(false);
-        return redirect()->back()->with('message', 'Siamo spiacenti ma l\'annuncio è stato rifiutato');
+        return redirect()->back()->with('message', __('ui.spiacenti'));
     }
 
     //ritorna la vista lavora con noi
@@ -57,7 +57,7 @@ class RevisorController extends Controller
 
             //salvo file su disco
             $cvPath = $request->file('cv')->storeAs('public/cv', $originalName);
-            
+
             //Salvo il percorso del file all'interno del database
             $candidate->cv = $cvPath;
             $candidate->save();
@@ -68,7 +68,7 @@ class RevisorController extends Controller
 
         // invia all'admin la richiesta con i dati dell'utente loggato
         Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()) );
-        return redirect()->back()->with('message', 'Candidatura inviata con successo!');
+        return redirect()->back()->with('message', __('ui.success'));
     }
 
      // questo metodo gestisce l'accettazione della richiesta di lavoro come revisore

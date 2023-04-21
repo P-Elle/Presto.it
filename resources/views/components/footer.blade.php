@@ -57,7 +57,7 @@
             <div class="col-12">
                 <div class="row ps-md-5 mb-4">
                     <div class="col-10 mx-auto col-md-3 mb-md-0 mb-4">
-                        <h2 class="footer-heading text-center">About</h2>
+                        <h2 class="footer-heading text-center">{{__('ui.about')}}</h2>
                         <ul class="list-unstyled text-center">
                             <li><a href="{{route('wip')}}" class="d-block">{{__('ui.story')}}</a></li>
                             <li><a href="{{route('wip')}}" class="d-block">{{__('ui.contact')}}</a></li>

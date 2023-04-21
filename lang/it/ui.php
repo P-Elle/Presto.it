@@ -25,7 +25,7 @@ return
     'price' => 'Prezzo',
     'category' => 'Categoria',
     'choose' => 'Scegli la categoria',
-    'preview' => 'Photo Preview :',
+    'preview' => 'Anteprima delle immagini :',
     'create2' => 'Crea',
     'require' => 'Richiesta inoltrata con successo!',
     'gusto' => 'Abbiamo annunci per ogni gusto!',
@@ -91,6 +91,10 @@ return
     'welcometeam' => 'Benvenut* nel nostro Team',
     'start' => 'Inizia qui',
     'motori' => 'Motori',
-    
+    'about' => 'Su di noi',
+    'complimenti' => 'Complimenti hai accettato l\'annuncio',
+    'spiacenti' => 'Siamo spiacenti ma l\'annuncio è stato rifiutato',
+    'success' => 'La sua candidatura è stata inviata con successo.',
+    'required' => 'Il campo attributo è obbligatorio',
 
 ];

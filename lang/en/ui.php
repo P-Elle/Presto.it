@@ -91,5 +91,11 @@ return
     'welcometeam' => 'Welcome to our Team',
     'start' => 'Start here',
     'motori' => 'Motors',
+    'about' => 'About',
+    'complimenti' => 'Congratulations you have accepted the announcement',
+    'spiacenti' => 'We\'re sorry but your ad was rejected',
+    'success' => 'Your application has been sent successfully.',
+    'required' => 'The field Attribute is required',
     
+
 ];

@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 
 class CreateAnnouncement extends Component
-{   
+{
     use WithFileUploads;
 
     public $title;
@@ -21,7 +21,7 @@ class CreateAnnouncement extends Component
     public $images = [];
     public $form_id;
     public $category;
-    
+
 
     //regole di validazione
     protected $rules = [
@@ -35,7 +35,7 @@ class CreateAnnouncement extends Component
 
     //messaggi personalizzati di errore
     protected $messages = [
-        'required' => 'Il campo :attribute è obbligatorio.',
+        'required' => 'Il campo attributo è obbligatorio',
         'min' => 'Il campo :attribute deve contenere almeno :min caratteri',
         'max' => 'Il campo :attribute può contenere al massimo :max caratteri',
         'numeric' => 'Il campo :attribute deve essere numerico',
@@ -44,11 +44,11 @@ class CreateAnnouncement extends Component
         'temporary_images.*max'=>'L\'immagine non può superare 1mb',
         'images.image' => 'L\'immagine deve essere un\'immagine',
         'images.max' => 'L\'immagine non può superare 1mb'
- 
+
     ];
 
     public function updateImageOrder($orderedImages)
-    {  
+    {
         // $this->temporary_images = collect($orderedImages)->map(function($id) {
         //     return collect($this->temporary_images)->where('id', (int) $id['value'])->first();
         // })->toArray();
@@ -59,12 +59,12 @@ class CreateAnnouncement extends Component
             $this->images[] = $image;
             // $image->store('images');
         }
-        
+
     }
 
 
 
- 
+
 
 
     public function updated($propertyName)
@@ -86,7 +86,7 @@ class CreateAnnouncement extends Component
 
     }
 
-  
+
 
     public function removeImage($key)
     {
@@ -122,7 +122,7 @@ class CreateAnnouncement extends Component
 
                 // andiamo ad effettuare in asincrono il nostro job ovvero in background andrà a croppare l'immagine e salvarla
                 // in announcements con l'id della relativa immagine
-                
+
                 dispatch(new ResizeImage($newImage->path, 400, 400));
             }
 
@@ -132,7 +132,7 @@ class CreateAnnouncement extends Component
 
         Auth::user()->announcements()->save($announcement);
 
-        session()->flash('message', 'Annuncio inserito con successo.');
+        session()->flash('message', __('ui.success'));
 
         $this->cleanForm();
     }
