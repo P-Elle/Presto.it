@@ -1,60 +1,4 @@
-
-
-<!-- As a heading -->
-<nav class="navbar navbar-expand ms-auto bg-body-tertiary fixed-top brand-dark-bg">
-  <div class="container">
-
-    <ul class="navbar-nav ms-auto text-uppercase ms-auto py-0 align-items-center">
-       @auth
-      <li class="nav-item dropdown brand-white">
-        <a class="nav-link dropdown-toggle brand-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-       Account
-        </a>
-       
-      
-        <ul class="dropdown-menu">
-          <li><a> {{auth()->user()->name}}</a></li>
-
-          <li><a class="dropdown-item" href="{{route('wip')}}">Modifica profilo</a></li>
-          <li><a class="dropdown-item" href="{{route('work.with.us')}}">Lavora con noi</a></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="/logout" onclick="event.preventDefault();getElementById('logout').submit();">Esci</a></li>
-          <form id="logout" action="/logout" method="POST" class="d-none">
-            @csrf
-          </form>
-        </ul>
-     
-      </li>
-      
-      
-
-      @else
-      <li class="nav-item">
-        <a class="nav-link brand-white" href="/login">Accedi</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link brand-white" href="/register">Registrati</a>
-      </li>
-      @endauth
-      <li class="nav-item mx-lg-3 ms-0"><x-_locale lang="it" nation='it'/></li>
-      <li class="nav-item mx-lg-3 ms-0"><x-_locale lang="en" nation='gb'/></li>
-      <li class="nav-item mx-lg-3 ms-auto"><x-_locale lang="es" nation='es'/></li>
-
-
-    </ul>
-  
-
-
-
-
-    
-   
-
-  
-  </div>
-</nav>
-
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark shrink" id="mainNav">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top shrink" id="mainNav">
 
   <div class="container">
     <a class="navbar-brand" href="{{route('welcome')}}">Presto.it</a>
@@ -79,18 +23,43 @@
           </li>
 
 
-          {{-- <li class="nav-item d-none d-lg-block"><x-_locale lang="it" nation='it'/></li>
+          <li class="nav-item d-none d-lg-block"><x-_locale lang="it" nation='it'/></li>
 
           <li class="nav-item d-none d-lg-block"><x-_locale lang="en" nation='gb'/></li>
 
-          <li class="nav-item d-none d-lg-block"><x-_locale lang="es" nation='es'/></li> --}}
+          <li class="nav-item d-none d-lg-block"><x-_locale lang="es" nation='es'/></li>
 
-          {{-- <li class="nav-item d-lg-none"><x-_locale lang="it" nation='it'/> <x-_locale lang="en" nation='gb'/> <x-_locale lang="es" nation='es'/></li> --}}
-         
-           
+          <li class="nav-item d-lg-none"><x-_locale lang="it" nation='it'/> <x-_locale lang="en" nation='gb'/> <x-_locale lang="es" nation='es'/></li>
+
           @auth
-          <li class="btn brand-light-bg button"><a class="brand-grey" href="{{route('announcements.create')}}">{{__('ui.insert')}}</a></li>
-          
+          <li class="nav-item d-lg-none">
+            <a class="nav-link" href="">{{__('ui.ciao')}} {{auth()->user()->name}}</a>
+          </li>
+
+          <li class="nav-item d-lg-none"><a class="nav-link" href="/logout" onclick="event.preventDefault();getElementById('logout').submit();">{{__('ui.logout')}}</a></li>
+          <form id="logout" action="/logout" method="POST" class="d-none">
+            @csrf
+          </form>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle d-none d-lg-block" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                {{__('ui.ciao')}} {{auth()->user()->name}}
+            </a>
+
+            <span class="d-none d-lg-block">
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{{route('wip')}}">{{__('ui.profile')}}</a></li>
+                <li><a class="dropdown-item" href="{{route('work.with.us')}}">{{__('ui.us')}}</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/logout" onclick="event.preventDefault();getElementById('logout').submit();">{{__('ui.out')}}</a></li>
+                <form id="logout" action="/logout" method="POST" class="d-none">
+                  @csrf
+                </form>
+              </ul>
+            </span>
+          </li>
+         <li class="btn brand-light-bg button"><a class="brand-grey" href="{{route('announcements.create')}}">{{__('ui.insert')}}</a></li>
+
           {{-- Revisore
             Se l'utente loggato è un revisore--}}
           @if (Auth::user()->is_revisor)
@@ -108,8 +77,16 @@
             </li>
 
           @endif
+
+          @else
+          <li class="nav-item">
+            <a class="nav-link" href="/login">{{__('ui.enter')}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/register">{{__('ui.register')}}</a>
+          </li>
           @endauth
-          
+
         </ul>
 
 
