@@ -131,6 +131,9 @@ color: var(--my-color-light-yellow) !important;
 .masterhero{
   max-height: 100% !important;
 }
+.masthead h1 {
+    margin-top: 25% !important;
+}
 
 .masthead{
 
@@ -152,6 +155,9 @@ color: var(--my-color-light-yellow) !important;
 
 
 #mainNav {
+    z-index: 100;
+    position: fixed;
+    top: 59px;
     padding-top: 1rem;
     padding-bottom: 1rem;
     background-color: var(--my-color-cool);
@@ -182,12 +188,24 @@ color: var(--my-color-light-yellow) !important;
   #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
     color: var(--my-color-light-brand);
   }
+  @media(min-width: 800px){
+    .masthead h1 {
+      margin-top: 15% !important;
+  }
+  }
+  .create{
+    margin-top: 100px !important;
+  }
+  
 
   @media (min-width: 992px) {
     .masthead .row:first-child, .brand-top{
       padding-top:103px !important;
+      
     }
+ 
     #mainNav {
+      top: 59px !important;
       padding-top: 1.5rem;
       padding-bottom: 1.5rem;
       border: none;
@@ -335,25 +353,35 @@ color: var(--my-color-light-yellow) !important;
   width: 90%;
 }
 
+.brand-header {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 60vh;
+  align-items: around;
+  
+
+}
+.brand-header h1 {
+  position: relative;
+  margin-top: 10% !important;
+}
+
+
 .category-header {
   background-image: url('/public/img/rodion-kutsaiev-PEm_sLmJT-w-unsplash.jpg');
-  background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+ 
 }
 
 .wip-header {
   background-image: url('/public/img/karim-manjra-dtSCKE9-8cI-unsplash.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 90vh;
+  
 }
 .verify-header {
   /* background-image: url('/public/img/karim-manjra-dtSCKE9-8cI-unsplash.jpg'); */
-  background-size: cover;
+  /* background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   min-height: 90vh;
 }
 
@@ -365,7 +393,7 @@ color: var(--my-color-light-yellow) !important;
 }
 
 .welcome-search .search-bar {
-  margin-top: -75px;
+  margin-top: -40px;
 }
 
 @media (max-width: 720px) {
