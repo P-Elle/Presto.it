@@ -94,7 +94,8 @@ return
     'about' => 'Su di noi',
     'complimenti' => 'Complimenti hai accettato l\'annuncio',
     'spiacenti' => 'Siamo spiacenti ma l\'annuncio è stato rifiutato',
-    'success' => 'La sua candidatura è stata inviata con successo.',
+    'successo' => 'La sua candidatura è stata inviata con successo.',
     'required' => 'Il campo attributo è obbligatorio',
+    'profilo' => 'Profilo',
 
 ];

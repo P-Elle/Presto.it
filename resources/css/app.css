@@ -196,14 +196,14 @@ color: var(--my-color-light-yellow) !important;
   .create{
     margin-top: 100px !important;
   }
-  
+
 
   @media (min-width: 992px) {
     .masthead .row:first-child, .brand-top{
       padding-top:103px !important;
-      
+
     }
- 
+
     #mainNav {
       top: 59px !important;
       padding-top: 1.5rem;
@@ -359,7 +359,7 @@ color: var(--my-color-light-yellow) !important;
   background-repeat: no-repeat;
   height: 60vh;
   align-items: around;
-  
+
 
 }
 .brand-header h1 {
@@ -370,12 +370,12 @@ color: var(--my-color-light-yellow) !important;
 
 .category-header {
   background-image: url('/public/img/rodion-kutsaiev-PEm_sLmJT-w-unsplash.jpg');
- 
+
 }
 
 .wip-header {
   background-image: url('/public/img/karim-manjra-dtSCKE9-8cI-unsplash.jpg');
-  
+
 }
 .verify-header {
   /* background-image: url('/public/img/karim-manjra-dtSCKE9-8cI-unsplash.jpg'); */
@@ -393,7 +393,7 @@ color: var(--my-color-light-yellow) !important;
 }
 
 .welcome-search .search-bar {
-  margin-top: -40px;
+  margin-top: -75px;
 }
 
 @media (max-width: 720px) {

@@ -99,7 +99,7 @@
             <div class="row revisor-header shadow align-items-center">
                 <div class="col-12 text-light">
                     <h1 class="brand-dark text-center">Yay!</h1>
-                    <h2 class="brand-dark text-center mb-5">{{ $announcement_to_check ? '{{__('ui.here')}}' : '{{__('ui.nohere')}}'}}</h2>
+                    <h2 class="brand-dark text-center mb-5">{{__('ui.nohere')}}</h2>
                 </div>
             </div>
         </div>

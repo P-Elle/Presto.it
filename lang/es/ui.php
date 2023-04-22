@@ -94,8 +94,9 @@ return
     'about' => 'Sobre nosotras',
     'complimenti' => 'Enhorabuena has aceptado el anuncio',
     'spiacenti' => 'Lo sentimos pero su anuncio fue rechazado',
-    'success' => 'Su solicitud ha sido enviada con éxito.',
+    'successo' => 'Su solicitud ha sido enviada con éxito.',
     'required' => 'El campo Atributo es obligatorio',
-    
+    'profilo' => 'Cuentas',
+
 
 ];
