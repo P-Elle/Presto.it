@@ -1,12 +1,12 @@
 import './bootstrap';
 import 'bootstrap';
 
-import '@nextapps-be/livewire-sortablejs';
-import Alpine from 'alpinejs'
+// import '@nextapps-be/livewire-sortablejs';
+// import Alpine from 'alpinejs'
  
-window.Alpine = Alpine
+// window.Alpine = Alpine
  
-Alpine.start()
+// Alpine.start()
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
