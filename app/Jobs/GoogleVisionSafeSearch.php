@@ -63,7 +63,9 @@ class GoogleVisionSafeSearch implements ShouldQueue
         //UN SEMAFORO DA VISUALIZZARE
         //SOLO SE INSTALLIAMO IL PACCHETTO DI CUI SI PARLA NEL VIDEO
         $likelihoodName = [
-            'text-secondary fas fa-circle', 'text-success fas fa-circle', 'text-success fas fa-circle', 'text-warning fas fa-circle', 'text-warning fas fa-circle', 'text-danger fas fa-circle'
+            // 'text-secondary fas fa-circle', 'text-success fas fa-circle', 'text-success fas fa-circle', 'text-warning fas fa-circle', 'text-warning fas fa-circle', 'text-danger fas fa-circle'
+            'text-secondary bi bi-emoji-neutral-fill', 'text-success bi bi-emoji-smile-fill', 'text-success bi bi-emoji-smile-fill', 'text-warning bi bi-emoji-frown-fill', 'text-warning bi bi-emoji-frown-fill', 'text-danger bi bi-emoji-frown-fill'
+
         ];
 
         //SALVIAMO LE EDICHETTE ALL'INTERNO DEI CAMPI

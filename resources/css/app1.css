@@ -4,7 +4,7 @@
 
 /*Per installare la libreria icone delle bandiere eseguire da terminale:
 npm install flag-icons */
-/* @import "/node_modules/flag-icons/css/flag-icons.min.css"; */
+@import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 
 
@@ -189,11 +189,8 @@ color: var(--my-color-light-yellow) !important;
   #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
     color: var(--my-color-light-brand);
   }
-  @media(min-width: 800px){
-    .masthead h1 {
-      margin-top: 10px !important;
-  }
-  }
+  
+  
   .create{
     margin-top: 100px !important;
   }
@@ -365,7 +362,7 @@ color: var(--my-color-light-yellow) !important;
 }
 
 .brand-header h1 {
-  margin-top: 150px !important;
+  margin-top: 90px !important;
 }
 
 
@@ -559,10 +556,6 @@ footer {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 40vh;
-}
-.revisor-2-header h1 {
-  margin-top: 100px !important;
 }
 
 .img-revisor{

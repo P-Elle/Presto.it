@@ -41,54 +41,65 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-3 justify-content-center d-flex flex-column">
-                        @if(count($announcement_to_check->images) === 1)
-                        <p>Adulti: <span class="{{$announcement_to_check->images[0]->adult}}"></span></p>
-                        <p>Satira: <span class="{{$announcement_to_check->images[0]->spoof}}"></span></p>
-                        <p>Medicina: <span class="{{$announcement_to_check->images[0]->medical}}"></span></p>
-                        <p>Violenza: <span class="{{$announcement_to_check->images[0]->violence}}"></span></p>
-                        <p>Contenuto razzista: <span class="{{$announcement_to_check->images[0]->racy}}"></span></p>
-                        @endif
-                    </div>
                    
                     
                    
                     {{-- carosello --}}
                     <div class="col-12 col-lg-5 align-item-center justify-content-center p-4">
 
-                        @if (count($announcement_to_check->images) === 0)
-                        <img src="https://picsum.photos/300/300" class="w-100 d-block"alt="{{$announcement->title}}">
-                        @elseif(count($announcement_to_check->images) === 1)
-                        
-                        <img src="{{$announcement_to_check->images[0]->getUrl(400,400)}}" class="w-100 d-block"alt="{{$announcement_to_check->title}}">
-
-                       @else
-                        {{-- carosello --}}
                         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-               
-                            <div class="carousel-inner">
-                                @foreach ($announcement_to_check->images as $key => $image)
-                                <div class="carousel-item  @if($loop->first)active @endif">
-                                    <img src="{{
-                                $image->getUrl(400,400)}}" class="w-100 d-block"alt="{{$announcement_to_check->title}}">
-
+                            {{-- <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div> --}}
+                            @if ($announcement_to_check->images)
+                                <div class="col-12">
+                                    <div class="carousel-inner"> 
+                                
+                                        @foreach ($announcement_to_check->images as $image)
+                                        
+                                            <div class="carousel-item  @if($loop->first)active @endif">
+                                                <img src="{{Storage::url($image->path)}}" class="img-carousel"alt="{{$announcement_to_check->title}}">
+                                            </div>
+                                            
+                                        @endforeach
+                                    </div>
                                 </div>
-                                @endforeach
-                           
-                            </div>
+                            @else
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="https://picsum.photos/500/300" class="v-100 d-block"alt="{{$announcement_to_check->title}}">
+
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://picsum.photos/500/300" class="v-100 d-block"alt="{{$announcement_to_check->title}}">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://picsum.photos/500/300" class="v-100 d-block"alt="{{$announcement_to_check->title}}">
+                                    </div>
+                                </div>
+                            @endif
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">{{__("ui.previous")}}</span>
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">{{__('ui.previous')}}</span>
                             </button>
                             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">{{__("ui.next")}}</span>
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">{{__('ui.next')}}</span>
                             </button>
                         </div>
-                        @endif
                     </div>
 
-          
+                    <div class="col-3 justify-content-center d-flex flex-column">
+                        
+                        <p>Adulti: <span class="{{$image->adult}}"></span></p>
+                        <p>Satira: <span class="{{$image->spoof}}"></span></p>
+                        <p>Medicina: <span class="{{$image->medical}}"></span></p>
+                        <p>Violenza: <span class="{{$image->violence}}"></span></p>
+                        <p>Contenuto razzista: <span class="{{$image->racy}}"></span></p>
+
+                    </div>
                   
                        
                        
