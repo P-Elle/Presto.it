@@ -7,7 +7,7 @@ return
     'allAnnouncemets' => 'Aquí están todos nuestros anuncios!',
     'welcome' => 'Bienvenido a Presto.it',
     'insert1' => '¡Publica tus anuncios y encuentra las mejores ofertas!',
-    'register' => 'registrar aquí',
+    'register' => 'Crea una cuenta',
     'account' => 'Ya tienes una cuenta?',
     'log' => 'Ingresar',
     'browse' => '¡Navega a través de los últimos anuncios!',

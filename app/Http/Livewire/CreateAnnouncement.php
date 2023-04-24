@@ -36,15 +36,15 @@ class CreateAnnouncement extends Component
 
     //messaggi personalizzati di errore
     protected $messages = [
-        'required' => 'Il campo attributo è obbligatorio',
-        'min' => 'Il campo :attribute deve contenere almeno :min caratteri',
-        'max' => 'Il campo :attribute può contenere al massimo :max caratteri',
-        'numeric' => 'Il campo :attribute deve essere numerico',
+    //     'required' => 'Il campo :attribute è obbligatorio',
+    //     'min' => 'Il campo :attribute deve contenere almeno :min caratteri',
+    //     'max' => 'Il campo :attribute può contenere al massimo :max caratteri',
+    //     'numeric' => 'Il campo :attribute deve essere numerico',
         'temporary_images.required'=>'L\'immagine è richiesta',
         'temporary_images.*.image'=>'I file devono essere immagini.',
         'temporary_images.*max'=>'L\'immagine non può superare 1mb',
-        'images.image' => 'L\'immagine deve essere un\'immagine',
-        'images.max' => 'L\'immagine non può superare 1mb'
+    //     'images.image' => 'L\'immagine deve essere un\'immagine',
+    //     'images.max' => 'L\'immagine non può superare 1mb'
 
     ];
 

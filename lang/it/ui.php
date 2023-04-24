@@ -9,7 +9,7 @@ return
     'insert1' => 'Inserisci i tuoi annunci & trova i migliori affari!',
     'register' => 'Registrati',
     'account' => 'Hai già un\'account?',
-    'log' => 'ENTRA',
+    'log' => 'Accedi',
     'browse' => 'Sfoglia tra gli annunci più recenti!',
     'life' => ': una nuova vita!',
     'none' => 'Non sono presenti annunci per questa categoria',
