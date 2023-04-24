@@ -2,7 +2,7 @@
 
     <x-navbar/>
     <div class="container-fluid brand-white-bg">
-        <div class="row index-header shadow justify-content-center">
+        <div class="row brand-header index-header shadow justify-content-center">
             <div class="col-12 text-light p-5">
                 <h1 class="mt-5 brand-white text-center pt-5"><span class="brand-cool"></span>{{__('ui.gusto')}}</h1>
             </div>

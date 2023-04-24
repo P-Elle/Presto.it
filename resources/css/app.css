@@ -105,6 +105,7 @@ p {
 h1 {
   letter-spacing: 0.0625em;
   font-weight: 700;
+
 }
 
 .shrink {
@@ -132,7 +133,7 @@ color: var(--my-color-light-yellow) !important;
   max-height: 100% !important;
 }
 .masthead h1 {
-    margin-top: 25% !important;
+    margin-top: 90px !important;
 }
 
 .masthead{
@@ -190,7 +191,7 @@ color: var(--my-color-light-yellow) !important;
   }
   @media(min-width: 800px){
     .masthead h1 {
-      margin-top: 15% !important;
+      margin-top: 10px !important;
   }
   }
   .create{
@@ -357,15 +358,16 @@ color: var(--my-color-light-yellow) !important;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 60vh;
+  height: 65vh;
   align-items: around;
 
 
 }
+
 .brand-header h1 {
-  position: relative;
-  margin-top: 10% !important;
+  margin-top: 150px !important;
 }
+
 
 
 .category-header {
@@ -393,7 +395,7 @@ color: var(--my-color-light-yellow) !important;
 }
 
 .welcome-search .search-bar {
-  margin-top: -75px;
+  margin-top: -70px;
 }
 
 @media (max-width: 720px) {

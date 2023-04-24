@@ -12,14 +12,16 @@
                         <p>{{$announcement->description}}</p>
                     </div>
                     <div class="col-12 col-lg-7 align-item-center justify-content-center p-4">
+                        
+                        @if (count($announcement->images) === 0)
+                        <img src="https://picsum.photos/300/300" class="w-100 d-block"alt="{{$announcement->title}}">
+                        @elseif(count($announcement->images) === 1)
+                        <img src="{{$announcement->images[0]->getUrl(400,400)}}" class="w-100 d-block"alt="{{$announcement->title}}">
 
+                       @else
                         {{-- carosello --}}
                         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-                            <div>
-                            {{-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                            </div> --}}
+               
                             <div class="carousel-inner">
                                 @foreach ($announcement->images as $key => $image)
                                 <div class="carousel-item  @if($loop->first)active @endif">
@@ -39,7 +41,9 @@
                             <span class="visually-hidden">{{__("ui.next")}}</span>
                             </button>
                         </div>
+                        @endif
                     </div>
+                    
 
                 </div>
             </div>
