@@ -9,7 +9,7 @@ return
     'insert1' => 'Post your ads & find the best deals!',
     'register' => 'Sign up',
     'account' => 'Do you already have an account?',
-    'log' => 'ENTER',
+    'log' => 'Sign in',
     'browse' => 'Browse through the latest announcements!',
     'life' => ': a new life!',
     'none' => 'There are no ads for this category!',
