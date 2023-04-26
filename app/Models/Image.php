@@ -13,6 +13,11 @@ class Image extends Model
 
     protected $fillable = ['path'];
 
+    //questo permette di castare le labels da testuali ad array(vedi job GoogleVisionLabel)
+    protected $casts = [
+        'labels' => 'array'
+    ];
+
     public function announcement(){
         return $this->belongsTo(Announcement::class);
     }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Jobs\GoogleVisionLabelImage;
 use App\Jobs\GoogleVisionSafeSearch;
 use Livewire\Component;
 use App\Models\Category;
@@ -126,6 +127,7 @@ class CreateAnnouncement extends Component
 
                 dispatch(new ResizeImage($newImage->path, 400, 400));
                 dispatch(new GoogleVisionSafeSearch($newImage->id));
+                dispatch(new GoogleVisionLabelImage($newImage->id));
             }
 
             //successivamente andiamo a cancellare la cartella temporanea di livewire

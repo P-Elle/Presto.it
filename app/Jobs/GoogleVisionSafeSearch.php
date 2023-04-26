@@ -68,7 +68,7 @@ class GoogleVisionSafeSearch implements ShouldQueue
 
         ];
 
-        //SALVIAMO LE EDICHETTE ALL'INTERNO DEI CAMPI
+        //SALVIAMO LE ETICHETTE ALL'INTERNO DEI CAMPI
         $i->adult = $likelihoodName[$adult];
         $i->medical = $likelihoodName[$medical];
         $i->spoof = $likelihoodName[$spoof];

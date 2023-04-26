@@ -44,7 +44,7 @@
           <div class="row justify-content-around welcome-cards">
             @foreach ($announcements as $announcement)
               <x-card :announcement="$announcement"/>
-              @endforeach
+            @endforeach
 
           </div>
 

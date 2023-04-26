@@ -41,7 +41,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-3 justify-content-center d-flex flex-column">
+                    {{-- LABELS --}}
+                    <div class="col-12 col-lg-4 p-4">
+                        <h5 class="brand">Tags</h5>
+                        <div class="p-2">
+                            @if ($announcement_to_check->images[0]->labels)
+                                @foreach ($announcement_to_check->images[0]->labels as $label)
+                                    <p class="d-inline">{{$label}} , </p>
+                                @endforeach                                
+                            @endif
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 p-4">
+                        <h5 class="brand">Revisioni immagini</h5>
                         @if(count($announcement_to_check->images) === 1)
                         <p>Adulti: <span class="{{$announcement_to_check->images[0]->adult}}"></span></p>
                         <p>Satira: <span class="{{$announcement_to_check->images[0]->spoof}}"></span></p>
@@ -57,7 +69,7 @@
                     <div class="col-12 col-lg-5 align-item-center justify-content-center p-4">
 
                         @if (count($announcement_to_check->images) === 0)
-                        <img src="https://picsum.photos/300/300" class="w-100 d-block"alt="{{$announcement->title}}">
+                        <img src="https://picsum.photos/300/300" class="w-100 d-block"alt="{{$announcement_to_check->title}}">
                         @elseif(count($announcement_to_check->images) === 1)
                         
                         <img src="{{$announcement_to_check->images[0]->getUrl(400,400)}}" class="w-100 d-block"alt="{{$announcement_to_check->title}}">
