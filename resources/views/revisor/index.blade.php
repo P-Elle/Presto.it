@@ -41,61 +41,88 @@
                             </div>
                         </div>
                     </div>
-                    {{-- LABELS --}}
-                    <div class="col-12 col-lg-4 p-4">
-                        <h5 class="brand">Tags</h5>
-                        <div class="p-2">
-                            @if ($announcement_to_check->images[0]->labels)
-                                @foreach ($announcement_to_check->images[0]->labels as $label)
-                                    <p class="d-inline">{{$label}} , </p>
-                                @endforeach                                
-                            @endif
-                        </div>
+                    
+                
+                    @if (count($announcement_to_check->images) === 0)
+                    <div class="col-12 col-lg-4 order-1">
+                    <img src="https://picsum.photos/300/300" class="w-100 d-block"alt="{{$announcement_to_check->title}}">
                     </div>
-                    <div class="col-12 col-lg-4 p-4">
+                    @elseif(count($announcement_to_check->images) === 1)
+                    <div class="col-12 col-lg-4 py-4 order-3 order-lg-2">
                         <h5 class="brand">Revisioni immagini</h5>
-                        @if(count($announcement_to_check->images) === 1)
                         <p>Adulti: <span class="{{$announcement_to_check->images[0]->adult}}"></span></p>
                         <p>Satira: <span class="{{$announcement_to_check->images[0]->spoof}}"></span></p>
                         <p>Medicina: <span class="{{$announcement_to_check->images[0]->medical}}"></span></p>
                         <p>Violenza: <span class="{{$announcement_to_check->images[0]->violence}}"></span></p>
                         <p>Contenuto razzista: <span class="{{$announcement_to_check->images[0]->racy}}"></span></p>
-                        @endif
+                        <h5 class="brand">Tags</h5>
+                        {{-- LABELS --}}
+                        @foreach ($announcement_to_check->images[0]->labels as $label)
+                        <p class="d-inline small">{{$label}}, @if($label) @endif</p>
+                        @endforeach 
                     </div>
+                        <div class="col-12 col-lg-4 py-4 order-2 order-lg-3">
+                         <img src="{{$announcement_to_check->images[0]->getUrl(400,400)}}" class="w-100 d-block"alt="{{$announcement_to_check->title}}">
+                        </div>
+                    
+                     
+                   
                    
                     
-                   
+                   @else
                     {{-- carosello --}}
-                    <div class="col-12 col-lg-5 align-item-center justify-content-center p-4">
-
-                        @if (count($announcement_to_check->images) === 0)
-                        <img src="https://picsum.photos/300/300" class="w-100 d-block"alt="{{$announcement_to_check->title}}">
-                        @elseif(count($announcement_to_check->images) === 1)
+                    <div class="col-12 col-lg-8">
                         
-                        <img src="{{$announcement_to_check->images[0]->getUrl(400,400)}}" class="w-100 d-block"alt="{{$announcement_to_check->title}}">
 
-                       @else
-                        {{-- carosello --}}
-                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-               
-                            <div class="carousel-inner">
-                                @foreach ($announcement_to_check->images as $key => $image)
-                                <div class="carousel-item  @if($loop->first)active @endif">
-                                    <img src="{{
-                                $image->getUrl(400,400)}}" class="w-100 d-block"alt="{{$announcement_to_check->title}}">
+                      
 
-                                </div>
-                                @endforeach
+                       
+                        <div class="accordion" id="accordionRevisor">
+                            @foreach ($announcement_to_check->images as $key => $image)
                            
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{$key}}" aria-expanded="true" aria-controls="collapseOne">
+                                    {{$announcement_to_check->title}} img{{$key + 1}}
+                                  </button>
+                                </h2>
+                                <div id="collapse{{$key}}" class="accordion-collapse collapse" data-bs-parent="#accordionRevisor">
+                                    <div class="accordion-body d-flex flex-row flex-wrap">
+                                        
+                                        
+                                        <div class="col-6">
+                                            <h5 class="brand">Revisioni immagini</h5>
+                                            <p>Adulti: <span class="{{$image->adult}}"></span></p>
+                                            <p>Satira: <span class="{{$image->spoof}}"></span></p>
+                                            <p>Medicina: <span class="{{$image->medical}}"></span></p>
+                                            <p>Violenza: <span class="{{$image->violence}}"></span></p>
+                                            <p>Contenuto razzista: <span class="{{$image->racy}}"></span></p>
+                                        </div>
+                                        <div class="col-6 ps-3">
+                                            <img src="{{$image->getUrl(400,400)}}" class="w-100 d-block"alt="{{$announcement_to_check->title}}">
+                                        </div>
+                                       
+                                        
+                                                <div class="col-12 pt-2">
+                                                    <h5 class="brand">Tags</h5>
+                                                    {{-- LABELS --}}
+                                                
+                                                        @foreach ($image->labels as $label)
+                                                    <p class="d-inline small">{{$label}},</p>
+                                                    
+                                                    @endforeach 
+                                                </div>
+                                        
+                                        
+                                        
+                                    </div>
+
+                                   
+                                </div>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">{{__("ui.previous")}}</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">{{__("ui.next")}}</span>
-                            </button>
+                            @endforeach
+
                         </div>
                         @endif
                     </div>
