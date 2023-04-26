@@ -3,12 +3,14 @@
 
     {{-- HEADER --}}
     <x-navbar/>
-    <div class="row masthead brand-header">
+    <div class="row masthead @auth
+      brand-header
+    @endauth">
       <div class="row brand-trasp-cool-bg justify-content-center m-0">
         <div class="col-12 col-md-10 col-lg-8 text-center p-0 m-0">
 
           <div class="px-5 py-2 mt-0 rounded-bottom d-flex flex-column justify-content-center">
-            <h1>{{ __('ui.insert1') }}</h1>
+            <h1 @guest class="titolo" @endguest>{{ __('ui.insert1') }}</h1>
 
             @guest
               <div class="row">

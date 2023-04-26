@@ -19,3 +19,5 @@ yarn-error.log
 /.vscode
 /storage/*.index
 2022-04-26-presto-livewire-user-story-7.json
+storage/announcements.index-shm
+storage/announcements.index-wal

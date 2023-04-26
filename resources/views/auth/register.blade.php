@@ -35,12 +35,14 @@
                         @enderror
                     </div>
 
-                    <div class="d-flex my-3">
-                        <button type="submit" class="btn brand-trasp-cool-bg brand-white me-3">{{__('ui.register')}}</button>
-                        <p class="align-self-center me-3">{{__('ui.or')}}</p>
+                    <div class="d-flex my-3 flex-column flex-lg-row">
+                        <button type="submit" class="btn brand-trasp-cool-bg brand-white">{{__('ui.register')}}</button>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <p class="mx-3 my-2 my-lg-0">{{__('ui.or')}}</p>
+                          </div>
                         <div class="row">
-                          <div class="col-12">
-                            <a class="btn btn-outline-dark" href="/auth/google/redirect" role="button" style="text-transform:none">
+                          <div class="col-12 d-flex justify-content-center mx-0">
+                            <a class="btn btn-outline-dark  w-100" href="/auth/google/redirect" role="button" style="text-transform:none">
                               <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
                               {{__('ui.login')}}
                             </a>

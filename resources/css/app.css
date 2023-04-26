@@ -132,13 +132,11 @@ color: var(--my-color-light-yellow) !important;
 .masterhero{
   max-height: 100% !important;
 }
-.masthead h1 {
-    margin-top: 90px !important;
-}
+
 
 .masthead{
 
-    min-height: 400px;
+    height: 100%;
     background-image: url('/public/img/steve-johnson-JUKWHtY4tMM-unsplash.jpg');
     background-size: cover;
     background-position: center;
@@ -191,8 +189,11 @@ color: var(--my-color-light-yellow) !important;
   }
   @media(min-width: 800px){
     .masthead h1 {
-      margin-top: 10px !important;
+      margin-top: 80px !important;
   }
+
+
+  
   }
   .create{
     margin-top: 100px !important;
@@ -365,7 +366,11 @@ color: var(--my-color-light-yellow) !important;
 }
 
 .brand-header h1 {
-  margin-top: 150px !important;
+  margin-top: 100px !important;
+}
+
+.titolo {
+  margin-top: 100px !important;
 }
 
 
@@ -648,3 +653,4 @@ footer {
 .preview-box > .row > .image-preview {
   display: inline-block;
 }
+
