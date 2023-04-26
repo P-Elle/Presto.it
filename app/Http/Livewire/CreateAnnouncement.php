@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Livewire;
-
+use App\Jobs\RemoveFaces;
 use App\Jobs\GoogleVisionLabelImage;
 use App\Jobs\GoogleVisionSafeSearch;
 use Livewire\Component;
@@ -123,13 +123,26 @@ class CreateAnnouncement extends Component
                 //e ogni immagine sarà ridimensionata e salvata nella relativa cartella
                 $newImage = $announcement->images()->create(['path'=>$image->store($newFileName, 'public')]);
 
+                // prima di croppare l'immmagine oscuriamo eventuali volti presenti
+
+                RemoveFaces::withChain([
+                    new ResizeImage($newImage->path, 400, 400),
+                    new GoogleVisionSafeSearch($newImage->id),
+                    new GoogleVisionLabelImage($newImage->id)
+                ]
+
+                )->dispatch($newImage->id);
                 // andiamo ad effettuare in asincrono il nostro job ovvero in background andrà a croppare l'immagine e salvarla
                 // in announcements con l'id della relativa immagine
 
+<<<<<<< Updated upstream
                 dispatch(new ResizeImage($newImage->path, 400, 400));
                 dispatch(new GoogleVisionSafeSearch($newImage->id));
                 dispatch(new GoogleVisionLabelImage($newImage->id));
                 dispatch(new WatermarkImage($newImage->path, 400, 400));
+=======
+                
+>>>>>>> Stashed changes
             }
 
             //successivamente andiamo a cancellare la cartella temporanea di livewire

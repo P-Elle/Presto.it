@@ -56,10 +56,13 @@
                         <p>Violenza: <span class="{{$announcement_to_check->images[0]->violence}}"></span></p>
                         <p>Contenuto razzista: <span class="{{$announcement_to_check->images[0]->racy}}"></span></p>
                         <h5 class="brand">Tags</h5>
+                       
                         {{-- LABELS --}}
+                        @if($announcement_to_check->images[0]->labels)
                         @foreach ($announcement_to_check->images[0]->labels as $label)
                         <p class="d-inline small">{{$label}}, @if($label) @endif</p>
                         @endforeach 
+                        @endif
                     </div>
                         <div class="col-12 col-lg-4 py-4 order-2 order-lg-3">
                          <img src="{{$announcement_to_check->images[0]->getUrl(400,400)}}" class="w-100 d-block"alt="{{$announcement_to_check->title}}">
@@ -70,7 +73,7 @@
                    
                     
                    @else
-                    {{-- carosello --}}
+                    {{-- accordion --}}
                     <div class="col-12 col-lg-8">
                         
 
