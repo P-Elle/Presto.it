@@ -7,6 +7,7 @@ use App\Jobs\GoogleVisionSafeSearch;
 use Livewire\Component;
 use App\Models\Category;
 use App\Jobs\ResizeImage;
+use App\Jobs\WatermarkImage;
 use App\Models\Announcement;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
@@ -128,6 +129,7 @@ class CreateAnnouncement extends Component
                 dispatch(new ResizeImage($newImage->path, 400, 400));
                 dispatch(new GoogleVisionSafeSearch($newImage->id));
                 dispatch(new GoogleVisionLabelImage($newImage->id));
+                dispatch(new WatermarkImage($newImage->path, 400, 400));
             }
 
             //successivamente andiamo a cancellare la cartella temporanea di livewire
