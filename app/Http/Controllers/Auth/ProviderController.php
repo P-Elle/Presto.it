@@ -27,7 +27,7 @@ class ProviderController extends Controller
             'provider_token' => $socialUser->token,
         ]);
         // dd($user);
-     
+        $user->markEmailAsVerified();
         Auth::login($user);
      
         return redirect('/');
