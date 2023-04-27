@@ -128,17 +128,14 @@ class CreateAnnouncement extends Component
                 RemoveFaces::withChain([
                     new ResizeImage($newImage->path, 400, 400),
                     new GoogleVisionSafeSearch($newImage->id),
-                    new GoogleVisionLabelImage($newImage->id)
+                    new GoogleVisionLabelImage($newImage->id),
+                    new WatermarkImage($newImage->path, 400, 400)
                 ]
 
                 )->dispatch($newImage->id);
                 // andiamo ad effettuare in asincrono il nostro job ovvero in background andrà a croppare l'immagine e salvarla
                 // in announcements con l'id della relativa immagine
-
-                dispatch(new ResizeImage($newImage->path, 400, 400));
-                dispatch(new GoogleVisionSafeSearch($newImage->id));
-                dispatch(new GoogleVisionLabelImage($newImage->id));
-                dispatch(new WatermarkImage($newImage->path, 400, 400));
+                
             }
 
             //successivamente andiamo a cancellare la cartella temporanea di livewire

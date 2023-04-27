@@ -294,7 +294,7 @@ color: var(--my-color-light-yellow) !important;
 }
 
 .index-cards .card-body{
-  background-color: var(--my-color-white);
+  background-color: var(--my-color-grey);
 }
 
 @keyframes cardtext {
@@ -339,11 +339,11 @@ color: var(--my-color-light-yellow) !important;
 }
 
 .ann-show {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .ann-detail {
-  margin-top: 10%;
+  margin-top: 200px;
 }
 
 .not-overlapping{
@@ -394,9 +394,7 @@ color: var(--my-color-light-yellow) !important;
 
 .index-header {
   background-image: url('/public/img/pexels-magda-ehlers-1279813.jpg');
-  background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+
 }
 
 .welcome-search .search-bar {
@@ -406,6 +404,15 @@ color: var(--my-color-light-yellow) !important;
 @media (max-width: 720px) {
   .welcome-search .search-bar {
     margin-top: -50px;
+  }
+
+}
+
+
+@media (max-width: 720px) {
+  .search-bar {
+    margin-top: -40px;
+    z-index: 5;
   }
 
 }

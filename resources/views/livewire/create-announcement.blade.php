@@ -1,8 +1,6 @@
 <div class="row brand-top mb-0 g-3 justify-content-center d-flex">
     <div class="col-12 col-md-6 brand-grey-bg mx-0 mt-5 px-5 not-overlapping create">
-        <h1 class="my-3 text-center">{{__('ui.create')}}</h1>        @if(session('message'))
-            <div class="alert alert-success my-2">{{session('message')}}</div>
-        @endif
+        <h1 class="my-3 text-center">{{__('ui.create')}}</h1>     
 
             <form wire:submit.prevent="store">
                 @csrf
@@ -106,6 +104,9 @@
 
                     </div> --}}
                     <div class="col-12 mt-1 mb-3">
+                        @if(session('message'))
+                        <div class="alert alert-success my-2">{{session('message')}}</div>
+                    @endif
                         <button type="submit" class="btn brand-dark-bg brand-white my-3">{{__('ui.create2')}}</button>                    </div>
                 </div>
             </form>

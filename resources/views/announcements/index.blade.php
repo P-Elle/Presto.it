@@ -9,9 +9,9 @@
             <x-search-announcement/>
         </div>
 
-    <section class="py-5">
-        <div class="row justify-content-center justify-content-lg-around">
-            <div class="container py-3 white-brand-bg ann-container mt-3 rounded-1">
+    <section>
+        <div class="row justify-content-center justify-content-lg-around brand-grey-bg pt-5">
+            <div class="container py-3 brand-grey-bg ann-container mt-3 rounded-1">
 
                 <div class="row justify-content-around index-cards">
                     @forelse ($announcements as $announcement)

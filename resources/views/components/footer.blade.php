@@ -1,15 +1,4 @@
-{{-- <div class="container-fluid mt-4 p-5 bg-dark text-light">
-    <div class="row">
-        <div class="col-12 text-center">
-            <p>Presto.it</p>
-            <p>Vuoi lavorare con noi?</p>
-            <p>Registrati e clicca qui</p>
-            <a href="{{route('become.revisor')}}" class="btn btn-warning text-light shadow my-3">
-            Diventa revisore</a>
-        </div>
-    </div>
-</div> --}}
-<div>
+
 
 
 <footer class="footer-10 pt-5">
@@ -53,80 +42,81 @@
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-12">
-                <div class="row ps-md-5 mb-4">
-                    <div class="col-10 mx-auto col-md-3 mb-md-0 mb-4">
-                        <h2 class="footer-heading text-center">{{__('ui.about')}}</h2>
+        <div class="row mb-5 pb-3 no-gutters">
+            <div class="col-md-4 mb-md-0 mb-4 d-flex">
+                <div class="con con-1 w-100 py-5">
+                    <div class="con-info w-100 text-center">
+                        <div class="d-flex align-items-center justify-content-center flex-column">
+                            <h2 class="footer-heading text-center">{{__('ui.about')}}</h2>
                         <ul class="list-unstyled text-center">
                             <li><a href="{{route('wip')}}" class="d-block">{{__('ui.story')}}</a></li>
                             <li><a href="{{route('wip')}}" class="d-block">{{__('ui.contact')}}</a></li>
                             <li><a href="{{route('wip')}}" class="d-block">{{__('ui.team')}}</a></li>
                             <li><a href="{{route('work.with.us')}}" class="d-block">{{__('ui.us')}}</a></li>
                         </ul>
-                    </div>
-                    <div class="col-10 mx-auto col-md-3 mb-md-0 mb-4">
-                        <h2 class="footer-heading text-center">{{__('ui.categories')}}</h2>
-                        <ul class="list-unstyled text-center">
-                            @foreach ($categories as $category)
-                            <li><a href="{{ route('category.view',$category) }}" class="d-block">
-                                @if (App::isLocale('it'))
-                                    {{($category->name)}}
-                                @elseif (App::isLocale('en'))
-                                    {{($category->name_en)}}
-                                @elseif (App::isLocale('es'))
-                                    {{($category->name_es)}}
-                                @endif
-                                
-                            </a></li>
-                            @endforeach
-
-                        </ul>
-                    </div>
-
-
-                    <div class="col-10 mx-auto col-md-3 mb-md-0 mb-4">
-                        <h2 class="footer-heading text-center">{{__('ui.resource')}}</h2>
-                        <ul class="list-unstyled text-center">
-                            <li><a href="{{route('wip')}}" class="d-block">{{__('ui.blog')}}</a></li>
-                            <li><a href="{{route('wip')}}" class="d-block">{{__('ui.news')}}</a></li>
-                            <li><a href="{{route('wip')}}" class="d-block">{{__('ui.privacy')}}</a></li>
-                        </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-            {{-- <div class="col-md-5 mb-md-0 mb-4">
-                <h2 class="footer-heading">Newsletter</h2>
-                @csrf
-                <form action="#" class="subscribe-form">
-                    <div class="form-group d-flex">
-                        <input type="text" class="form-control rounded-left" placeholder="Inserisci la tua email">
-                        <button type="submit" class="form-control submit rounded-right">Sottoscrivi</button>
+            <div class="col-md-4 mb-md-0 mb-4 d-flex">
+                <div class="con con-2 w-100 py-5">
+                    <div class="con-info w-100 text-center">
+                        <div class="d-flex align-items-center justify-content-center flex-column">
+                            <h2 class="footer-heading text-center">{{__('ui.categories')}}</h2>
+                            <ul class="list-unstyled text-center">
+                                @foreach ($categories as $category)
+                                <li><a href="{{ route('category.view',$category) }}" class="d-block">{{ $category->name }}</a></li>
+                                @endforeach
+
+                            </ul>
+                        </div>
+                        
                     </div>
-                    <span class="subheading">Ricevi le ultime novità sulla tua email</span>
-                </form>
-            </div> --}}
+                </div>
+            </div>
+            <div class="col-md-4 mb-md-0 mb-4 d-flex">
+                <div class="con con-3 w-100 py-5">
+                    <div class="con-info w-100 text-center">
+                        <div class="d-flex align-items-center justify-content-center flex-column">
+                            <h2 class="footer-heading text-center">{{__('ui.resource')}}</h2>
+                            <ul class="list-unstyled text-center">
+                                <li><a href="{{route('wip')}}" class="d-block">{{__('ui.blog')}}</a></li>
+                                <li><a href="{{route('wip')}}" class="d-block">{{__('ui.news')}}</a></li>
+                                <li><a href="{{route('wip')}}" class="d-block">{{__('ui.privacy')}}</a></li>
+                            </ul>
+                        </div>
+                      
+                    </div>
+                </div>
+            </div>
         </div>
+       
     </div>
+
+
+
+
     {{-- parte sotto --}}
     <div class="row mb-5 pt-4 border-top brand-dark-bg">
-        <div class="col-md-6 mb-md-0 mb-4 text-center">
-            <p class="brand-grey mx-auto ms-lg-5">© 2023 Presto.it</p>
-            <p class="brand-grey mx-auto ms-lg-5">by The Scrumming Heads.</p>
-            <p class="brand-grey mx-auto ms-lg-5">{{__('ui.rights')}}</p>
+        <div class="col-12 mb-md-0 mb-4 text-center d-flex flex-column align-items-center justify-content-center">
+            <p class="brand-grey">© 2023 Presto.it</p>
+            <p class="brand-grey">by The Scrumming Heads.</p>
+            <p class="brand-grey">{{__('ui.rights')}}</p>
 
         </div>
-        <div class="col-md-6 text-center text-md-right">
+
+        {{-- icone --}}
+        <div class="col-12 text-center d-flex justify-content-center">
             <ul class="ftco-footer-social p-0">
-                <li class="ftco-animate"><a href="{{route('wip')}}" data-toggle="tooltip" data-placement="top"
+                <li class="ftco-animate p-0"><a href="{{route('wip')}}" data-toggle="tooltip" data-placement="top"
                         title="Twitter"><span class="ion-logo-twitter"><i class="bi bi-twitter brand-white"></i></span></a></li>
-                <li class="ftco-animate"><a href="{{route('wip')}}" data-toggle="tooltip" data-placement="top"
+                <li class="ftco-animate p-0"><a href="{{route('wip')}}" data-toggle="tooltip" data-placement="top"
                         title="Facebook"><span class="ion-logo-facebook"><i class="bi bi-facebook brand-white"></i></span></a></li>
-                <li class="ftco-animate"><a href="{{route('wip')}}" data-toggle="tooltip" data-placement="top"
+                <li class="ftco-animate p-0"><a href="{{route('wip')}}" data-toggle="tooltip" data-placement="top"
                         title="Instagram"><span class="ion-logo-instagram"><i class="bi bi-instagram brand-white"></i></span></a>
                 </li>
             </ul>
         </div>
     </div>
-    </div>
+    
 </footer>
