@@ -41,6 +41,14 @@ class Image extends Model
     public function getUrl($w = null, $h = null ){
         return Image::getUrlByFilePath($this->path,$w, $h);
     }
+
+    public function watermark(){
+        $path = dirname($this->path);
+        $fileName = basename($this->path);
+        $file = "{$path}/watermark_image{$fileName}";
+        //altrimenti salva l’immagine croppata
+        return Storage::url($file);
+    }
     
 
 }
