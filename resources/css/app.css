@@ -283,11 +283,9 @@ color: var(--my-color-light-yellow) !important;
 }
 .welcome-cards .card-body{
   background-color: var(--my-color-brand);
+  aspect-ratio: 1;
 }
 
-.index-cards .card-body{
-  background-color: var(--my-color-grey);
-}
 
 @keyframes cardtext {
   from {opacity: 0;}
@@ -314,7 +312,7 @@ color: var(--my-color-light-yellow) !important;
   font-size: 20px;
 }
 .z-ind {
-  z-index: 5;
+  z-index: 8;
 }
 
 .card-body-text h4{
@@ -394,8 +392,8 @@ color: var(--my-color-light-yellow) !important;
 }
 
 @media (max-width: 720px) {
-  .welcome-search .search-bar {
-    margin-top: -50px;
+   .search-bar {
+    margin-top: 0px !important;
   }
 
 }

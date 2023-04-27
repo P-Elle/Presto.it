@@ -15,6 +15,7 @@
             <div class="row">
                 <div class="col-10 col-md-8 mx-auto my-5 justify-content-center ann-detail">
 
+<<<<<<< Updated upstream
                     <div class="row detail brand-white-bg justify-content-center">
                         {{-- campo descrittivo --}}
                         <div class="col-12 col-lg-4 p-4">
@@ -43,6 +44,116 @@
                                         <button class="btn shadow brand-bg brand-white"
                                             type="submit">{{ __('ui.refuse') }}</button>
                                     </form>
+=======
+                <div class="row detail brand-white-bg justify-content-center">
+                    {{-- campo descrittivo --}}
+                    <div class="col-12 col-lg-4 p-4">
+                        <h2 class="brand">{{$announcement_to_check->title}}</h2>
+                        <h3>{{$announcement_to_check->price}} €</h3>
+                        <p class="small mt-1">{{$announcement_to_check->category->name ?? "categoria non registrata"}}</p>
+                        <p>{{$announcement_to_check->description}}</p>
+                        <div class="row mt-5 d-none d-lg-flex">
+                            
+                            <div class="col-6">
+                                <form action="{{ route('revisor.reject_announcement',['announcement'=>$announcement_to_check]) }}"
+                                    method="POST">
+                                    @csrf
+                                    @method('PATCH')
+                                    <button class="btn brand-grey-bg brand-dark" type="submit">{{__('ui.refuse')}}</button>
+                                </form>
+                            </div>
+                            <div class="col-6">
+                                <form action="{{ route('revisor.accept_announcement',['announcement'=>$announcement_to_check]) }}"
+                                method="POST">
+                                    @csrf
+                                    @method('PATCH')
+                                    <button class="btn brand-bg brand-white" type="submit">{{__('ui.accept')}}</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+                
+                    @if (count($announcement_to_check->images) === 0)
+                    <div class="col-12 col-lg-4 order-1">
+                    <img src="https://picsum.photos/300/300" class="w-100 d-block"alt="{{$announcement_to_check->title}}">
+                    </div>
+                    @elseif(count($announcement_to_check->images) === 1)
+                    <div class="col-12 col-lg-4 py-4 order-3 order-lg-2">
+                        <h5 class="brand">Revisioni immagini</h5>
+                        <p>Adulti: <span class="{{$announcement_to_check->images[0]->adult}}"></span></p>
+                        <p>Satira: <span class="{{$announcement_to_check->images[0]->spoof}}"></span></p>
+                        <p>Medicina: <span class="{{$announcement_to_check->images[0]->medical}}"></span></p>
+                        <p>Violenza: <span class="{{$announcement_to_check->images[0]->violence}}"></span></p>
+                        <p>Contenuto razzista: <span class="{{$announcement_to_check->images[0]->racy}}"></span></p>
+                        <h5 class="brand">Tags</h5>
+                       
+                        {{-- LABELS --}}
+                        @if($announcement_to_check->images[0]->labels)
+                        @foreach ($announcement_to_check->images[0]->labels as $label)
+                        <p class="d-inline small">{{$label}}, @if($label) @endif</p>
+                        @endforeach 
+                        @endif
+                    </div>
+                        <div class="col-12 col-lg-4 py-4 order-2 order-lg-3">
+                         <img src="{{$announcement_to_check->images[0]->getUrl(400,400)}}" class="w-100 d-block"alt="{{$announcement_to_check->title}}">
+                        </div>
+                    
+                     
+                   
+                   
+                    
+                   @else
+                    {{-- accordion --}}
+                    <div class="col-12 col-lg-8">
+                        
+
+                      <p class="brand-cool">Galleria Immagini</p>
+
+                       
+                        <div class="accordion brand-white-bg my-lg-3" id="accordionRevisor">
+                            @foreach ($announcement_to_check->images as $key => $image)
+                           
+
+                            <div class="accordion-item border-0">
+                                <h2 class="accordion-header brand-white-bg">
+                                  <button class="btn brand-light-bg text-center brand-white my-2 rounded-circle p-2 d-flex align-items-center justify-content-center" type="button" style="width:32px; height:32px;" data-bs-toggle="collapse" data-bs-target="#collapse{{$key}}" aria-expanded="true" aria-controls="collapseOne">
+                                    {{$key + 1}}
+                                  </button>
+                                </h2>
+                                <div id="collapse{{$key}}" class="accordion-collapse collapse" data-bs-parent="#accordionRevisor">
+                                    <div class="accordion-body brand-white-bg d-flex flex-row flex-wrap">
+                                        
+                                        
+                                        <div class="col-6">
+                                            <h5 class="brand">Revisioni immagini</h5>
+                                            <p>Adulti: <span class="{{$image->adult}}"></span></p>
+                                            <p>Satira: <span class="{{$image->spoof}}"></span></p>
+                                            <p>Medicina: <span class="{{$image->medical}}"></span></p>
+                                            <p>Violenza: <span class="{{$image->violence}}"></span></p>
+                                            <p>Contenuto razzista: <span class="{{$image->racy}}"></span></p>
+                                        </div>
+                                        <div class="col-6 ps-3">
+                                            <img src="{{$image->getUrl(400,400)}}" class="w-100 d-block"alt="{{$announcement_to_check->title}}">
+                                        </div>
+                                       
+                                        
+                                                <div class="col-12 pt-2">
+                                                    <h5 class="brand">Tags</h5>
+                                                    {{-- LABELS --}}
+                                                
+                                                        @foreach ($image->labels as $label)
+                                                    <p class="d-inline small">{{$label}},</p>
+                                                    
+                                                    @endforeach 
+                                                </div>
+                                        
+                                        
+                                        
+                                    </div>
+
+                                   
+>>>>>>> Stashed changes
                                 </div>
                             </div>
                         </div>
@@ -137,6 +248,25 @@
 
                                 </div>
                         @endif
+                        <div class="row mt-5 d-lg-none mb-2">
+                            
+                            <div class="col-4">
+                                <form action="{{ route('revisor.reject_announcement',['announcement'=>$announcement_to_check]) }}"
+                                    method="POST">
+                                    @csrf
+                                    @method('PATCH')
+                                    <button class="btn brand-grey-bg brand-dark" type="submit">{{__('ui.refuse')}}</button>
+                                </form>
+                            </div>
+                            <div class="col-4 ms-0">
+                                <form action="{{ route('revisor.accept_announcement',['announcement'=>$announcement_to_check]) }}"
+                                method="POST">
+                                    @csrf
+                                    @method('PATCH')
+                                    <button class="btn brand-bg brand-white" type="submit">{{__('ui.accept')}}</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
 
 
