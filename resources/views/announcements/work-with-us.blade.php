@@ -1,7 +1,7 @@
 <x-main>
     <x-navbar/>
-    <div class="container">
-        <div class="row container-success">
+    <div class="container-fluid brand-bg">
+        <div class="row container-success mx-auto">
 
             @if(session('message'))
                     {{-- <div class="alert alert-success my-2">{{session('message')}}</div> --}}

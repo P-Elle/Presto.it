@@ -1,5 +1,5 @@
 <div class="row justify-content-center search-bar">
-    <div class="col-12 col-md-8 p-2">
+    <div class="col-12 col-md-8 px-2">
         <form action="{{route('announcements.search')}}" method="GET">
 
             <div class="row justify-content-center">

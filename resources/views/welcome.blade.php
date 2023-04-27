@@ -10,13 +10,13 @@
         <div class="col-12 col-md-10 col-lg-8 text-center p-0 m-0">
 
           <div class="px-5 py-2 mt-0 rounded-bottom d-flex flex-column justify-content-center">
-            <h1 @guest class="titolo" @endguest>{{ __('ui.insert1') }}</h1>
+            <h1 class="titolo"> {{ __('ui.insert1') }}</h1>
 
             @guest
               <div class="row">
 
                 <div class="col-6 mx-auto mb-5">
-                  <button class="btn brand-bg button mt-3"><a class="brand-white" href="{{'/register'}}">{{ __('ui.register') }}</a></button>
+                  <button class="btn brand-bg button mt-5"><a class="brand-white" href="{{'/register'}}">{{ __('ui.register') }}</a></button>
                   <hr>
                   <p class="brand-white">{{ __('ui.account') }}<a class="brand-light d-block mb-5" href="{{'/login'}}">{{ __('ui.log') }}</a></p>
 

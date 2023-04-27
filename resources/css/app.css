@@ -187,14 +187,7 @@ color: var(--my-color-light-yellow) !important;
   #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
     color: var(--my-color-light-brand);
   }
-  @media(min-width: 800px){
-    .masthead h1 {
-      margin-top: 80px !important;
-  }
 
-
-  
-  }
   .create{
     margin-top: 100px !important;
   }
@@ -203,7 +196,6 @@ color: var(--my-color-light-yellow) !important;
   @media (min-width: 992px) {
     .masthead .row:first-child, .brand-top{
       padding-top:103px !important;
-
     }
 
     #mainNav {
@@ -359,18 +351,18 @@ color: var(--my-color-light-yellow) !important;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 65vh;
+  height: 400px;
   align-items: around;
 
 
 }
 
 .brand-header h1 {
-  margin-top: 100px !important;
+  margin-top: 120px !important;
 }
 
-.titolo {
-  margin-top: 100px !important;
+.d-flex .titolo {
+  margin-top: 90px !important;
 }
 
 
@@ -398,7 +390,7 @@ color: var(--my-color-light-yellow) !important;
 }
 
 .welcome-search .search-bar {
-  margin-top: -70px;
+  margin-top: -60px !important;
 }
 
 @media (max-width: 720px) {
@@ -409,13 +401,14 @@ color: var(--my-color-light-yellow) !important;
 }
 
 
-@media (max-width: 720px) {
+/* @media (max-width: 720px) {
   .search-bar {
     margin-top: -40px;
     z-index: 5;
   }
 
 }
+
 
 
 /* LAVORA CON NOI */
@@ -446,7 +439,8 @@ color: var(--my-color-light-yellow) !important;
 }
 
 .container-success{
-  padding-top: 7.5rem;
+  padding-top: 5rem;
+  max-width: 1200px;
 }
 
 @media (max-width: 992px) {
