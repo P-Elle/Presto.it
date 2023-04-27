@@ -69,7 +69,16 @@
                         <h2 class="footer-heading text-center">{{__('ui.categories')}}</h2>
                         <ul class="list-unstyled text-center">
                             @foreach ($categories as $category)
-                             <li><a href="{{ route('category.view',$category) }}" class="d-block">{{ $category->name }}</a></li>
+                            <li><a href="{{ route('category.view',$category) }}" class="d-block">
+                                @if (App::isLocale('it'))
+                                    {{($category->name)}}
+                                @elseif (App::isLocale('en'))
+                                    {{($category->name_en)}}
+                                @elseif (App::isLocale('es'))
+                                    {{($category->name_es)}}
+                                @endif
+                                
+                            </a></li>
                             @endforeach
 
                         </ul>

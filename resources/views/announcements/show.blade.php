@@ -8,7 +8,14 @@
                     <div class="col-12 col-lg-5 p-4">
                         <h2 class="brand mt-5 mt-lg-0">{{$announcement->title}}</h2>
                         <h3>{{$announcement->price}} €</h3>
-                        <p class="small mt-1">{{$announcement->category->name}}</p>
+                        <p class="small mt-1">
+                            @if (App::isLocale('it'))
+                                {{$announcement->category->name}}
+                            @elseif (App::isLocale('en'))
+                                {{$announcement->category->name_en}}
+                            @elseif (App::isLocale('es'))
+                                {{($announcement->category->name_es)}}
+                            @endif
                         <p>{{$announcement->description}}</p>
                     </div>
                     <div class="col-12 col-lg-7 align-item-center justify-content-center p-4">

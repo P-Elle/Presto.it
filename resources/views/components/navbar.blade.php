@@ -43,14 +43,6 @@
 
     </ul>
   
-
-
-
-
-    
-   
-
-  
   </div>
 </nav>
 
@@ -72,7 +64,15 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
               @foreach ($categories as $category)
-                <li><a class="dropdown-item" href="{{route('category.view', $category)}}" >{{($category->name)}}</a></li>
+                <li><a class="dropdown-item" href="{{route('category.view', $category)}}" >
+                  @if (App::isLocale('it'))
+                    {{($category->name)}}
+                  @elseif (App::isLocale('en'))
+                    {{($category->name_en)}}
+                  @elseif (App::isLocale('es'))
+                    {{($category->name_es)}}
+                  @endif
+                </a></li>
                 <li><hr class="dropdown-divider"></li>
               @endforeach
             </ul>

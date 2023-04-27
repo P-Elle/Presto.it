@@ -15,17 +15,27 @@ return new class extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             // inserisco campo categoria
-            $table->string('name');
+            $table->string('name')->nullable();
+            $table->string('name_en')->nullable();
+            $table->string('name_es')->nullable();
+
             $table->timestamps();
         });
 
-        $categories = [__("ui.motori"), 'Informatica', 'Elettrodomestici', 'Libri', 'Giochi',
+        $categories = ['Motori', 'Informatica', 'Elettrodomestici', 'Libri', 'Giochi',
         'Sport', 'Immobili','Telefoni', 'Arredamento'];
+        $categories_en = ['Motors', 'IT', 'Home appliances', 'Books', 'Games', 'Sport', 'Real estates', 'Mobiles', 'Furniture'];
+        $categories_es = ['Motores', 'Informática', 'Electrodomésticos', 'Libros', 'Juegos', 'Deportes', 'Immuebles', 'Moviles', 'Mobiles'];
 
-        foreach($categories as $category) {
-            Category::create(['name'=>$category]);
+    
+        for($i = 0; $i < 9; $i++){
+            Category::create([
+                'name' => $categories[$i],
+                'name_es' => $categories_es[$i],
+                'name_en' => $categories_en[$i]
+            ]);
         }
-
+            
     }
 
     /**

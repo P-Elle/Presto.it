@@ -15,7 +15,15 @@
                                 @if((session()->get('searchCategory')) == $category->id)
                                 selected
                                 @endif
-                                >{{$category->name}}</option>
+                                >
+                                @if (App::isLocale('it'))
+                                    {{($category->name)}}
+                                @elseif (App::isLocale('en'))
+                                    {{($category->name_en)}}
+                                @elseif (App::isLocale('es'))
+                                    {{($category->name_es)}}
+                                @endif
+                                </option>
                             @endforeach
 
 

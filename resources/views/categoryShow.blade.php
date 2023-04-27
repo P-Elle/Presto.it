@@ -3,7 +3,16 @@
     <div class="container-fluid brand-grey-bg">
         <div class="row brand-header category-header shadow">
             <div class="col-12 text-light p-5">
-                <h1 class="mt-5 brand-light text-center pt-5"><span class="brand-cool">{{ $category->name }}</span>{{ __('ui.life')}}</h1>
+                <h1 class="mt-5 brand-light text-center pt-5"><span class="brand-cool">
+                    @if (App::isLocale('it'))
+                        {{($category->name)}}
+                    @elseif (App::isLocale('en'))
+                        {{($category->name_en)}}
+                    @elseif (App::isLocale('es'))
+                        {{($category->name_es)}}
+                    @endif
+                    
+                </span>{{ __('ui.life')}}</h1>
             </div>
             <x-search-announcement/>
         </div>

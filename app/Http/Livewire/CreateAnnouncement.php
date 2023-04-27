@@ -135,14 +135,10 @@ class CreateAnnouncement extends Component
                 // andiamo ad effettuare in asincrono il nostro job ovvero in background andrà a croppare l'immagine e salvarla
                 // in announcements con l'id della relativa immagine
 
-<<<<<<< Updated upstream
                 dispatch(new ResizeImage($newImage->path, 400, 400));
                 dispatch(new GoogleVisionSafeSearch($newImage->id));
                 dispatch(new GoogleVisionLabelImage($newImage->id));
                 dispatch(new WatermarkImage($newImage->path, 400, 400));
-=======
-                
->>>>>>> Stashed changes
             }
 
             //successivamente andiamo a cancellare la cartella temporanea di livewire
