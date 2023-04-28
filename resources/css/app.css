@@ -283,7 +283,7 @@ color: var(--my-color-light-yellow) !important;
 }
 .welcome-cards .card-body{
   background-color: var(--my-color-brand);
-  aspect-ratio: 1;
+  
 }
 
 
