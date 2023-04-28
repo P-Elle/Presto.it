@@ -21,7 +21,7 @@
                     <div class="col-12 col-lg-7 align-item-center justify-content-center p-4">
                         
                         @if (count($announcement->images) === 0)
-                        <img src="https://picsum.photos/300/300" class="w-100 d-block"alt="{{$announcement->title}}">
+                        <img src="{{$announcement->image}}" class="w-100 d-block"alt="{{$announcement->title}}">
                         @elseif(count($announcement->images) === 1)
                         <img src="{{$announcement->images[0]->getUrl(400,400)}}" class="w-100 d-block"alt="{{$announcement->title}}">
 

@@ -50,7 +50,8 @@
                     @if (!empty($images))
 
                          <div class="col-12 mt-1 preview-box">
-                            <p>{{__('ui.preview')}}</p>                             <div x-data="{images: @entangle('images')}" wire:sortable="updateImageOrder" class="row mx-auto rounded py-4 brand-white-bg" x-init="() => {
+                            <p>{{__('ui.preview')}}</p>                             
+                            <div x-data="{images: @entangle('images')}" wire:sortable="updateImageOrder" class="row mx-auto rounded py-4 brand-white-bg" x-init="() => {
                                 const container = document.querySelector('[wire\\:sortable]')
                                 const sortable = new Sortable(container, {
                                     draggable: '.image-container',
@@ -59,17 +60,13 @@
                             }">
 
 
-                                 @foreach ($images as $key => $image)
+                                @foreach ($images as $key => $image)
 
-                                         <div class="image-preview mx-auto" wire:sortable.item="{{$key}}" wire:key="image-{{$key}}" wire:sortable.handle style="background-image: url({{$image->temporaryUrl()}});">
-                                             <button type="button" class="btn remove m-0 p-0 border-0" wire:click="removeImage({{$key}})"><i class="bi bi-x-circle-fill"></i></button>
-                                             {{-- <button wire:sortable.handle>drag</button> --}}
-                                         </div>
-
-
-
-
-                                 @endforeach
+                                    <div class="image-preview mx-auto" wire:sortable.item="{{$key}}" wire:key="image-{{$key}}" wire:sortable.handle style="background-image: url({{$image->temporaryUrl()}});">
+                                        <button type="button" class="btn remove m-0 p-0 border-0" wire:click="removeImage({{$key}})"><i class="bi bi-x-circle-fill"></i></button>
+                                            {{-- <button wire:sortable.handle>drag</button> --}}
+                                    </div>
+                                @endforeach
 
                              </div>
 

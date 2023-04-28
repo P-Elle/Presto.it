@@ -23,9 +23,9 @@ return new class extends Migration
         });
 
         $categories = ['Motori', 'Informatica', 'Elettrodomestici', 'Libri', 'Giochi',
-        'Sport', 'Immobili','Telefoni', 'Arredamento'];
-        $categories_en = ['Motors', 'IT', 'Home appliances', 'Books', 'Games', 'Sport', 'Real estates', 'Mobiles', 'Furniture'];
-        $categories_es = ['Motores', 'Informática', 'Electrodomésticos', 'Libros', 'Juegos', 'Deportes', 'Immuebles', 'Moviles', 'Mobiles'];
+        'Sport', 'Abbigliamento','Telefoni', 'Arredamento'];
+        $categories_en = ['Motors', 'IT', 'Home appliances', 'Books', 'Games', 'Sport', 'Clothing', 'Mobiles', 'Furniture'];
+        $categories_es = ['Motores', 'Informática', 'Electrodomésticos', 'Libros', 'Juegos', 'Deportes', 'Ropa', 'Moviles', 'Mobiles'];
 
     
         for($i = 0; $i < 9; $i++){

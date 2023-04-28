@@ -18,14 +18,16 @@ class UserSeeder extends Seeder
             'name' => 'Gendo Ikari',
             'is_revisor' => 1,
             'email' => 'nerv@info.com',
-            'password' => Hash::make('Test1234!')
+            'password' => Hash::make('Test1234!'),
+            'email_verified_at' => now()
         ]);
 
         User::create([
             'name' => 'Shinji Ikari',
             'is_revisor' => 0,
             'email' => 'eva@info.com',
-            'password' => Hash::make('Test1234!')
+            'password' => Hash::make('Test1234!'),
+            'email_verified_at' => now()
         ]);
            
     }

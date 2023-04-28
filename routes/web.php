@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AccountController;
 use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\Auth\ProviderController;
 use App\Http\Controllers\FrontController;
@@ -57,6 +58,9 @@ Route::get('/auth/{provider}/callback', [ProviderController::class, 'callback'])
 
 // rotta provvisoria
 Route::get('/arriva/presto',[FrontController::class, 'wip'])->name('wip');
+
+//account
+Route::get('/account/{user}', [AccountController::class, 'account'])->middleware(['auth', 'verified'])->name('account');
 
 
 // rotta per la lingua differente
