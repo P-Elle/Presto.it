@@ -8,32 +8,32 @@
        @auth
       <li class="nav-item dropdown brand-white">
         <a class="nav-link dropdown-toggle brand-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-       Account
+            {{__('ui.profilo')}}
         </a>
-       
-      
+
+
         <ul class="dropdown-menu">
           <li><a class="dropdown-item"> {{auth()->user()->name}}</a></li>
 
-          <li><a class="dropdown-item" href="{{route('account', auth()->user()->id)}}">Modifica profilo</a></li>
-          <li><a class="dropdown-item" href="{{route('work.with.us')}}">Lavora con noi</a></li>
+          <li><a class="dropdown-item" href="{{route('account', auth()->user()->id)}}">{{__('ui.profile')}}</a></li>
+          <li><a class="dropdown-item" href="{{route('work.with.us')}}">{{__('ui.us')}}</a></li>
           <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="/logout" onclick="event.preventDefault();getElementById('logout').submit();">Esci</a></li>
+          <li><a class="dropdown-item" href="/logout" onclick="event.preventDefault();getElementById('logout').submit();">{{__('ui.out')}}</a></li>
           <form id="logout" action="/logout" method="POST" class="d-none">
             @csrf
           </form>
         </ul>
-     
+
       </li>
-      
-      
+
+
 
       @else
       <li class="nav-item">
-        <a class="nav-link brand-white" href="/login">Accedi</a>
+        <a class="nav-link brand-white" href="/login">{{__('ui.enter')}}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link brand-white" href="/register">Registrati</a>
+        <a class="nav-link brand-white" href="/register">{{__('ui.register')}}</a>
       </li>
       @endauth
       <li class="nav-item mx-lg-3 ms-0"><x-_locale lang="it" nation='it'/></li>
@@ -42,7 +42,7 @@
 
 
     </ul>
-  
+
   </div>
 </nav>
 
@@ -86,11 +86,11 @@
           <li class="nav-item d-none d-lg-block"><x-_locale lang="es" nation='es'/></li> --}}
 
           {{-- <li class="nav-item d-lg-none"><x-_locale lang="it" nation='it'/> <x-_locale lang="en" nation='gb'/> <x-_locale lang="es" nation='es'/></li> --}}
-         
-           
+
+
           @auth
           <li class="btn brand-light-bg button"><a class="brand-grey" href="{{route('announcements.create')}}">{{__('ui.insert')}}</a></li>
-          
+
           {{-- Revisore
             Se l'utente loggato è un revisore--}}
           @if (Auth::user()->is_revisor)
@@ -109,7 +109,7 @@
 
           @endif
           @endauth
-          
+
         </ul>
 
 

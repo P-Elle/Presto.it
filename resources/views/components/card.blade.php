@@ -11,12 +11,12 @@
                 @elseif (App::isLocale('es'))
                     {{($announcement->category->name_es)}}
                 @endif
-                
+
             </a></span>
 
         </div>
         <div class="card-body z-ind brand-grey-bg ps-0">
-            
+
         </div>
         <div class="card-body-text  brand-cool-bg ps-0">
             <h4><a class="link-announcement brand-grey" href="{{route('announcements.show', $announcement)}}">{{$announcement->title}}</a></h4>
@@ -29,10 +29,10 @@
                 @elseif (App::isLocale('es'))
                     {{($announcement->category->name_es)}}
                 @endif
-                
+
                 </a>
         </div>
-       
+
         {{-- <div class="card-footer small p-2">
             <div class="row">
                 <div class="col-6 text-center text-secondary">{{$announcement->user->name}}</div>
