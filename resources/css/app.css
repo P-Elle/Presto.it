@@ -283,7 +283,6 @@ color: var(--my-color-light-yellow) !important;
 }
 .welcome-cards .card-body{
   background-color: var(--my-color-brand);
-  aspect-ratio: 1;
 }
 
 
@@ -429,6 +428,10 @@ color: var(--my-color-light-yellow) !important;
 .form-work{
   width: 60%;
   margin: auto;
+}
+
+.success-box{
+  margin-top: 120px;
 }
 
 .success-box svg{

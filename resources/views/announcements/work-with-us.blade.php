@@ -57,10 +57,10 @@
                         <textarea class="form-control" name="body" id="body" cols="30" rows="5"></textarea>
                     </div>
 
-                    <div class="mb-3">
+                    {{-- <div class="mb-3">
                         <label for="cv" class="form-label">{{__('ui.cv')}}</label>
                         <input class="form-control" type="file" id="cv" name="cv">
-                    </div>
+                    </div> --}}
 
                     <button type="submit" class="btn brand-dark-bg brand-white my-3">{{__('ui.send')}}</button>
                 </form>

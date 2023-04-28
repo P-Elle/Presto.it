@@ -30,6 +30,7 @@ class AnnouncementSeeder extends Seeder
         //     ]);
         // }
 
+        
         Announcement::create([
             'id' => 1,
             'is_accepted' => 1,

@@ -2,7 +2,7 @@
     <div class="card brand-alpha px-0 my-4 rounded-0" style="width: 15rem;">
         <div class="c-header">
             <img src="{{!$announcement->images()->get()->isEmpty() ? {{--Storage::url($announcement->images()->first()->path)--}} 
-            $announcement->images()->first()->watermark() : 'https://picsum.photos/800/800'}}" class="img-fluid w-100" alt="foto-annuncio"> 
+            $announcement->images()->first()->watermark() : $announcement->image}}" class="img-fluid w-100" alt="foto-annuncio"> 
             <span class="btn rounded-1 c-category brand-grey brand-trasp-cool-bg"><a href="{{route('category.view', $announcement->category)}}">
                 @if (App::isLocale('it'))
                     {{($announcement->category->name)}}
