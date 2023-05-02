@@ -55,7 +55,7 @@
                         <p>Satira: <span class="{{$announcement_to_check->images[0]->spoof}}"></span></p>
                         <p>Medicina: <span class="{{$announcement_to_check->images[0]->medical}}"></span></p>
                         <p>Violenza: <span class="{{$announcement_to_check->images[0]->violence}}"></span></p>
-                        <p>Contenuto razzista: <span class="{{$announcement_to_check->images[0]->racy}}"></span></p>
+                        <p>Contenuto Ammiccante: <span class="{{$announcement_to_check->images[0]->racy}}"></span></p>
                         <h5 class="brand">Tags</h5>
 
                         {{-- LABELS --}}
@@ -109,7 +109,7 @@
                                             <p>Satira: <span class="{{$image->spoof}}"></span></p>
                                             <p>Medicina: <span class="{{$image->medical}}"></span></p>
                                             <p>Violenza: <span class="{{$image->violence}}"></span></p>
-                                            <p>Contenuto razzista: <span class="{{$image->racy}}"></span></p>
+                                            <p>Contenuto Ammiccante: <span class="{{$image->racy}}"></span></p>
                                         </div>
                                         <div class="col-6 ps-3">
                                             <img src="{{$image->watermark()}}" class="w-100 d-block"alt="{{$announcement_to_check->title}}">
@@ -120,7 +120,7 @@
                                                     <h5 class="brand">Tags</h5>
                                                     {{-- LABELS --}}
 
-                                                        @foreach ($image->labels as $label)
+                                                        @foreach ($announcement_to_check->images[0]->labels as $label)
                                                     <p class="d-inline small">{{$label}},</p>
 
                                                     @endforeach

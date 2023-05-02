@@ -1,21 +1,23 @@
 <x-main>
     <x-navbar/>
-    <div class="container-fluid brand-grey-bg mt-5">
-        <div class="row brand-header shadow align-items-center">
-            <div class="col-12 text-light">
-                <h1 class="brand-cool" style="text-shadow: 5px 5px 5px #332f2f;">Benvenut*, {{$user->name}}!</h1>
+    <div class="container-fluid brand-cool-bg">
+        <div class="row">
+            <div class="col-10 col-md-6 mx-auto justify-content-center ann-detail">
                 
-                <h2 class="brand-dark">Ecco qui le tue info</h2>
 
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 brand-trasp-cool-bg">
-                            <h3>Nome: </h3>
-                            <p>{{$user->name}}</p>
-                            <h3>E-mail: </h3>
-                            <p>{{$user->email}}</p>
-                            <h3>Sei revisore?</h3>
-                            <p>@if ($user->is_revisor == 1)
+                <div class="row detail brand-white brand-grey-bg justify-content-center">
+                    
+                    <div class="col-12 col-lg-8 p-4">
+                        <h1 class="brand">Benvenut<span class="brand-light">*</span>, {{$user->name}}!</h1>
+                            
+                            <hr class="brand-cool">
+                            <h3 class="brand-cool">Nome: </h3>
+                            <p class="brand">{{$user->name}}</p>
+                            
+                            <h3 class="brand-cool">E-mail: </h3>
+                            <p class="brand">{{$user->email}}</p>
+                            <h3 class="brand-cool">Sei revisore?</h3>
+                            <p class="brand">@if ($user->is_revisor == 1)
                                 Sì
                                 @else
                                 No 
@@ -23,13 +25,14 @@
                                 @endif
                             </p>
 
-                        </div>
+                        
                     </div>
+                  
+                    
+
                 </div>
-
             </div>
+
         </div>
-
-
     </div>
 </x-main>

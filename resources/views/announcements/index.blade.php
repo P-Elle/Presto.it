@@ -10,7 +10,7 @@
         </div>
 
     <section>
-        <div class="row justify-content-center justify-content-lg-around brand-grey-bg mt-5 mt-lg-0">
+        <div class="row justify-content-center justify-content-lg-around brand-grey-bg mt-5 pt-5">
             <div class="container py-3 ann-container mt-3 rounded-1">
 
                 <div class="row justify-content-around index-cards">

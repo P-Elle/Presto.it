@@ -19,25 +19,25 @@
                         <p>{{$announcement->description}}</p>
                     </div>
                     <div class="col-12 col-lg-7 align-item-center justify-content-center p-4">
-                        
+
                         @if (count($announcement->images) === 0)
                         <img src="{{$announcement->image}}" class="w-100 d-block"alt="{{$announcement->title}}">
                         @elseif(count($announcement->images) === 1)
-                        <img src="{{$announcement->images[0]->getUrl(400,400)}}" class="w-100 d-block"alt="{{$announcement->title}}">
+                        <img src="{{$announcement->images[0]->watermark()}}" class="w-100 d-block"alt="{{$announcement->title}}">
 
                        @else
                         {{-- carosello --}}
-                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-               
+                        <div id="carouselExampleIndicators" class="carousel slide carousel-dark" data-bs-ride="true">
+
                             <div class="carousel-inner">
                                 @foreach ($announcement->images as $key => $image)
                                 <div class="carousel-item  @if($loop->first)active @endif">
                                     <img src="{{
-                                $image->getUrl(400,400)}}" class="v-100 d-block"alt="{{$announcement->title}}">
+                                $image->watermark()}}" class="w-100 d-block"alt="{{$announcement->title}}">
 
                                 </div>
                                 @endforeach
-                           
+
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -50,7 +50,7 @@
                         </div>
                         @endif
                     </div>
-                    
+
 
                 </div>
             </div>

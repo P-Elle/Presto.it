@@ -76,7 +76,7 @@ return
     'jpg' => 'Imagen',
     'progress' => 'Trabajo en progreso...',
     'page' => 'la pagina llegara Presto.it!',
-    'success' => 'Anuncio insertado correctamente!',
+    'success' => 'Gracias, el anuncio será revisado Presto!',
     'bottom' => 'Para confirmar su registro haga clic en el siguiente enlace ',
     'non' => 'Si no has recibido el email de confirmación',
     'click' => 'haga clic aquí',

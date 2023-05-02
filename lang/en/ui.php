@@ -76,7 +76,7 @@ return
     'jpg' => 'Image',
     'progress' => 'Work in progress...',
     'page' => 'The page will arrive Presto.it!',
-    'success' => 'Ad inserted successfully!',
+    'success' => 'Thank you, the ad will be revised Presto.',
     'bottom' => 'To confirm your registration click on the link below ',
     'non' => 'If you have not received the confirmation email',
     'click' => 'Click here',
