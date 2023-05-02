@@ -95,6 +95,12 @@ return
     'spiacenti' => 'We\'re sorry but your ad was rejected',
     'successo' => 'Your application has been sent successfully.',
     'required' => 'The field Attribute is required',
-    'profilo' => 'Account'
-
+    'profilo' => 'Account',
+    'account-welcome' => 'Welcome',
+    'account-name' => 'Name',
+    'account-mail' => 'E-mail',
+    'account-revisor' => 'Are you a revisor?',
+    'account-yes' => 'Yes',
+    'account-no' => 'No',
+    'account-become' => 'Become revisor'
 ];

@@ -39,7 +39,7 @@
                         <button type="submit" class="btn brand-trasp-cool-bg brand-white">{{__('ui.register')}}</button>
                         <div class="d-flex justify-content-center align-items-center">
                             <p class="mx-3 my-2 my-lg-0">{{__('ui.or')}}</p>
-                          </div>
+                        </div>
                         <div class="row">
                           <div class="col-12 d-flex justify-content-center mx-0">
                             <a class="btn btn-outline-dark  w-100" href="/auth/google/redirect" role="button" style="text-transform:none">
@@ -50,10 +50,7 @@
                         </div>
                     </div>
 
-
-
                 </form>
-
 
             </div>
         </div>

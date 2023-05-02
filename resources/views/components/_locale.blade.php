@@ -1,5 +1,3 @@
-
-
 <form class="d-inline px-3 px-lg-0" action="{{route ('setLocale', $lang)}}" method="post">
 
     @csrf

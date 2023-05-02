@@ -3,7 +3,8 @@
 
     {{-- HEADER --}}
     <x-navbar/>
-    <div class="row masthead @auth
+    <div class="row masthead 
+    @auth
       brand-header
     @endauth">
       <div class="row brand-trasp-cool-bg justify-content-center m-0">
@@ -25,9 +26,6 @@
               </div>
             @endguest
 
-
-
-
           </div>
         </div>
       </div>
@@ -43,22 +41,14 @@
       <div class="row justify-content-center justify-content-lg-around">
         <h2 class="text-center brand-grey">{{ __('ui.browse')}}</h2>
 
-          <div class="row justify-content-around welcome-cards">
-            @foreach ($announcements as $announcement)
-              <x-card :announcement="$announcement"/>
-            @endforeach
+        <div class="row justify-content-around welcome-cards">
+          @foreach ($announcements as $announcement)
+            <x-card :announcement="$announcement"/>
+          @endforeach
 
-          </div>
+        </div>
 
-      </div>
-
-
-          </div>
-      </div>
-
-            
-      
-            
+      </div>    
     </section>
 
 

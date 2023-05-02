@@ -97,6 +97,11 @@ return
     'successo' => 'Su solicitud ha sido enviada con éxito.',
     'required' => 'El campo Atributo es obligatorio',
     'profilo' => 'Cuentas',
-
-
+    'account-welcome' => 'Bienvenid',
+    'account-name' => 'Nombre',
+    'account-mail' => 'Correo electrónico',
+    'account-revisor' => 'Eres revisor?',
+    'account-yes' => 'Sí',
+    'account-no' => 'No',
+    'account-become' => 'Conviértete en revisor'
 ];

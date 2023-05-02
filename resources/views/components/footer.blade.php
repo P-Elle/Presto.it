@@ -1,6 +1,3 @@
-
-
-
 <footer class="footer-10 pt-5">
     <div class="container p-0">
         <div class="row mb-5 pb-3 no-gutters">
@@ -48,12 +45,12 @@
                     <div class="con-info w-100 text-center">
                         <div class="d-flex align-items-center justify-content-center flex-column">
                             <h2 class="footer-heading text-center">{{__('ui.about')}}</h2>
-                        <ul class="list-unstyled text-center">
-                            <li><a href="{{route('wip')}}" class="d-block">{{__('ui.story')}}</a></li>
-                            <li><a href="{{route('wip')}}" class="d-block">{{__('ui.contact')}}</a></li>
-                            <li><a href="{{route('wip')}}" class="d-block">{{__('ui.team')}}</a></li>
-                            <li><a href="{{route('work.with.us')}}" class="d-block">{{__('ui.us')}}</a></li>
-                        </ul>
+                            <ul class="list-unstyled text-center">
+                                <li><a href="{{route('wip')}}" class="d-block">{{__('ui.story')}}</a></li>
+                                <li><a href="{{route('wip')}}" class="d-block">{{__('ui.contact')}}</a></li>
+                                <li><a href="{{route('wip')}}" class="d-block">{{__('ui.team')}}</a></li>
+                                <li><a href="{{route('work.with.us')}}" class="d-block">{{__('ui.us')}}</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -65,21 +62,22 @@
                             <h2 class="footer-heading text-center">{{__('ui.categories')}}</h2>
                             <ul class="list-unstyled text-center">
                                 @foreach ($categories as $category)
-                                <li><a href="{{ route('category.view',$category) }}" class="d-block">
-                                    @if (App::isLocale('it'))
-                                        {{($category->name)}}
-                                    @elseif (App::isLocale('en'))
-                                        {{($category->name_en)}}
-                                    @elseif (App::isLocale('es'))
-                                        {{($category->name_es)}}
-                                    @endif 
+                                    <li>
+                                        <a href="{{ route('category.view',$category) }}" class="d-block">
+                                            @if (App::isLocale('it'))
+                                                {{($category->name)}}
+                                            @elseif (App::isLocale('en'))
+                                                {{($category->name_en)}}
+                                            @elseif (App::isLocale('es'))
+                                                {{($category->name_es)}}
+                                            @endif 
                                     
-                                </a></li>
+                                        </a>
+                                    </li>
                                 @endforeach
 
                             </ul>
                         </div>
-                        
                     </div>
                 </div>
             </div>

@@ -4,21 +4,20 @@
         <div class="row container-success mx-auto">
 
             @if(session('message'))
-                    {{-- <div class="alert alert-success my-2">{{session('message')}}</div> --}}
-                    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-                        <symbol id="check-circle-fill" viewBox="0 0 16 16">
-                          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                        </symbol>
-                    </svg>
-                    <div class="alert d-flex align-items-center success-box white-brand-bg py-0" role="alert">
-                        <svg class="bi flex-shrink-0 me-2 brand" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
-                        <div>
-                            <h4 class="alert-heading">{{session('message')}}</h4>
-                            <p>{{__('ui.soon')}}</p>
-                            <hr>
-                            <a href="{{route('announcements.index')}}" class="btn brand-light-bg brand-grey">{{__('ui.explore')}}</a>
-                        </div>
+                <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                    <symbol id="check-circle-fill" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                    </symbol>
+                </svg>
+                <div class="alert d-flex align-items-center success-box white-brand-bg py-0" role="alert">
+                    <svg class="bi flex-shrink-0 me-2 brand" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                    <div>
+                        <h4 class="alert-heading">{{session('message')}}</h4>
+                        <p>{{__('ui.soon')}}</p>
+                        <hr>
+                        <a href="{{route('announcements.index')}}" class="btn brand-light-bg brand-grey">{{__('ui.explore')}}</a>
                     </div>
+                </div>
             @endif
 
             <div class="col-6 container-work ">
@@ -56,11 +55,6 @@
                         <label for="body" class="form-label">{{__('ui.presentati')}}</label>
                         <textarea class="form-control" name="body" id="body" cols="30" rows="5"></textarea>
                     </div>
-
-                    {{-- <div class="mb-3">
-                        <label for="cv" class="form-label">{{__('ui.cv')}}</label>
-                        <input class="form-control" type="file" id="cv" name="cv">
-                    </div> --}}
 
                     <button type="submit" class="btn brand-dark-bg brand-white my-3">{{__('ui.send')}}</button>
                 </form>

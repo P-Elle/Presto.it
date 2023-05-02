@@ -97,5 +97,11 @@ return
     'successo' => 'La sua candidatura è stata inviata con successo.',
     'required' => 'Il campo attributo è obbligatorio',
     'profilo' => 'Profilo',
-
+    'account-welcome' => 'Benvenut',
+    'account-name' => 'Nome',
+    'account-mail' => 'E-mail',
+    'account-revisor' => 'Sei revisore?',
+    'account-yes' => 'Sì',
+    'account-no' => 'No',
+    'account-become' => 'Diventa revisore'
 ];

@@ -21,33 +21,33 @@
                     <div class="col-12 col-lg-7 align-item-center justify-content-center p-4">
 
                         @if (count($announcement->images) === 0)
-                        <img src="{{$announcement->image}}" class="w-100 d-block"alt="{{$announcement->title}}">
+                            <img src="{{$announcement->image}}" class="w-100 d-block"alt="{{$announcement->title}}">
                         @elseif(count($announcement->images) === 1)
-                        <img src="{{$announcement->images[0]->watermark()}}" class="w-100 d-block"alt="{{$announcement->title}}">
+                            <img src="{{$announcement->images[0]->watermark()}}" class="w-100 d-block"alt="{{$announcement->title}}">
 
-                       @else
-                        {{-- carosello --}}
-                        <div id="carouselExampleIndicators" class="carousel slide carousel-dark" data-bs-ride="true">
+                        @else
+                            {{-- carosello --}}
+                            <div id="carouselExampleIndicators" class="carousel slide carousel-dark" data-bs-ride="true">
 
-                            <div class="carousel-inner">
-                                @foreach ($announcement->images as $key => $image)
-                                <div class="carousel-item  @if($loop->first)active @endif">
-                                    <img src="{{
-                                $image->watermark()}}" class="w-100 d-block"alt="{{$announcement->title}}">
+                                <div class="carousel-inner">
+                                    @foreach ($announcement->images as $key => $image)
+                                        <div class="carousel-item  @if($loop->first)active @endif">
+                                            <img src="{{
+                                        $image->watermark()}}" class="w-100 d-block"alt="{{$announcement->title}}">
+
+                                        </div>
+                                    @endforeach
 
                                 </div>
-                                @endforeach
-
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">{{__("ui.previous")}}</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">{{__("ui.next")}}</span>
+                                </button>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">{{__("ui.previous")}}</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">{{__("ui.next")}}</span>
-                            </button>
-                        </div>
                         @endif
                     </div>
 
